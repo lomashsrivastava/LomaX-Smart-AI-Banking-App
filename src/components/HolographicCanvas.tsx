@@ -1,75 +1,128 @@
 'use client';
-import { useRef, useEffect, useCallback } from 'react';
+import { useRef, useEffect, useCallback, useState } from 'react';
 import { useAppStore } from '@/lib/store';
 
-interface Particle {
-  x: number; y: number; vx: number; vy: number;
-  radius: number; color: string; alpha: number; life: number;
+// 3D Point structure
+interface Point3D {
+  x: number; y: number; z: number;
 }
 
-interface Moon {
-  angle: number; radius: number; size: number;
-  color: string; label: string; balance: number; speed: number;
+// Projected 2D Point
+interface Point2D {
+  x: number; y: number; scale: number;
+}
+
+interface Node3D {
+  p: Point3D;
+  color: string;
+}
+
+interface Moon3D {
+  angle: number;
+  orbitRadius: number;
+  orbitTiltX: number; // inclination
+  orbitTiltZ: number; 
+  size: number;
+  color: string;
+  label: string;
+  balance: number;
+  speed: number;
 }
 
 export default function HolographicCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animFrameRef = useRef<number>(0);
-  const particlesRef = useRef<Particle[]>([]);
-  const moonsRef = useRef<Moon[]>([]);
-  const mouseRef = useRef({ x: 0, y: 0 });
-  const timeRef = useRef(0);
-  const { accounts, netWorth, transactions } = useAppStore();
+  
+  // Data refs
+  const globeNodesRef = useRef<Node3D[]>([]);
+  const moonsRef = useRef<Moon3D[]>([]);
+  const { accounts, netWorth } = useAppStore();
 
-  const initParticles = useCallback((w: number, h: number) => {
-    const particles: Particle[] = [];
-    for (let i = 0; i < 120; i++) {
-      const angle = Math.random() * Math.PI * 2;
-      const dist = 50 + Math.random() * Math.min(w, h) * 0.35;
-      particles.push({
-        x: w / 2 + Math.cos(angle) * dist,
-        y: h / 2 + Math.sin(angle) * dist,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        radius: Math.random() * 2 + 0.5,
-        color: ['#00e5ff', '#b900ff', '#ff007f', '#10b981', '#f59e0b'][Math.floor(Math.random() * 5)],
-        alpha: Math.random() * 0.6 + 0.2,
-        life: Math.random() * 1000,
+  // Camera & Interaction state
+  const rotationRef = useRef({ x: 0, y: 0 });
+  const isDraggingRef = useRef(false);
+  const lastMouseRef = useRef({ x: 0, y: 0 });
+  
+  // Constants
+  const GLOBE_RADIUS = 250;
+  const FOCAL_LENGTH = 800;
+
+  // 1. Math Utilities for 3D
+  const rotateX = (p: Point3D, angle: number): Point3D => {
+    const cos = Math.cos(angle), sin = Math.sin(angle);
+    return { x: p.x, y: p.y * cos - p.z * sin, z: p.y * sin + p.z * cos };
+  };
+
+  const rotateY = (p: Point3D, angle: number): Point3D => {
+    const cos = Math.cos(angle), sin = Math.sin(angle);
+    return { x: p.x * cos + p.z * sin, y: p.y, z: -p.x * sin + p.z * cos };
+  };
+
+  const rotateZ = (p: Point3D, angle: number): Point3D => {
+    const cos = Math.cos(angle), sin = Math.sin(angle);
+    return { x: p.x * cos - p.y * sin, y: p.x * sin + p.y * cos, z: p.z };
+  };
+
+  const project = (p: Point3D, w: number, h: number): Point2D => {
+    // Translate Z so the object is in front of the camera
+    const z = p.z + FOCAL_LENGTH; 
+    const scale = FOCAL_LENGTH / (z || 1);
+    return {
+      x: (p.x * scale) + (w / 2),
+      y: (p.y * scale) + (h / 2),
+      scale
+    };
+  };
+
+  // 2. Initialization
+  const initGlobe = useCallback(() => {
+    const nodes: Node3D[] = [];
+    // Fibonacci sphere distribution
+    const numNodes = 400;
+    const phi = Math.PI * (3 - Math.sqrt(5)); 
+    
+    for (let i = 0; i < numNodes; i++) {
+      const y = 1 - (i / (numNodes - 1)) * 2; 
+      const radius = Math.sqrt(1 - y * y); 
+      const theta = phi * i; 
+
+      const x = Math.cos(theta) * radius;
+      const z = Math.sin(theta) * radius;
+
+      // Make it look like a high-tech data core
+      const isHot = Math.random() > 0.95;
+      nodes.push({
+        p: { x: x * GLOBE_RADIUS, y: y * GLOBE_RADIUS, z: z * GLOBE_RADIUS },
+        color: isHot ? '#ff3366' : '#00f0ff'
       });
     }
-    // Transaction particles (shooting stars)
-    const recentTxns = transactions.slice(0, 15);
-    recentTxns.forEach((txn, i) => {
-      const a = (i / 15) * Math.PI * 2;
-      const d = 80 + Math.random() * 100;
-      particles.push({
-        x: w / 2 + Math.cos(a) * d, y: h / 2 + Math.sin(a) * d,
-        vx: Math.cos(a) * 0.8, vy: Math.sin(a) * 0.8,
-        radius: 2 + txn.amount / 20000,
-        color: txn.type === 'credit' ? '#10b981' : txn.type === 'debit' ? '#ef4444' : '#f59e0b',
-        alpha: 0.7, life: 500 + Math.random() * 500,
-      });
-    });
-    return particles;
-  }, [transactions]);
+    return nodes;
+  }, []);
 
   const initMoons = useCallback(() => {
     return accounts.map((acc, i) => ({
       angle: (i / accounts.length) * Math.PI * 2,
-      radius: 100 + i * 35,
-      size: 8 + (acc.balance / 1000000) * 12,
+      orbitRadius: GLOBE_RADIUS + 100 + i * 40,
+      orbitTiltX: (Math.random() - 0.5) * Math.PI * 0.5,
+      orbitTiltZ: (Math.random() - 0.5) * Math.PI * 0.5,
+      size: 15 + (acc.balance / 1000000) * 20,
       color: acc.color,
       label: acc.accountType.charAt(0).toUpperCase() + acc.accountType.slice(1),
       balance: acc.balance,
-      speed: 0.002 + (accounts.length - i) * 0.001,
+      speed: 0.005 + (accounts.length - i) * 0.002,
     }));
   }, [accounts]);
 
+  // 3. Main Loop
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+
+    // Setup
+    globeNodesRef.current = initGlobe();
+    moonsRef.current = initMoons();
 
     const resize = () => {
       const dpr = window.devicePixelRatio || 1;
@@ -77,151 +130,143 @@ export default function HolographicCanvas() {
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
       ctx.scale(dpr, dpr);
-      particlesRef.current = initParticles(rect.width, rect.height);
-      moonsRef.current = initMoons();
     };
-
     resize();
     window.addEventListener('resize', resize);
 
-    const handleMouse = (e: MouseEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      mouseRef.current = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    // Interaction handlers
+    const handleDown = (e: MouseEvent | TouchEvent) => {
+      isDraggingRef.current = true;
+      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+      const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+      lastMouseRef.current = { x: clientX, y: clientY };
     };
-    canvas.addEventListener('mousemove', handleMouse);
+    const handleMove = (e: MouseEvent | TouchEvent) => {
+      if (!isDraggingRef.current) return;
+      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+      const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+      const dx = clientX - lastMouseRef.current.x;
+      const dy = clientY - lastMouseRef.current.y;
+      
+      rotationRef.current.y += dx * 0.005;
+      rotationRef.current.x -= dy * 0.005;
+      lastMouseRef.current = { x: clientX, y: clientY };
+    };
+    const handleUp = () => { isDraggingRef.current = false; };
 
+    canvas.addEventListener('mousedown', handleDown);
+    window.addEventListener('mousemove', handleMove);
+    window.addEventListener('mouseup', handleUp);
+    canvas.addEventListener('touchstart', handleDown);
+    window.addEventListener('touchmove', handleMove);
+    window.addEventListener('touchend', handleUp);
+
+    // Render loop
     const animate = () => {
       const rect = canvas.getBoundingClientRect();
       const w = rect.width, h = rect.height;
-      timeRef.current += 0.016;
       ctx.clearRect(0, 0, w, h);
 
-      // Draw grid
-      ctx.strokeStyle = 'rgba(0,229,255,0.03)';
-      ctx.lineWidth = 0.5;
-      for (let x = 0; x < w; x += 40) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke(); }
-      for (let y = 0; y < h; y += 40) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke(); }
+      // Auto rotation
+      if (!isDraggingRef.current) {
+        rotationRef.current.y += 0.002;
+        rotationRef.current.x += 0.0005;
+      }
 
-      const cx = w / 2, cy = h / 2;
+      // Draw Globe
+      const sortedNodes = globeNodesRef.current.map(node => {
+        let p = rotateX(node.p, rotationRef.current.x);
+        p = rotateY(p, rotationRef.current.y);
+        return { ...node, rotated: p, proj: project(p, w, h) };
+      }).sort((a, b) => b.rotated.z - a.rotated.z); // Z-sort (draw back to front)
 
-      // Draw orbit paths
-      moonsRef.current.forEach(moon => {
+      sortedNodes.forEach((node, i) => {
+        const { proj, rotated } = node;
+        // Fade out nodes in the back
+        const alpha = Math.max(0.1, 1 - (rotated.z + GLOBE_RADIUS) / (GLOBE_RADIUS * 2));
+        const r = Math.max(0.5, 2 * proj.scale);
+        
         ctx.beginPath();
-        ctx.arc(cx, cy, moon.radius, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(0,229,255,0.06)`;
-        ctx.lineWidth = 0.5;
-        ctx.stroke();
+        ctx.arc(proj.x, proj.y, r, 0, Math.PI * 2);
+        ctx.fillStyle = `${node.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`;
+        ctx.fill();
+
+        // Connect some nearby nodes to form wireframe
+        if (i % 3 === 0 && i > 0 && alpha > 0.3) {
+          const prev = sortedNodes[i - 1].proj;
+          ctx.beginPath();
+          ctx.moveTo(proj.x, proj.y);
+          ctx.lineTo(prev.x, prev.y);
+          ctx.strokeStyle = `rgba(0, 240, 255, ${alpha * 0.15})`;
+          ctx.lineWidth = 0.5 * proj.scale;
+          ctx.stroke();
+        }
       });
 
-      // Draw central singularity (net worth core)
-      const pulseScale = 1 + Math.sin(timeRef.current * 2) * 0.05;
-      const coreRadius = 30 * pulseScale;
-      const gradient = ctx.createRadialGradient(cx, cy, 0, cx, cy, coreRadius * 2.5);
-      gradient.addColorStop(0, 'rgba(0,229,255,0.6)');
-      gradient.addColorStop(0.4, 'rgba(185,0,255,0.3)');
-      gradient.addColorStop(0.7, 'rgba(255,0,127,0.1)');
-      gradient.addColorStop(1, 'transparent');
-      ctx.beginPath();
-      ctx.arc(cx, cy, coreRadius * 2.5, 0, Math.PI * 2);
-      ctx.fillStyle = gradient;
-      ctx.fill();
-
-      // Inner core
-      ctx.beginPath();
-      ctx.arc(cx, cy, coreRadius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(0,229,255,0.15)';
-      ctx.fill();
-      ctx.strokeStyle = 'rgba(0,229,255,0.5)';
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
-
-      // Net worth text
+      // Draw Singularity Core (Net Worth text in the center of the globe)
+      const centerProj = project({x:0, y:0, z:0}, w, h);
       ctx.fillStyle = '#ffffff';
-      ctx.font = 'bold 16px Inter';
+      ctx.font = `bold ${24 * centerProj.scale}px Outfit`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText(`₹${(netWorth / 100000).toFixed(1)}L`, cx, cy - 4);
-      ctx.font = '10px Inter';
-      ctx.fillStyle = 'rgba(255,255,255,0.5)';
-      ctx.fillText('NET WORTH', cx, cy + 12);
+      ctx.fillText(`₹${(netWorth / 100000).toFixed(1)}L`, centerProj.x, centerProj.y - 10 * centerProj.scale);
+      ctx.font = `${10 * centerProj.scale}px Space Grotesk`;
+      ctx.fillStyle = 'rgba(255,255,255,0.7)';
+      ctx.fillText('GLOBAL SINGULARITY', centerProj.x, centerProj.y + 15 * centerProj.scale);
 
-      // Draw moons (accounts)
-      moonsRef.current.forEach(moon => {
+      // Draw Moons (Accounts)
+      const moonObjects = moonsRef.current.map(moon => {
         moon.angle += moon.speed;
-        const mx = cx + Math.cos(moon.angle) * moon.radius;
-        const my = cy + Math.sin(moon.angle) * moon.radius;
+        // Base flat orbit
+        let p: Point3D = {
+          x: Math.cos(moon.angle) * moon.orbitRadius,
+          y: 0,
+          z: Math.sin(moon.angle) * moon.orbitRadius
+        };
+        // Apply individual moon orbit tilt
+        p = rotateX(p, moon.orbitTiltX);
+        p = rotateZ(p, moon.orbitTiltZ);
+        // Apply global camera rotation
+        p = rotateX(p, rotationRef.current.x);
+        p = rotateY(p, rotationRef.current.y);
+        
+        return { ...moon, rotated: p, proj: project(p, w, h) };
+      }).sort((a, b) => b.rotated.z - a.rotated.z);
 
-        // Moon glow
-        const moonGlow = ctx.createRadialGradient(mx, my, 0, mx, my, moon.size * 2);
-        moonGlow.addColorStop(0, moon.color + '40');
+      moonObjects.forEach(moon => {
+        const { proj, rotated } = moon;
+        // Z-depth calculation for fading and sizing
+        const depthRatio = 1 - (rotated.z + GLOBE_RADIUS * 2) / (GLOBE_RADIUS * 4);
+        const alpha = Math.max(0.1, Math.min(1, depthRatio * 1.5));
+        const finalSize = moon.size * proj.scale;
+
+        // Draw Moon Aura
+        const moonGlow = ctx.createRadialGradient(proj.x, proj.y, 0, proj.x, proj.y, finalSize * 2.5);
+        moonGlow.addColorStop(0, `${moon.color}${Math.floor(alpha * 100).toString(16).padStart(2,'0')}`);
         moonGlow.addColorStop(1, 'transparent');
         ctx.beginPath();
-        ctx.arc(mx, my, moon.size * 2, 0, Math.PI * 2);
+        ctx.arc(proj.x, proj.y, finalSize * 2.5, 0, Math.PI * 2);
         ctx.fillStyle = moonGlow;
         ctx.fill();
 
-        // Moon body
+        // Draw Moon Core
         ctx.beginPath();
-        ctx.arc(mx, my, moon.size, 0, Math.PI * 2);
-        ctx.fillStyle = moon.color + '30';
+        ctx.arc(proj.x, proj.y, finalSize, 0, Math.PI * 2);
+        ctx.fillStyle = `${moon.color}${Math.floor(alpha * 200).toString(16).padStart(2,'0')}`;
         ctx.fill();
-        ctx.strokeStyle = moon.color + '80';
-        ctx.lineWidth = 1.5;
+        ctx.strokeStyle = `${moon.color}${Math.floor(alpha * 255).toString(16).padStart(2,'0')}`;
+        ctx.lineWidth = 1.5 * proj.scale;
         ctx.stroke();
 
-        // Moon label
-        ctx.fillStyle = '#ffffff';
-        ctx.font = '9px Inter';
-        ctx.textAlign = 'center';
-        ctx.fillText(moon.label, mx, my + moon.size + 14);
-        ctx.font = '8px JetBrains Mono';
-        ctx.fillStyle = 'rgba(255,255,255,0.5)';
-        ctx.fillText(`₹${(moon.balance / 1000).toFixed(0)}K`, mx, my + moon.size + 24);
-      });
-
-      // Draw particles
-      particlesRef.current.forEach(p => {
-        // Mouse interaction
-        const dx = mouseRef.current.x - p.x;
-        const dy = mouseRef.current.y - p.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 80) {
-          p.vx -= dx * 0.0003;
-          p.vy -= dy * 0.0003;
-        }
-
-        p.x += p.vx;
-        p.y += p.vy;
-        p.life -= 0.5;
-        p.alpha = Math.max(0, Math.min(1, p.alpha + (Math.random() - 0.5) * 0.02));
-
-        // Wrap around
-        if (p.x < 0) p.x = w;
-        if (p.x > w) p.x = 0;
-        if (p.y < 0) p.y = h;
-        if (p.y > h) p.y = 0;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = p.color;
-        ctx.globalAlpha = p.alpha;
-        ctx.fill();
-        ctx.globalAlpha = 1;
-      });
-
-      // Draw connecting lines between nearby particles
-      particlesRef.current.forEach((p, i) => {
-        for (let j = i + 1; j < Math.min(i + 8, particlesRef.current.length); j++) {
-          const p2 = particlesRef.current[j];
-          const d = Math.sqrt((p.x - p2.x) ** 2 + (p.y - p2.y) ** 2);
-          if (d < 60) {
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(0,229,255,${0.08 * (1 - d / 60)})`;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
-          }
+        // Draw labels if moon is somewhat in front
+        if (alpha > 0.4) {
+          ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+          ctx.font = `bold ${12 * proj.scale}px Outfit`;
+          ctx.textAlign = 'center';
+          ctx.fillText(moon.label, proj.x, proj.y + finalSize + 16 * proj.scale);
+          ctx.font = `${10 * proj.scale}px Space Grotesk`;
+          ctx.fillStyle = `rgba(255,255,255,${alpha * 0.7})`;
+          ctx.fillText(`₹${(moon.balance / 1000).toFixed(0)}K`, proj.x, proj.y + finalSize + 30 * proj.scale);
         }
       });
 
@@ -233,14 +278,19 @@ export default function HolographicCanvas() {
     return () => {
       cancelAnimationFrame(animFrameRef.current);
       window.removeEventListener('resize', resize);
-      canvas.removeEventListener('mousemove', handleMouse);
+      canvas.removeEventListener('mousedown', handleDown);
+      window.removeEventListener('mousemove', handleMove);
+      window.removeEventListener('mouseup', handleUp);
+      canvas.removeEventListener('touchstart', handleDown);
+      window.removeEventListener('touchmove', handleMove);
+      window.removeEventListener('touchend', handleUp);
     };
-  }, [accounts, netWorth, initParticles, initMoons]);
+  }, [initGlobe, initMoons, netWorth]);
 
   return (
     <canvas
       ref={canvasRef}
-      className="w-full h-full rounded-2xl"
+      className="w-full h-full cursor-grab active:cursor-grabbing"
       style={{ background: 'transparent' }}
     />
   );

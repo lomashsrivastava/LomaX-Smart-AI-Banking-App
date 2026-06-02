@@ -64,3 +64,8 @@ STEP 14: [2026-06-02 14:03] - Phase 7: Aesthetic Overhaul
   Files: src/app/globals.css, src/app/page.tsx, src/app/layout.tsx
   Features: Replaced font with Outfit, rewrote glassmorphism tokens, absolute full-screen holographic spatial layout, floating UI dock.
   Status: DONE
+
+STEP 15: [2026-06-02 14:09] - Phase 8: 3D Global Macro Singularity
+  Files: src/components/HolographicCanvas.tsx
+  Features: Custom 3D projection engine, rotating wireframe globe, Z-sorted orbiting moons, interactive camera drag.
+  Status: DONE
