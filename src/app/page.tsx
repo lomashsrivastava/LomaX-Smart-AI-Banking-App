@@ -11,7 +11,7 @@ const DigitalTwinPanel = dynamic(() => import('@/components/DigitalTwinPanel'), 
 const VaultPanel = dynamic(() => import('@/components/VaultPanel'), { ssr: false });
 const CardPanel = dynamic(() => import('@/components/CardPanel'), { ssr: false });
 const UpiPanel = dynamic(() => import('@/components/UpiPanel'), { ssr: false });
-const FamilyBusinessPanel = dynamic(() => import('@/components/FamilyBusinessPanel'), { ssr: false });
+const FamilyBusinessPanel = dynamic(() => import('@/components/FamilyBizPanel'), { ssr: false });
 const AdminPanopticon = dynamic(() => import('@/components/AdminPanopticon'), { ssr: false });
 
 const navItems: { id: ViewId; label: string; icon: React.ReactNode; color: string }[] = [
