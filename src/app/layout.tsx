@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Outfit, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const outfit = Outfit({
+  variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: "#00e5ff",
+  themeColor: "#00f0ff",
 };
 
 export default function RootLayout({
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} dark`}>
+    <html lang="en" className={`${outfit.variable} ${spaceGrotesk.variable} dark`}>
       <body className="min-h-screen antialiased">{children}</body>
     </html>
   );
