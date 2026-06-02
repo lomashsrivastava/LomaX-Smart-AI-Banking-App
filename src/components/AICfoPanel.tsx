@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useAppStore } from '@/lib/store';
 import { Brain, Send, Sparkles, TrendingUp, AlertTriangle, Lightbulb, ChevronRight, Check, X, Mic, MicOff } from 'lucide-react';
 import MagicButton from './MagicButton';
+import NeuralBrain from './NeuralBrain';
 
 const AI_RESPONSES: Record<string, string> = {
   'default': "I've analyzed your financial patterns. Your spending is well-controlled this month — 12% below your average. Your Europe Trip goal is on track. Would you like me to run a simulation?",
@@ -111,6 +112,7 @@ export default function AICfoPanel() {
 
       {/* Chat Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4" style={{ scrollbarWidth: 'thin' }}>
+        <NeuralBrain isProcessing={isTyping || isListening} />
         {aiMessages.map(msg => (
           <div key={msg.id} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in-up`}>
             <div className={`max-w-[85%] rounded-2xl px-4 py-3 ${
