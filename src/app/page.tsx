@@ -5,6 +5,7 @@ import { Home, Vault, Brain, Activity, CreditCard, Zap, Heart, Target, Eye, Bell
 import type { ViewId } from '@/lib/types';
 import { useEffect, useState } from 'react';
 import BiometricGate from '@/components/BiometricGate';
+import QuantumTerminal from '@/components/QuantumTerminal';
 
 const HolographicCanvas = dynamic(() => import('@/components/HolographicCanvas'), { ssr: false });
 const AICfoPanel = dynamic(() => import('@/components/AICfoPanel'), { ssr: false });
@@ -56,12 +57,25 @@ function ObservatoryOverview() {
 export default function HomePage() {
   const { activeView, setActiveView, fetchInitialData, isFetchingData } = useAppStore();
   const [unlocked, setUnlocked] = useState(false);
+  const [terminalOpen, setTerminalOpen] = useState(false);
 
   useEffect(() => {
     if (unlocked) {
       fetchInitialData();
     }
   }, [unlocked, fetchInitialData]);
+
+  // Terminal Shortcut
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === '`' || e.key === '~') {
+        e.preventDefault();
+        setTerminalOpen(prev => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   if (!unlocked) {
     return <BiometricGate onUnlock={() => setUnlocked(true)} />;
@@ -114,6 +128,13 @@ export default function HomePage() {
             </div>
           </div>
           <div className="flex items-center gap-4">
+            <button 
+              onClick={() => setTerminalOpen(true)}
+              className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-[#a1a1aa] hover:text-[#00f0ff] transition-colors cursor-pointer border border-white/5"
+              title="Quantum Terminal (~)"
+            >
+              <span className="font-mono text-xl leading-none -mt-1">_</span>
+            </button>
             <button className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition-colors cursor-pointer border border-white/5">
               <Search className="w-5 h-5" />
             </button>
@@ -161,6 +182,11 @@ export default function HomePage() {
              {renderPanel()}
           </main>
         </div>
+
+        {/* Quantum Terminal Overlay */}
+        {terminalOpen && (
+          <QuantumTerminal onClose={() => setTerminalOpen(false)} />
+        )}
       </div>
 
     </div>
