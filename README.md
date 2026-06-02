@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LomaX NEO: The Financial Singularity OS 🌌
 
-## Getting Started
+LomaX NEO is a next-generation financial operating system featuring a futuristic, highly immersive spatial interface, AI-driven financial logic, and a fully functional backend infrastructure.
 
-First, run the development server:
+## Architecture & Data Flow
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```mermaid
+graph TD;
+    subgraph Frontend (Next.js App Router)
+      A[Zustand Store] -->|Syncs| B[Dashboard Layout];
+      B --> C[Holographic Canvas Engine];
+      B --> D[AI CFO Panel];
+      B --> E[Digital Twin Simulator];
+      B --> F[Vault / UPI / Cards];
+    end
+    
+    subgraph Backend (Next.js APIs)
+      A -->|Fetch / Mutate| G[API Routes /api/*];
+      G <--> H[/api/ai/chat/];
+      G <--> I[/api/twin/simulate/];
+    end
+    
+    subgraph Database Layer
+      G --> J[(MongoDB Database)];
+      J --> K[User & Account Schemas];
+      J --> L[Transaction Ledger];
+      J --> M[Cards & UpiMandates];
+    end
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features Complete 🚀
+1. **Holographic 60fps Canvas Engine**: 3D particle visualization of the user's Net Worth Singularity and Account Moons.
+2. **AI CFO (Loma)**: Analyzes ledger data on the backend to provide financial insights.
+3. **Digital Twin Monte Carlo Engine**: Projects 36-month probabilistic outcomes for user goals.
+4. **Full-Stack Persistent Ledger**: Live MongoDB integration for double-entry transactions, virtual card management, and autonomous UPI AutoPay mandates.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Run Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Requirements
+- Node.js 18+
+- MongoDB instance (local or Atlas)
 
-## Learn More
+### 1. Install & Configure
+```bash
+git clone <repo-url>
+cd LomaX
+npm install
+```
+Rename `.env.example` to `.env.local` and add your MongoDB connection string.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Seed the Database
+To populate the hyper-realistic mock financial data:
+```bash
+npm run dev
+# In another terminal window:
+curl -X POST http://localhost:3000/api/seed
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Experience the Singularity
+Open `http://localhost:3000` in your web browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Production Deployment (Docker)
 
-## Deploy on Vercel
+We have provided a multi-stage `Dockerfile` to instantly deploy LomaX NEO anywhere.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Build the image
+docker build -t lomax-neo .
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Run the container
+docker run -p 3000:3000 -e MONGODB_URI="mongodb://your-db-uri" lomax-neo
+```

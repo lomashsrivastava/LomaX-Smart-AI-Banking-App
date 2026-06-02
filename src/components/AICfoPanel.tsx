@@ -22,31 +22,22 @@ function matchResponse(input: string): string {
 }
 
 export default function AICfoPanel() {
-  const { aiMessages, addAiMessage, aiSuggestions } = useAppStore();
+  const { aiMessages, sendAiMessage, aiSuggestions } = useAppStore();
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    setIsTyping(false); // reset typing state when new messages arrive
   }, [aiMessages]);
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!input.trim() || isTyping) return;
-    const userMsg = { id: `msg-${Date.now()}`, role: 'user' as const, content: input, timestamp: new Date().toISOString() };
-    addAiMessage(userMsg);
+    const content = input;
     setInput('');
     setIsTyping(true);
-
-    setTimeout(() => {
-      const response = matchResponse(userMsg.content);
-      addAiMessage({
-        id: `msg-${Date.now() + 1}`, role: 'assistant', content: response,
-        timestamp: new Date().toISOString(), confidence: 0.85 + Math.random() * 0.12,
-        reasoning: ['Analyzed 6-month spending data', 'Compared with peer benchmarks', 'Applied tax code FY2025-26'],
-      });
-      setIsTyping(false);
-    }, 1500 + Math.random() * 1000);
+    await sendAiMessage(content);
   };
 
   return (

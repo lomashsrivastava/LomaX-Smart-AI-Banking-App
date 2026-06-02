@@ -3,6 +3,7 @@ import { useAppStore } from '@/lib/store';
 import dynamic from 'next/dynamic';
 import { Home, Vault, Brain, Activity, CreditCard, Zap, Heart, Briefcase, Target, BarChart3, Eye, Settings, ChevronRight, TrendingUp, ArrowDownLeft, Bell, Search } from 'lucide-react';
 import type { ViewId } from '@/lib/types';
+import { useEffect } from 'react';
 
 const HolographicCanvas = dynamic(() => import('@/components/HolographicCanvas'), { ssr: false, loading: () => <div className="w-full h-full flex items-center justify-center"><div className="w-8 h-8 border-2 border-[#00e5ff] border-t-transparent rounded-full animate-spin" /></div> });
 const AICfoPanel = dynamic(() => import('@/components/AICfoPanel'), { ssr: false });
@@ -114,7 +115,21 @@ function ObservatoryOverview() {
 }
 
 export default function HomePage() {
-  const { activeView, setActiveView } = useAppStore();
+  const { activeView, setActiveView, fetchInitialData, isFetchingData } = useAppStore();
+
+  useEffect(() => {
+    fetchInitialData();
+  }, [fetchInitialData]);
+
+  if (isFetchingData) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center neo-grid-bg bg-black">
+        <div className="w-16 h-16 border-4 border-[#00e5ff] border-t-transparent rounded-full animate-spin mb-4" />
+        <h1 className="text-xl font-bold text-gradient-magic tracking-widest animate-pulse">LomaX NEO</h1>
+        <p className="text-xs text-[#9ca3af] mt-2">Connecting to secure financial ledger...</p>
+      </div>
+    );
+  }
 
   const renderPanel = () => {
     switch (activeView) {
