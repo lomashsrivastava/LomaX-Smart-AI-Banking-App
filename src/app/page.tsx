@@ -77,8 +77,8 @@ function ObservatoryOverview() {
           { label: "Today's Spend", value: `₹${todaySpend.toLocaleString('en-IN')}`, change: '', icon: <ArrowDownLeft className="w-4 h-4" />, color: '#ef4444' },
           { label: 'Active Goals', value: `${goals.filter(g => g.status === 'active').length}`, change: '', icon: <Target className="w-4 h-4" />, color: '#10b981' },
           { label: 'AI Savings Found', value: `₹${aiSuggestions.reduce((s, a) => s + a.potentialSavings, 0)}/mo`, change: '', icon: <Brain className="w-4 h-4" />, color: '#b900ff' },
-        ].map(m => (
-          <div key={m.label} className="glass-card p-4 rounded-xl">
+        ].map((m, idx) => (
+          <div key={`${m.label}-${idx}`} className="glass-card p-4 rounded-xl">
             <div className="flex items-center justify-between mb-2">
               <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: m.color + '15', color: m.color }}>{m.icon}</div>
               {m.change && <span className="text-[10px] text-[#10b981]">{m.change}</span>}
