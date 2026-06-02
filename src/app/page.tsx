@@ -3,7 +3,7 @@ import { useAppStore } from '@/lib/store';
 import dynamic from 'next/dynamic';
 import { Home, Vault, Brain, Activity, CreditCard, Zap, Heart, Briefcase, Target, BarChart3, Eye, Settings, ChevronRight, TrendingUp, ArrowDownLeft, Bell, Search } from 'lucide-react';
 import type { ViewId } from '@/lib/types';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const HolographicCanvas = dynamic(() => import('@/components/HolographicCanvas'), { ssr: false, loading: () => <div className="w-full h-full flex items-center justify-center"><div className="w-8 h-8 border-2 border-[#00e5ff] border-t-transparent rounded-full animate-spin" /></div> });
 const AICfoPanel = dynamic(() => import('@/components/AICfoPanel'), { ssr: false });
@@ -115,8 +115,6 @@ function ObservatoryOverview() {
 }
 
 import BiometricGate from '@/components/BiometricGate';
-import { useState, useEffect } from 'react';
-
 export default function HomePage() {
   const { activeView, setActiveView, fetchInitialData, isFetchingData } = useAppStore();
   const [unlocked, setUnlocked] = useState(false);

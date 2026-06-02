@@ -100,28 +100,28 @@ export const useAppStore = create<AppState>((set, get) => ({
     const res = await fetch('/api/cards', { method: 'POST', body: JSON.stringify({ action: 'toggleStatus', cardId }) });
     if (res.ok) {
       const updated = await res.json();
-      set((s) => ({ cards: s.cards.map(c => c._id === updated._id || c.id === cardId ? { ...c, status: updated.status } : c) }));
+      set((s) => ({ cards: s.cards.map(c => (c as any)._id === updated._id || c.id === cardId ? { ...c, status: updated.status } : c) }));
     }
   },
   toggleCardOnline: async (cardId) => {
     const res = await fetch('/api/cards', { method: 'POST', body: JSON.stringify({ action: 'toggleOnline', cardId }) });
     if (res.ok) {
       const updated = await res.json();
-      set((s) => ({ cards: s.cards.map(c => c._id === updated._id || c.id === cardId ? { ...c, onlineEnabled: updated.onlineEnabled } : c) }));
+      set((s) => ({ cards: s.cards.map(c => (c as any)._id === updated._id || c.id === cardId ? { ...c, onlineEnabled: updated.onlineEnabled } : c) }));
     }
   },
   toggleCardInternational: async (cardId) => {
     const res = await fetch('/api/cards', { method: 'POST', body: JSON.stringify({ action: 'toggleInternational', cardId }) });
     if (res.ok) {
       const updated = await res.json();
-      set((s) => ({ cards: s.cards.map(c => c._id === updated._id || c.id === cardId ? { ...c, internationalEnabled: updated.internationalEnabled } : c) }));
+      set((s) => ({ cards: s.cards.map(c => (c as any)._id === updated._id || c.id === cardId ? { ...c, internationalEnabled: updated.internationalEnabled } : c) }));
     }
   },
   toggleCardNightLock: async (cardId) => {
     const res = await fetch('/api/cards', { method: 'POST', body: JSON.stringify({ action: 'toggleNightLock', cardId }) });
     if (res.ok) {
       const updated = await res.json();
-      set((s) => ({ cards: s.cards.map(c => c._id === updated._id || c.id === cardId ? { ...c, nightLockEnabled: updated.nightLockEnabled } : c) }));
+      set((s) => ({ cards: s.cards.map(c => (c as any)._id === updated._id || c.id === cardId ? { ...c, nightLockEnabled: updated.nightLockEnabled } : c) }));
     }
   },
   generateVirtualCard: async () => {

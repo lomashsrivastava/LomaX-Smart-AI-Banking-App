@@ -19,12 +19,15 @@ export const metadata: Metadata = {
   description: "A living, breathing financial nervous system that anticipates your needs, learns from your behavior, and acts autonomously to grow your wealth while protecting you from risk.",
   keywords: ["fintech", "AI CFO", "digital twin", "holographic finance", "UPI", "post-quantum"],
   manifest: "/manifest.json",
-  themeColor: "#00e5ff",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
     title: "LomaX",
   },
+};
+
+export const viewport = {
+  themeColor: "#00e5ff",
 };
 
 export default function RootLayout({
