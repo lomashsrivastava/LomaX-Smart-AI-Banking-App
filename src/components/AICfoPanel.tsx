@@ -1,7 +1,7 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import { useAppStore } from '@/lib/store';
-import { Brain, Send, Sparkles, TrendingUp, AlertTriangle, Lightbulb, ChevronRight, Check, X } from 'lucide-react';
+import { Brain, Send, Sparkles, TrendingUp, AlertTriangle, Lightbulb, ChevronRight, Check, X, Mic, MicOff } from 'lucide-react';
 import MagicButton from './MagicButton';
 
 const AI_RESPONSES: Record<string, string> = {
@@ -25,7 +25,40 @@ export default function AICfoPanel() {
   const { aiMessages, sendAiMessage, aiSuggestions } = useAppStore();
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [isListening, setIsListening] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
+
+  // Initialize Speech Recognition
+  const toggleListening = () => {
+    if (isListening) {
+      setIsListening(false);
+      return;
+    }
+    
+    // @ts-ignore - SpeechRecognition is not fully typed in standard TS yet
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      const recognition = new SpeechRecognition();
+      recognition.continuous = false;
+      recognition.interimResults = true;
+      
+      recognition.onstart = () => setIsListening(true);
+      
+      recognition.onresult = (event: any) => {
+        const transcript = Array.from(event.results)
+          .map((result: any) => result[0].transcript)
+          .join('');
+        setInput(transcript);
+      };
+      
+      recognition.onerror = () => setIsListening(false);
+      recognition.onend = () => setIsListening(false);
+      
+      recognition.start();
+    } else {
+      alert("Voice recognition not supported in this browser. Please use Chrome.");
+    }
+  };
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -124,20 +157,27 @@ export default function AICfoPanel() {
       </div>
 
       {/* Input */}
-      <div className="p-4 border-t border-white/5">
-        <div className="flex items-center gap-2 glass-card rounded-xl px-3 py-2">
-          <input
-            value={input}
-            onChange={e => setInput(e.target.value)}
-            onKeyDown={e => e.key === 'Enter' && handleSend()}
-            placeholder="Ask Loma anything about your finances..."
-            className="flex-1 bg-transparent text-sm text-white placeholder-[#6b7280] outline-none"
-          />
-          <MagicButton onClick={handleSend} size="sm" disabled={!input.trim() || isTyping} icon={<Send className="w-3.5 h-3.5" />}>
-            Send
-          </MagicButton>
-        </div>
-        <div className="flex gap-2 mt-2">
+      <div className="p-4 border-t border-white/5 flex gap-2">
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+          placeholder="Ask Loma anything..."
+          className="flex-1 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00e5ff]/50 transition-colors placeholder-[#6b7280]"
+        />
+        <button 
+          onClick={toggleListening}
+          className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${isListening ? 'bg-[#00e5ff]/20 text-[#00e5ff] animate-pulse-glow shadow-[0_0_15px_#00e5ff40]' : 'bg-white/5 text-[#9ca3af] hover:bg-white/10'}`}
+        >
+          {isListening ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
+        </button>
+        <button onClick={handleSend} disabled={!input.trim() || isTyping} className="w-10 h-10 rounded-full flex items-center justify-center bg-[#00e5ff] text-black hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+          <Send className="w-4 h-4 -ml-0.5" />
+        </button>
+      </div>
+      <div className="px-4 pb-4">
+        <div className="flex gap-2">
           {['How can I save more?', 'Show my spending', 'Tax optimization'].map(q => (
             <button key={q} onClick={() => { setInput(q); }} className="text-[10px] text-[#9ca3af] hover:text-[#00e5ff] px-2 py-1 rounded-lg border border-white/5 hover:border-[#00e5ff]/20 transition-all cursor-pointer">
               {q}

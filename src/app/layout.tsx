@@ -18,6 +18,13 @@ export const metadata: Metadata = {
   title: "LomaX NEO — The Financial Singularity OS",
   description: "A living, breathing financial nervous system that anticipates your needs, learns from your behavior, and acts autonomously to grow your wealth while protecting you from risk.",
   keywords: ["fintech", "AI CFO", "digital twin", "holographic finance", "UPI", "post-quantum"],
+  manifest: "/manifest.json",
+  themeColor: "#00e5ff",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "LomaX",
+  },
 };
 
 export default function RootLayout({

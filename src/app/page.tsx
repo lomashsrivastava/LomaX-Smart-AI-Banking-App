@@ -114,12 +114,22 @@ function ObservatoryOverview() {
   );
 }
 
+import BiometricGate from '@/components/BiometricGate';
+import { useState, useEffect } from 'react';
+
 export default function HomePage() {
   const { activeView, setActiveView, fetchInitialData, isFetchingData } = useAppStore();
+  const [unlocked, setUnlocked] = useState(false);
 
   useEffect(() => {
-    fetchInitialData();
-  }, [fetchInitialData]);
+    if (unlocked) {
+      fetchInitialData();
+    }
+  }, [unlocked, fetchInitialData]);
+
+  if (!unlocked) {
+    return <BiometricGate onUnlock={() => setUnlocked(true)} />;
+  }
 
   if (isFetchingData) {
     return (
