@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useAppStore } from '@/lib/store';
 import { Activity, Play, BarChart3, TrendingUp, AlertTriangle, CheckCircle, Loader2 } from 'lucide-react';
 import MagicButton from './MagicButton';
+import TwinTopography from './TwinTopography';
 
 export default function DigitalTwinPanel() {
   const { simulationScenarios, activeSimulation, runSimulation } = useAppStore();
@@ -24,6 +25,12 @@ export default function DigitalTwinPanel() {
       </div>
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        
+        {/* Topographic 3D Wealth Map */}
+        <div className="h-64 shrink-0">
+          <TwinTopography />
+        </div>
+
         {/* Scenario Cards */}
         <div className="space-y-3">
           <h4 className="text-xs font-semibold text-[#9ca3af] uppercase tracking-wider">Scenarios</h4>
