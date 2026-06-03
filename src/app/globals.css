@@ -1,139 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap');
 @import "tailwindcss";
 
-/* ============================================
-   LomaX NEO - Premium Cinematic Design System
-   ============================================ */
-
 :root {
-  /* Colors - Highly Curated */
-  --neo-primary: #00f0ff;
-  --neo-secondary: #c900ff;
-  --neo-tertiary: #ff0055;
-  
-  --neo-success: #00ffa3;
-  --neo-error: #ff3366;
-  --neo-warning: #ffb800;
-
-  /* Deep Space Background */
-  --neo-bg-start: #030305;
-  --neo-bg-end: #0a0a0f;
-  --neo-bg: #050508;
-
-  /* Floating Glass Surfaces */
-  --neo-surface: rgba(15, 15, 20, 0.4);
-  --neo-surface-hover: rgba(25, 25, 35, 0.6);
-  --neo-glass-border: rgba(255, 255, 255, 0.08);
-
-  /* Typography */
-  --neo-text-primary: #ffffff;
-  --neo-text-secondary: #a1a1aa;
-  --neo-text-muted: #52525b;
-
-  /* Shadows & Glows */
-  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  --glow-primary: 0 0 20px rgba(0, 240, 255, 0.4);
-  --glow-secondary: 0 0 20px rgba(201, 0, 255, 0.4);
-
-  /* Radii */
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
-  --radius-pill: 9999px;
-
-  /* Transitions */
-  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  --duration-fast: 0.2s;
-}
-
-@theme inline {
-  --color-background: var(--neo-bg);
-  --color-foreground: var(--neo-text-primary);
-  --color-neo-primary: var(--neo-primary);
-  --color-neo-secondary: var(--neo-secondary);
-  --color-neo-tertiary: var(--neo-tertiary);
-  --color-neo-success: var(--neo-success);
-  --color-neo-error: var(--neo-error);
-  --color-neo-warning: var(--neo-warning);
-  --font-sans: 'Outfit', system-ui, sans-serif;
-  --font-mono: 'Space Grotesk', monospace;
+  --background: #f8fafc; /* very light gray/blue tint for background */
+  --foreground: #0f172a;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--neo-bg);
-  color: var(--neo-text-primary);
+  background: var(--background);
+  color: var(--foreground);
   font-family: 'Outfit', system-ui, sans-serif;
   min-height: 100vh;
-  overflow: hidden; /* App is full screen */
   -webkit-font-smoothing: antialiased;
 }
 
-::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(0,240,255,0.5); }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
-/* Premium Glassmorphism */
-.glass-panel {
-  background: var(--neo-surface);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--neo-glass-border);
-  box-shadow: var(--shadow-glass);
-  border-radius: var(--radius-xl);
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-lg);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
-  transition: all var(--duration-fast) var(--ease-spring);
-}
-
-.glass-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-glass), var(--glow-primary);
-}
-
-/* Animations */
-@keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(20px) scale(0.98); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 5px rgba(0,240,255,0.4); }
-  50% { box-shadow: 0 0 25px rgba(0,240,255,0.8); }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-fade-in-up { animation: fade-in-up 0.7s var(--ease-spring) forwards; }
-.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
-.animate-float { animation: float 6s ease-in-out infinite; }
-
-/* Typography Gradients */
-.text-gradient-magic {
-  background: linear-gradient(135deg, var(--neo-primary), var(--neo-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Decorative */
-.neo-grid-bg {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
+/* Global overrides for recharts to ensure tooltips look clean */
+.recharts-tooltip-cursor {
+  fill: #f1f5f9 !important;
 }

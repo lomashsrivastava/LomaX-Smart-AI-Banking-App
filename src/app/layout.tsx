@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: "#00f0ff",
+  themeColor: "#2563eb",
 };
 
 export default function RootLayout({
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${spaceGrotesk.variable} dark`}>
+    <html lang="en" className={`${outfit.variable} ${spaceGrotesk.variable}`}>
       <body className="min-h-screen antialiased">{children}</body>
     </html>
   );
