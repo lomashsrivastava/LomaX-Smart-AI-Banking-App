@@ -10,7 +10,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
+  background: #0f172a; /* Deep slate/navy for presentation canvas */
   color: var(--foreground);
   font-family: 'Outfit', system-ui, sans-serif;
   min-height: 100vh;

@@ -7,7 +7,7 @@ import {
   Briefcase, PiggyBank, DollarSign, BarChart3, Users, Building2,
   ChevronDown, UserPlus, CreditCard, Send, CheckCircle2, AlertCircle, AlertTriangle, UserCircle2, ArrowRightLeft,
   FileText, Activity, Server, Smartphone, Globe, ShieldCheck, Mail, Bell, Search, LayoutDashboard,
-  Wallet, FileDown, ShieldAlert, Sliders, ChevronRight, Check
+  Wallet, FileDown, ShieldAlert, Sliders, ChevronRight, Check, TrendingUp
 } from 'lucide-react';
 import { useState } from 'react';
 

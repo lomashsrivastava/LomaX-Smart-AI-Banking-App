@@ -1,8 +1,8 @@
 'use client';
 import dynamic from 'next/dynamic';
 
-const FutureBankDashboard = dynamic(() => import('@/components/FutureBankDashboard'), { ssr: false });
+const FutureBankEcosystem = dynamic(() => import('@/components/FutureBankEcosystem'), { ssr: false });
 
 export default function HomePage() {
-  return <FutureBankDashboard />;
+  return <FutureBankEcosystem />;
 }
