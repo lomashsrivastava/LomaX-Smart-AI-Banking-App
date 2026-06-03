@@ -94,3 +94,8 @@ STEP 20: [2026-06-03 09:56] - Phase 13: FutureBank Ecosystem Portfolio View
   Files: src/components/FutureBankEcosystem.tsx, src/app/page.tsx, src/app/globals.css
   Features: Transformed the UI into a massive ultra-wide composite portfolio graphic. Includes Left panel (Role login, Core Modules), Center Panel (Upgraded Admin Dashboard), and Right Panel (Full iPhone Mobile Mockup + App features).
   Status: DONE
+
+STEP 21: [2026-06-03 10:08] - Phase 14: Interactive Ecosystem State & Routing
+  Files: src/components/FutureBankEcosystem.tsx
+  Features: Implemented a robust state machine to make the static UI a fully functional multi-page app. Added role-switching (Admin/Customer), Core Module internal routing (built Accounts, Loans, Cards mock pages), and an interactive nested router inside the CSS iPhone mockup.
+  Status: DONE
