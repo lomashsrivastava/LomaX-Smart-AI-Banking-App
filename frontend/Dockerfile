@@ -4,6 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
+ENV DOCKER_BUILD=true
 RUN npm run build
 
 # Stage 2: Run Next.js
