@@ -1,0 +1,82 @@
+.pyramid-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.pyramid-loader {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: block;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) scale(0.18);
+}
+
+.pyramid-loader .wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.pyramid-loader .wrapper .side {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.5);
+}
+
+/* Colors adapted to the LomaX Emerald/Cyan theme */
+.pyramid-loader .wrapper .side1 {
+  transform: rotateZ(-30deg) rotateY(90deg);
+  background: conic-gradient(#10b981, #10b981, #06b6d4, #06b6d4);
+}
+
+.pyramid-loader .wrapper .side2 {
+  transform: rotateZ(30deg) rotateY(90deg);
+  background: conic-gradient(#06b6d4, #06b6d4, #34d399, #34d399);
+}
+
+.pyramid-loader .wrapper .side3 {
+  transform: rotateX(30deg);
+  background: conic-gradient(#34d399, #34d399, #22d3ee, #22d3ee);
+}
+
+.pyramid-loader .wrapper .side4 {
+  transform: rotateX(-30deg);
+  background: conic-gradient(#22d3ee, #22d3ee, #10b981, #10b981);
+}
+
+.pyramid-loader .wrapper .shadow {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(rgba(16, 185, 129, 0.8), rgba(6, 182, 212, 0.4));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateX(90deg) translateZ(-40px);
+  filter: blur(8px);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.8);
+}

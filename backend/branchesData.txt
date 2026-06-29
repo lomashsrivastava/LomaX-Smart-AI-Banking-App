@@ -1,0 +1,151 @@
+Branch Code	Branch Name	IFSC Code	MICR Code	Manager Name	State	District	City	Pincode	Phone
+BR870	Gomti Nagar	LOMX09358	526201180	Aarav Sharma	Uttar Pradesh	Lucknow	Lucknow	226010	5400150015
+BR871	Hazratganj	LOMX09359	526201181	Rohan Verma	Uttar Pradesh	Lucknow	Lucknow	226001	5400150016
+BR872	Civil Lines	LOMX09360	526201182	Aditya Singh	Uttar Pradesh	Prayagraj	Prayagraj	211001	5400150017
+BR873	Katra	LOMX09361	526201183	Ishaan Gupta	Uttar Pradesh	Prayagraj	Prayagraj	211002	5400150018
+BR874	Sigra	LOMX09362	526201184	Vivaan Mishra	Uttar Pradesh	Varanasi	Varanasi	221010	5400150019
+BR875	Lanka	LOMX09363	526201185	Arjun Tiwari	Uttar Pradesh	Varanasi	Varanasi	221005	5400150020
+BR876	Cantt Road	LOMX09364	526201186	Krish Pandey	Uttar Pradesh	Gorakhpur	Gorakhpur	273001	5400150021
+BR877	Basharatpur	LOMX09365	526201187	Mohit Yadav	Uttar Pradesh	Gorakhpur	Gorakhpur	273004	5400150022
+BR878	Rajendra Nagar	LOMX09366	526201188	Aman Srivastava	Uttar Pradesh	Bareilly	Bareilly	243001	5400150023
+BR879	Pilibhit Road	LOMX09367	526201189	Rahul Chauhan	Uttar Pradesh	Bareilly	Bareilly	243006	5400150024
+BR880	Nehru Nagar	LOMX09368	526201190	Kunal Saxena	Uttar Pradesh	Ghaziabad	Ghaziabad	201001	5400150025
+BR881	Vaishali	LOMX09369	526201191	Saurabh Agarwal	Uttar Pradesh	Ghaziabad	Ghaziabad	201010	5400150026
+BR882	Sector 18	LOMX09370	526201192	Nitin Sharma	Uttar Pradesh	Gautam Buddha Nagar	Noida	201301	5400150027
+BR883	Sector 62	LOMX09371	526201193	Deepak Verma	Uttar Pradesh	Gautam Buddha Nagar	Noida	201309	5400150028
+BR884	Alpha 1	LOMX09372	526201194	Pankaj Singh	Uttar Pradesh	Gautam Buddha Nagar	Greater Noida	201310	5400150029
+BR885	Surajkund	LOMX09373	526201195	Manish Gupta	Uttar Pradesh	Agra	Agra	282001	5400150030
+BR886	Tajganj	LOMX09374	526201196	Akash Mishra	Uttar Pradesh	Agra	Agra	282004	5400150031
+BR887	Shastri Nagar	LOMX09375	526201197	Harsh Tandon	Uttar Pradesh	Meerut	Meerut	250004	5400150032
+BR888	Ganga Nagar	LOMX09376	526201198	Abhishek Jain	Uttar Pradesh	Meerut	Meerut	250001	5400150033
+BR889	Naveen Market	LOMX09377	526201199	Ayush Srivastava	Uttar Pradesh	Kanpur Nagar	Kanpur	208001	5400150034
+BR890	Kakadeo	LOMX09378	526201200	Prateek Shukla	Uttar Pradesh	Kanpur Nagar	Kanpur	208025	5400150035
+BR891	Rani Bazar	LOMX09379	526201201	Sachin Pandey	Rajasthan	Bikaner	Bikaner	334001	5400150036
+BR892	MI Road	LOMX09380	526201202	Hemant Sharma	Rajasthan	Jaipur	Jaipur	302001	5400150037
+BR893	Malviya Nagar	LOMX09381	526201203	Yash Gupta	Rajasthan	Jaipur	Jaipur	302017	5400150038
+BR894	Sardarpura	LOMX09382	526201204	Gaurav Singh	Rajasthan	Jodhpur	Jodhpur	342003	5400150039
+BR895	Hiran Magri	LOMX09383	526201205	Mukesh Meena	Rajasthan	Udaipur	Udaipur	313001	5400150040
+BR896	Civil Lines	LOMX09384	526201206	Rajat Sharma	Madhya Pradesh	Indore	Indore	452001	5400150041
+BR897	Vijay Nagar	LOMX09385	526201207	Rohit Gupta	Madhya Pradesh	Indore	Indore	452010	5400150042
+BR898	MP Nagar	LOMX09386	526201208	Nikhil Verma	Madhya Pradesh	Bhopal	Bhopal	462011	5400150043
+BR899	Arera Colony	LOMX09387	526201209	Vikas Tiwari	Madhya Pradesh	Bhopal	Bhopal	462016	5400150044
+BR900	Sitabuldi	LOMX09388	526201210	Siddharth Jain	Maharashtra	Nagpur	Nagpur	440012	5400150045
+BR901	Dharampeth	LOMX09389	526201211	Varun Agrawal	Maharashtra	Nagpur	Nagpur	440010	5400150046
+BR902	FC Road	LOMX09390	526201212	Ankit Kulkarni	Maharashtra	Pune	Pune	411004	5400150047
+BR903	Kothrud	LOMX09391	526201213	Omkar Patil	Maharashtra	Pune	Pune	411038	5400150048
+BR904	Andheri East	LOMX09392	526201214	Ritesh Shah	Maharashtra	Mumbai Suburban	Mumbai	400069	5400150049
+BR905	Borivali West	LOMX09393	526201215	Karan Mehta	Maharashtra	Mumbai Suburban	Mumbai	400092	5400150050
+BR906	Salt Lake	LOMX09394	526201216	Soumik Roy	West Bengal	Kolkata	Kolkata	700091	5400150051
+BR907	Park Street	LOMX09395	526201217	Anirban Das	West Bengal	Kolkata	Kolkata	700016	5400150052
+BR908	Patia	LOMX09396	526201218	Debashish Sahu	Odisha	Khordha	Bhubaneswar	751024	5400150053
+BR909	Saheed Nagar	LOMX09397	526201219	Sandeep Nayak	Odisha	Khordha	Bhubaneswar	751007	5400150054
+BR910	Banjara Hills	LOMX09398	526201220	Sai Krishna	Telangana	Hyderabad	Hyderabad	500034	5400150055
+BR911	Kukatpally	LOMX09399	526201221	Naveen Reddy	Telangana	Hyderabad	Hyderabad	500072	5400150056
+BR912	Whitefield	LOMX09400	526201222	Prakash Gowda	Karnataka	Bengaluru Urban	Bengaluru	560066	5400150057
+BR913	Jayanagar	LOMX09401	526201223	Vinay Kumar	Karnataka	Bengaluru Urban	Bengaluru	560041	5400150058
+BR914	T Nagar	LOMX09402	526201224	Arvind Raj	Tamil Nadu	Chennai	Chennai	600017	5400150059
+BR915	Anna Nagar	LOMX09403	526201225	Dinesh Kumar	Tamil Nadu	Chennai	Chennai	600040	5400150060
+BR916	Vyttila	LOMX09404	526201226	Joseph Mathew	Kerala	Ernakulam	Kochi	682019	5400150061
+BR917	Kakkanad	LOMX09405	526201227	Nivin Thomas	Kerala	Ernakulam	Kochi	682030	5400150062
+BR918	Sector 17	LOMX09406	526201228	Gurpreet Singh	Chandigarh	Chandigarh	Chandigarh	160017	5400150063
+BR919	Dwarka	LOMX09407	526201229	Ashish Malhotra	Delhi	New Delhi	New Delhi	110075	5400150064
+BR920	Ashok Nagar	LOMX09408	526201230	Anuj Sharma	Uttar Pradesh	Lucknow	Lucknow	226004	5400150065
+BR921	Alambagh	LOMX09409	526201231	Rakesh Verma	Uttar Pradesh	Lucknow	Lucknow	226005	5400150066
+BR922	Indira Nagar	LOMX09410	526201232	Vivek Singh	Uttar Pradesh	Lucknow	Lucknow	226016	5400150067
+BR923	Chowk	LOMX09411	526201233	Mohan Gupta	Uttar Pradesh	Lucknow	Lucknow	226003	5400150068
+BR924	Kidwai Nagar	LOMX09412	526201234	Sumit Tiwari	Uttar Pradesh	Kanpur Nagar	Kanpur	208011	5400150069
+BR925	Barra	LOMX09413	526201235	Rajeev Pandey	Uttar Pradesh	Kanpur Nagar	Kanpur	208027	5400150070
+BR926	Govind Nagar	LOMX09414	526201236	Ashutosh Mishra	Uttar Pradesh	Kanpur Nagar	Kanpur	208006	5400150071
+BR927	Swaroop Nagar	LOMX09415	526201237	Piyush Srivastava	Uttar Pradesh	Kanpur Nagar	Kanpur	208002	5400150072
+BR928	Chetganj	LOMX09416	526201238	Deepanshu Rai	Uttar Pradesh	Varanasi	Varanasi	221001	5400150073
+BR929	Maldahiya	LOMX09417	526201239	Satyam Dubey	Uttar Pradesh	Varanasi	Varanasi	221002	5400150074
+BR930	Bhelupur	LOMX09418	526201240	Shubham Yadav	Uttar Pradesh	Varanasi	Varanasi	221010	5400150075
+BR931	Orderly Bazar	LOMX09419	526201241	Nikhil Pathak	Uttar Pradesh	Varanasi	Varanasi	221002	5400150076
+BR932	Medical Road	LOMX09420	526201242	Harshit Gupta	Uttar Pradesh	Gorakhpur	Gorakhpur	273013	5400150077
+BR933	Golghar	LOMX09421	526201243	Rajat Yadav	Uttar Pradesh	Gorakhpur	Gorakhpur	273001	5400150078
+BR934	Rustampur	LOMX09422	526201244	Akshay Singh	Uttar Pradesh	Gorakhpur	Gorakhpur	273016	5400150079
+BR935	Mohaddipur	LOMX09423	526201245	Neeraj Pandey	Uttar Pradesh	Gorakhpur	Gorakhpur	273008	5400150080
+BR936	Rajpur Road	LOMX09424	526201246	Rohit Nautiyal	Uttarakhand	Dehradun	Dehradun	248001	5400150081
+BR937	Clement Town	LOMX09425	526201247	Vivek Rawat	Uttarakhand	Dehradun	Dehradun	248002	5400150082
+BR938	Har Ki Pauri	LOMX09426	526201248	Suresh Bisht	Uttarakhand	Haridwar	Haridwar	249401	5400150083
+BR939	Ranipur More	LOMX09427	526201249	Dheeraj Negi	Uttarakhand	Haridwar	Haridwar	249407	5400150084
+BR940	Sector 14	LOMX09428	526201250	Manpreet Singh	Haryana	Gurugram	Gurugram	122001	5400150085
+BR941	DLF Phase 3	LOMX09429	526201251	Jatin Arora	Haryana	Gurugram	Gurugram	122002	5400150086
+BR942	Sector 15	LOMX09430	526201252	Keshav Malik	Haryana	Faridabad	Faridabad	121007	5400150087
+BR943	NIT	LOMX09431	526201253	Tarun Bhatia	Haryana	Faridabad	Faridabad	121001	5400150088
+BR944	Model Town	LOMX09432	526201254	Vikas Chawla	Punjab	Ludhiana	Ludhiana	141002	5400150089
+BR945	Dugri	LOMX09433	526201255	Hardeep Singh	Punjab	Ludhiana	Ludhiana	141013	5400150090
+BR946	Ranjit Avenue	LOMX09434	526201256	Navdeep Gill	Punjab	Amritsar	Amritsar	143001	5400150091
+BR947	Hall Bazar	LOMX09435	526201257	Gurvinder Singh	Punjab	Amritsar	Amritsar	143006	5400150092
+BR948	Pal Road	LOMX09436	526201258	Chetan Joshi	Rajasthan	Jodhpur	Jodhpur	342008	5400150093
+BR949	Paota	LOMX09437	526201259	Rahul Rathore	Rajasthan	Jodhpur	Jodhpur	342006	5400150094
+BR950	C Scheme	LOMX09438	526201260	Lokesh Sharma	Rajasthan	Jaipur	Jaipur	302005	5400150095
+BR951	Mansarovar	LOMX09439	526201261	Yogesh Saini	Rajasthan	Jaipur	Jaipur	302020	5400150096
+BR952	Jagatpura	LOMX09440	526201262	Amit Meena	Rajasthan	Jaipur	Jaipur	302017	5400150097
+BR953	Shobhagpura	LOMX09441	526201263	Ritesh Jain	Rajasthan	Udaipur	Udaipur	313001	5400150098
+BR954	Fatehpura	LOMX09442	526201264	Pawan Solanki	Rajasthan	Udaipur	Udaipur	313004	5400150099
+BR955	New Palasia	LOMX09443	526201265	Gaurav Agrawal	Madhya Pradesh	Indore	Indore	452001	5400150100
+BR956	Bhawarkuan	LOMX09444	526201266	Nitin Dubey	Madhya Pradesh	Indore	Indore	452010	5400150101
+BR957	Sudama Nagar	LOMX09445	526201267	Ajay Tiwari	Madhya Pradesh	Indore	Indore	452009	5400150102
+BR958	Kolar Road	LOMX09446	526201268	Kapil Sharma	Madhya Pradesh	Bhopal	Bhopal	462042	5400150103
+BR959	Shahpura	LOMX09447	526201269	Hemant Jain	Madhya Pradesh	Bhopal	Bhopal	462016	5400150104
+BR960	TT Nagar	LOMX09448	526201270	Vimal Verma	Madhya Pradesh	Bhopal	Bhopal	462003	5400150105
+BR961	Wardha Road	LOMX09449	526201271	Kunal Deshmukh	Maharashtra	Nagpur	Nagpur	440015	5400150106
+BR962	Manish Nagar	LOMX09450	526201272	Nilesh Patil	Maharashtra	Nagpur	Nagpur	440027	5400150107
+BR963	Hadapsar	LOMX09451	526201273	Akshay Jadhav	Maharashtra	Pune	Pune	411028	5400150108
+BR964	Baner	LOMX09452	526201274	Shreyas Kulkarni	Maharashtra	Pune	Pune	411045	5400150109
+BR965	Wakad	LOMX09453	526201275	Pravin Patil	Maharashtra	Pune	Pune	411057	5400150110
+BR966	Thane West	LOMX09454	526201276	Raj Mehta	Maharashtra	Thane	Thane	400601	5400150111
+BR967	Dombivli East	LOMX09455	526201277	Harsh Shah	Maharashtra	Thane	Dombivli	421201	5400150112
+BR968	Vashi	LOMX09456	526201278	Tejas Naik	Maharashtra	Thane	Navi Mumbai	400703	5400150113
+BR969	Nerul	LOMX09457	526201279	Omkar More	Maharashtra	Thane	Navi Mumbai	400706	5400150114
+BR970	Gariahat	LOMX09458	526201280	Sayan Roy	West Bengal	Kolkata	Kolkata	700019	5400150115
+BR971	Dum Dum	LOMX09459	526201281	Abhijit Das	West Bengal	Kolkata	Kolkata	700028	5400150116
+BR972	Behala	LOMX09460	526201282	Subhojit Sen	West Bengal	Kolkata	Kolkata	700034	5400150117
+BR973	New Town	LOMX09461	526201283	Arnab Ghosh	West Bengal	Kolkata	Kolkata	700156	5400150118
+BR974	Chandrasekharpur	LOMX09462	526201284	Pratap Sahoo	Odisha	Khordha	Bhubaneswar	751016	5400150119
+BR975	Rasulgarh	LOMX09463	526201285	Biswajit Mohanty	Odisha	Khordha	Bhubaneswar	751010	5400150120
+BR976	Cuttack Road	LOMX09464	526201286	Ranjan Das	Odisha	Khordha	Bhubaneswar	751006	5400150121
+BR977	Berhampur Main	LOMX09465	526201287	Debasis Panda	Odisha	Ganjam	Berhampur	760001	5400150122
+BR978	Ameerpet	LOMX09466	526201288	Rakesh Reddy	Telangana	Hyderabad	Hyderabad	500016	5400150123
+BR979	Madhapur	LOMX09467	526201289	Sandeep Rao	Telangana	Hyderabad	Hyderabad	500081	5400150124
+BR980	Gachibowli	LOMX09468	526201290	Kiran Reddy	Telangana	Hyderabad	Hyderabad	500032	5400150125
+BR981	Begumpet	LOMX09469	526201291	Mahesh Kumar	Telangana	Hyderabad	Hyderabad	500016	5400150126
+BR982	Electronic City	LOMX09470	526201292	Darshan Gowda	Karnataka	Bengaluru Urban	Bengaluru	560100	5400150127
+BR983	Koramangala	LOMX09471	526201293	Naveen Shetty	Karnataka	Bengaluru Urban	Bengaluru	560034	5400150128
+BR984	Yelahanka	LOMX09472	526201294	Vinod Rao	Karnataka	Bengaluru Urban	Bengaluru	560064	5400150129
+BR985	Hebbal	LOMX09473	526201295	Sunil Kumar	Karnataka	Bengaluru Urban	Bengaluru	560024	5400150130
+BR986	RS Puram	LOMX09474	526201296	Saravanan K	Tamil Nadu	Coimbatore	Coimbatore	641002	5400150131
+BR987	Gandhipuram	LOMX09475	526201297	Prakash V	Tamil Nadu	Coimbatore	Coimbatore	641012	5400150132
+BR988	Peelamedu	LOMX09476	526201298	Dinesh R	Tamil Nadu	Coimbatore	Coimbatore	641004	5400150133
+BR989	Velachery	LOMX09477	526201299	Arul Raj	Tamil Nadu	Chennai	Chennai	600042	5400150134
+BR990	Tambaram	LOMX09478	526201300	Karthik S	Tamil Nadu	Chennai	Chennai	600045	5400150135
+BR991	Adyar	LOMX09479	526201301	Hari Prasad	Tamil Nadu	Chennai	Chennai	600020	5400150136
+BR992	Aluva	LOMX09480	526201302	Nithin Mathew	Kerala	Ernakulam	Kochi	683101	5400150137
+BR993	Edappally	LOMX09481	526201303	Jomon George	Kerala	Ernakulam	Kochi	682024	5400150138
+BR994	Tripunithura	LOMX09482	526201304	Alan Joseph	Kerala	Ernakulam	Kochi	682301	5400150139
+BR995	Kowdiar	LOMX09483	526201305	Rahul Nair	Kerala	Thiruvananthapuram	Thiruvananthapuram	695003	5400150140
+BR996	Pattom	LOMX09484	526201306	Vishnu Pillai	Kerala	Thiruvananthapuram	Thiruvananthapuram	695004	5400150141
+BR997	Sector 22	LOMX09485	526201307	Harpreet Singh	Chandigarh	Chandigarh	Chandigarh	160022	5400150142
+BR998	Sector 35	LOMX09486	526201308	Karanjit Singh	Chandigarh	Chandigarh	Chandigarh	160035	5400150143
+BR999	Janakpuri	LOMX09487	526201309	Ashok Khanna	Delhi	West Delhi	New Delhi	110058	5400150144
+BR1000	Rohini	LOMX09488	526201310	Deepak Malhotra	Delhi	North West Delhi	New Delhi	110085	5400150145
+BR1001	Pitampura	LOMX09489	526201311	Vikas Arora	Delhi	North West Delhi	New Delhi	110034	5400150146
+BR1002	Laxmi Nagar	LOMX09490	526201312	Pawan Gupta	Delhi	East Delhi	New Delhi	110092	5400150147
+BR1003	Saket	LOMX09491	526201313	Mohit Khurana	Delhi	South Delhi	New Delhi	110017	5400150148
+BR1004	Karol Bagh	LOMX09492	526201314	Anil Bansal	Delhi	Central Delhi	New Delhi	110005	5400150149
+BR1005	Rajouri Garden	LOMX09493	526201315	Saurabh Chopra	Delhi	West Delhi	New Delhi	110027	5400150150
+BR1006	Connaught Place	LOMX09494	526201316	Gagan Anand	Delhi	New Delhi	New Delhi	110001	5400150151
+BR1007	Preet Vihar	LOMX09495	526201317	Mukul Jain	Delhi	East Delhi	New Delhi	110092	5400150152
+BR1008	Vikaspuri	LOMX09496	526201318	Rohan Batra	Delhi	West Delhi	New Delhi	110018	5400150153
+BR1009	Ashram Road	LOMX09497	526201319	Ketan Patel	Gujarat	Ahmedabad	Ahmedabad	380009	5400150154
+BR1010	Navrangpura	LOMX09498	526201320	Dhruv Shah	Gujarat	Ahmedabad	Ahmedabad	380009	5400150155
+BR1011	Satellite	LOMX09499	526201321	Meet Patel	Gujarat	Ahmedabad	Ahmedabad	380015	5400150156
+BR1012	Maninagar	LOMX09500	526201322	Hitesh Prajapati	Gujarat	Ahmedabad	Ahmedabad	380008	5400150157
+BR1013	Alkapuri	LOMX09501	526201323	Yash Barot	Gujarat	Vadodara	Vadodara	390007	5400150158
+BR1014	Karelibaug	LOMX09502	526201324	Nirav Patel	Gujarat	Vadodara	Vadodara	390018	5400150159
+BR1015	Adajan	LOMX09503	526201325	Jay Mehta	Gujarat	Surat	Surat	395009	5400150160
+BR1016	Vesu	LOMX09504	526201326	Parth Desai	Gujarat	Surat	Surat	395007	5400150161
+BR1017	City Light	LOMX09505	526201327	Harsh Patel	Gujarat	Surat	Surat	395007	5400150162
+BR1018	Ring Road	LOMX09506	526201328	Krunal Shah	Gujarat	Surat	Surat	395002	5400150163
+BR1019	Jubilee Hills	LOMX09507	526201329	Rajesh Reddy	Telangana	Hyderabad	Hyderabad	500033	5400150164

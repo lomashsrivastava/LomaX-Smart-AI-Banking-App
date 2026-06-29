@@ -1,0 +1,1 @@
+export default function Page() { return <div className='p-8'><h1 className='text-2xl font-bold'>Under Construction</h1><p className='text-muted-foreground mt-2'>This admin module is currently being built.</p></div>; }

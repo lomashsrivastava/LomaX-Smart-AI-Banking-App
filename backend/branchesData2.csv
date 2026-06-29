@@ -1,0 +1,581 @@
+BranchCode,BranchName,IFSCCode,MICRCode,ManagerName,State,District,City,Pincode,Phone
+BR1020,River View,LOMX09508,526201330,Aarav Sharma,Uttar Pradesh,Ballia,Ballia,277001,5400150165
+BR1021,Station Road,LOMX09509,526201331,Rohan Verma,Uttar Pradesh,Deoria,Deoria,274001,5400150166
+BR1022,Green Park,LOMX09510,526201332,Kabir Singh,Uttar Pradesh,Kushinagar,Padrauna,274304,5400150167
+BR1023,Market Chowk,LOMX09511,526201333,Aditya Gupta,Uttar Pradesh,Maharajganj,Maharajganj,273303,5400150168
+BR1024,Civil Lines,LOMX09512,526201334,Vivaan Mishra,Uttar Pradesh,Basti,Basti,272001,5400150169
+BR1025,Main Road,LOMX09513,526201335,Arjun Tiwari,Uttar Pradesh,Sant Kabir Nagar,Khalilabad,272175,5400150170
+BR1026,Railway Colony,LOMX09514,526201336,Krish Pandey,Uttar Pradesh,Siddharthnagar,Naugarh,272207,5400150171
+BR1027,Industrial Area,LOMX09515,526201337,Mohit Yadav,Uttar Pradesh,Gonda,Gonda,271001,5400150172
+BR1028,Shiv Nagar,LOMX09516,526201338,Aman Srivastava,Uttar Pradesh,Bahraich,Bahraich,271801,5400150173
+BR1029,Lotus Enclave,LOMX09517,526201339,Rahul Chauhan,Uttar Pradesh,Shrawasti,Bhinga,271831,5400150174
+BR1030,Royal Avenue,LOMX09518,526201340,Kunal Saxena,Uttar Pradesh,Balrampur,Balrampur,271201,5400150175
+BR1031,Crystal Plaza,LOMX09519,526201341,Saurabh Agarwal,Uttar Pradesh,Barabanki,Barabanki,225001,5400150176
+BR1032,Metro Point,LOMX09520,526201342,Nitin Sharma,Uttar Pradesh,Sultanpur,Sultanpur,228001,5400150177
+BR1033,Prime Square,LOMX09521,526201343,Deepak Verma,Uttar Pradesh,Amethi,Gauriganj,227409,5400150178
+BR1034,Elite Market,LOMX09522,526201344,Pankaj Singh,Uttar Pradesh,Raebareli,Raebareli,229001,5400150179
+BR1035,Sunrise Nagar,LOMX09523,526201345,Manish Gupta,Uttar Pradesh,Unnao,Unnao,209801,5400150180
+BR1036,Harmony Vihar,LOMX09524,526201346,Akash Mishra,Uttar Pradesh,Hardoi,Hardoi,241001,5400150181
+BR1037,Galaxy Road,LOMX09525,526201347,Harsh Tandon,Uttar Pradesh,Sitapur,Sitapur,261001,5400150182
+BR1038,Velocity Park,LOMX09526,526201348,Abhishek Jain,Uttar Pradesh,Lakhimpur Kheri,Lakhimpur,262701,5400150183
+BR1039,Summit Colony,LOMX09527,526201349,Ayush Srivastava,Uttar Pradesh,Shahjahanpur,Shahjahanpur,242001,5400150184
+BR1040,Central Plaza,LOMX09528,526201350,Prateek Shukla,Uttar Pradesh,Pilibhit,Pilibhit,262001,5400150185
+BR1041,Crown Avenue,LOMX09529,526201351,Sachin Pandey,Uttar Pradesh,Badaun,Badaun,243601,5400150186
+BR1042,Orbit Tower,LOMX09530,526201352,Hemant Sharma,Uttar Pradesh,Sambhal,Sambhal,244302,5400150187
+BR1043,Zenith Road,LOMX09531,526201353,Yash Gupta,Uttar Pradesh,Amroha,Amroha,244221,5400150188
+BR1044,Classic Nagar,LOMX09532,526201354,Gaurav Singh,Uttar Pradesh,Moradabad,Moradabad,244001,5400150189
+BR1045,Prestige Market,LOMX09533,526201355,Mukesh Meena,Uttar Pradesh,Rampur,Rampur,244901,5400150190
+BR1046,Silver Heights,LOMX09534,526201356,Rajat Sharma,Uttar Pradesh,Bijnor,Bijnor,246701,5400150191
+BR1047,Golden Square,LOMX09535,526201357,Rohit Gupta,Uttar Pradesh,Muzaffarnagar,Muzaffarnagar,251001,5400150192
+BR1048,Capital Road,LOMX09536,526201358,Nikhil Verma,Uttar Pradesh,Saharanpur,Saharanpur,247001,5400150193
+BR1049,Riverfront,LOMX09537,526201359,Vikas Tiwari,Uttar Pradesh,Shamli,Shamli,247776,5400150194
+BR1050,Garden Colony,LOMX09538,526201360,Siddharth Jain,Uttar Pradesh,Baghpat,Baghpat,250609,5400150195
+BR1051,Heritage Chowk,LOMX09539,526201361,Ankit Kulkarni,Uttar Pradesh,Hapur,Hapur,245101,5400150196
+BR1052,Park View,LOMX09540,526201362,Omkar Patil,Uttar Pradesh,Bulandshahr,Bulandshahr,203001,5400150197
+BR1053,Delta Plaza,LOMX09541,526201363,Ritesh Shah,Uttar Pradesh,Aligarh,Aligarh,202001,5400150198
+BR1054,Alpha Nagar,LOMX09542,526201364,Karan Mehta,Uttar Pradesh,Hathras,Hathras,204101,5400150199
+BR1055,Beta Market,LOMX09543,526201365,Soumik Roy,Uttar Pradesh,Kasganj,Kasganj,207123,5400150200
+BR1056,Gamma Road,LOMX09544,526201366,Anirban Das,Uttar Pradesh,Etah,Etah,207001,5400150201
+BR1057,Lotus Garden,LOMX09545,526201367,Debashish Sahu,Uttar Pradesh,Mainpuri,Mainpuri,205001,5400150202
+BR1058,Anand Nagar,LOMX09546,526201368,Sandeep Nayak,Uttar Pradesh,Farrukhabad,Farrukhabad,209625,5400150203
+BR1059,Vijay Chowk,LOMX09547,526201369,Sai Krishna,Uttar Pradesh,Etawah,Etawah,206001,5400150204
+BR1060,Kalyan Vihar,LOMX09548,526201370,Naveen Reddy,Uttar Pradesh,Auraiya,Auraiya,206122,5400150205
+BR1061,Saraswati Colony,LOMX09549,526201371,Prakash Gowda,Uttar Pradesh,Jalaun,Orai,285001,5400150206
+BR1062,Shiv Park,LOMX09550,526201372,Vinay Kumar,Uttar Pradesh,Hamirpur,Hamirpur,210301,5400150207
+BR1063,Ashok Avenue,LOMX09551,526201373,Arvind Raj,Uttar Pradesh,Mahoba,Mahoba,210427,5400150208
+BR1064,Rajendra Nagar,LOMX09552,526201374,Dinesh Kumar,Uttar Pradesh,Banda,Banda,210001,5400150209
+BR1065,Metro Road,LOMX09553,526201375,Joseph Mathew,Uttar Pradesh,Chitrakoot,Karwi,210205,5400150210
+BR1066,Crystal Tower,LOMX09554,526201376,Nivin Thomas,Uttar Pradesh,Fatehpur,Fatehpur,212601,5400150211
+BR1067,Prime Enclave,LOMX09555,526201377,Gurpreet Singh,Uttar Pradesh,Kaushambi,Manjhanpur,212207,5400150212
+BR1068,Elite Point,LOMX09556,526201378,Ashish Malhotra,Uttar Pradesh,Pratapgarh,Pratapgarh,230001,5400150213
+BR1069,Central Market,LOMX09557,526201379,Dhruv Patel,Uttar Pradesh,Jaunpur,Jaunpur,222001,5400150214
+BR1070,Royal Park,LOMX09558,526201380,Nirav Shah,Uttar Pradesh,Ghazipur,Ghazipur,233001,5400150215
+BR1071,Orbit Plaza,LOMX09559,526201381,Jay Patel,Uttar Pradesh,Mau,Mau,275101,5400150216
+BR1072,Zenith Avenue,LOMX09560,526201382,Parth Desai,Uttar Pradesh,Azamgarh,Azamgarh,276001,5400150217
+BR1073,Classic Road,LOMX09561,526201383,Harsh Patel,Uttar Pradesh,Ambedkar Nagar,Akbarpur,224122,5400150218
+BR1074,Prestige Colony,LOMX09562,526201384,Krunal Shah,Uttar Pradesh,Sonbhadra,Robertsganj,231216,5400150219
+BR1075,Crown Square,LOMX09563,526201385,Rajesh Reddy,Uttar Pradesh,Mirzapur,Mirzapur,231001,5400150220
+BR1076,Green Avenue,LOMX09564,526201386,Rakesh Sharma,Bihar,Patna,Patna,800001,5400150221
+BR1077,River Park,LOMX09565,526201387,Vivek Kumar,Bihar,Gaya,Gaya,823001,5400150222
+BR1078,Lotus Tower,LOMX09566,526201388,Abhishek Singh,Bihar,Muzaffarpur,Muzaffarpur,842001,5400150223
+BR1079,Metro Square,LOMX09567,526201389,Harsh Gupta,Bihar,Bhagalpur,Bhagalpur,812001,5400150224
+BR1080,Capital Plaza,LOMX09568,526201390,Ankit Verma,Bihar,Darbhanga,Darbhanga,846004,5400150225
+BR1081,Silver Market,LOMX09569,526201391,Ayush Sharma,Bihar,Purnia,Purnia,854301,5400150226
+BR1082,Golden Park,LOMX09570,526201392,Rohit Mishra,Bihar,Arrah,Arrah,802301,5400150227
+BR1083,Industrial Road,LOMX09571,526201393,Nikhil Pandey,Bihar,Siwan,Siwan,841226,5400150228
+BR1084,Airport View,LOMX09572,526201394,Manish Gupta,Bihar,Chapra,Chapra,841301,5400150229
+BR1085,Station Plaza,LOMX09573,526201395,Saurabh Singh,Bihar,Bettiah,Bettiah,845438,5400150230
+BR1086,Galaxy Point,LOMX09574,526201396,Pankaj Kumar,Bihar,Motihari,Motihari,845401,5400150231
+BR1087,Harmony Road,LOMX09575,526201397,Akash Tiwari,Bihar,Sitamarhi,Sitamarhi,843302,5400150232
+BR1088,Velocity Nagar,LOMX09576,526201398,Deepak Sharma,Bihar,Samastipur,Samastipur,848101,5400150233
+BR1089,Summit Colony,LOMX09577,526201399,Rajat Verma,Bihar,Begusarai,Begusarai,851101,5400150234
+BR1090,Riverfront Avenue,LOMX09578,526201400,Varun Gupta,Bihar,Munger,Munger,811201,5400150235
+BR1091,Prime Heights,LOMX09579,526201401,Amit Singh,Bihar,Nalanda,Bihar Sharif,803101,5400150236
+BR1092,Metro Heights,LOMX09580,526201402,Karan Sharma,Bihar,Sasaram,Sasaram,821115,5400150237
+BR1093,Classic Tower,LOMX09581,526201403,Harshit Gupta,Bihar,Katihar,Katihar,854105,5400150238
+BR1094,Elite Avenue,LOMX09582,526201404,Prashant Kumar,Bihar,Kishanganj,Kishanganj,855107,5400150239
+BR1095,Crystal Road,LOMX09583,526201405,Anurag Singh,Bihar,Madhubani,Madhubani,847211,5400150240
+BR1096,Royal Colony,LOMX09584,526201406,Yogesh Sharma,Bihar,Supaul,Supaul,852131,5400150241
+BR1097,Central Point,LOMX09585,526201407,Kapil Verma,Bihar,Saharsa,Saharsa,852201,5400150242
+BR1098,Prestige Market,LOMX09586,526201408,Hemant Jain,Bihar,Khagaria,Khagaria,851204,5400150243
+BR1099,Orbit Square,LOMX09587,526201409,Vimal Kumar,Bihar,Jamui,Jamui,811307,5400150244
+BR1100,Lake View,LOMX09588,526201410,Aarav Kumar,Bihar,Araria,Araria,854311,5400150245
+BR1101,Shiv Enclave,LOMX09589,526201411,Rohan Singh,Bihar,Banka,Banka,813102,5400150246
+BR1102,Royal Garden,LOMX09590,526201412,Kabir Sharma,Bihar,Buxar,Buxar,802101,5400150247
+BR1103,Metro Point,LOMX09591,526201413,Aditya Gupta,Bihar,Gopalganj,Gopalganj,841428,5400150248
+BR1104,Central Plaza,LOMX09592,526201414,Vivaan Mishra,Bihar,Jehanabad,Jehanabad,804408,5400150249
+BR1105,Silver Heights,LOMX09593,526201415,Arjun Tiwari,Bihar,Lakhisarai,Lakhisarai,811311,5400150250
+BR1106,Green Valley,LOMX09594,526201416,Krish Pandey,Bihar,Madhepura,Madhepura,852113,5400150251
+BR1107,Prime Avenue,LOMX09595,526201417,Mohit Yadav,Bihar,Nawada,Nawada,805110,5400150252
+BR1108,Orbit Tower,LOMX09596,526201418,Aman Srivastava,Bihar,Sheikhpura,Sheikhpura,811105,5400150253
+BR1109,Elite Square,LOMX09597,526201419,Rahul Chauhan,Bihar,Vaishali,Hajipur,844101,5400150254
+BR1110,Crystal Market,LOMX09598,526201420,Kunal Saxena,Jharkhand,Ranchi,Ranchi,834001,5400150255
+BR1111,Riverfront Road,LOMX09599,526201421,Saurabh Agarwal,Jharkhand,Jamshedpur,Jamshedpur,831001,5400150256
+BR1112,Lotus Nagar,LOMX09600,526201422,Nitin Sharma,Jharkhand,Dhanbad,Dhanbad,826001,5400150257
+BR1113,Galaxy Chowk,LOMX09601,526201423,Deepak Verma,Jharkhand,Bokaro,Bokaro,827001,5400150258
+BR1114,Prestige Avenue,LOMX09602,526201424,Pankaj Singh,Jharkhand,Deoghar,Deoghar,814112,5400150259
+BR1115,Harmony Plaza,LOMX09603,526201425,Manish Gupta,Jharkhand,Hazaribagh,Hazaribagh,825301,5400150260
+BR1116,Capital Market,LOMX09604,526201426,Akash Mishra,Jharkhand,Giridih,Giridih,815301,5400150261
+BR1117,Classic Road,LOMX09605,526201427,Harsh Tandon,Jharkhand,Palamu,Daltonganj,822101,5400150262
+BR1118,Crown Enclave,LOMX09606,526201428,Abhishek Jain,Jharkhand,Ramgarh,Ramgarh,829122,5400150263
+BR1119,Velocity Point,LOMX09607,526201429,Ayush Srivastava,Jharkhand,Chatra,Chatra,825401,5400150264
+BR1120,Sunrise Colony,LOMX09608,526201430,Prateek Shukla,Chhattisgarh,Raipur,Raipur,492001,5400150265
+BR1121,Green Park,LOMX09609,526201431,Sachin Pandey,Chhattisgarh,Bilaspur,Bilaspur,495001,5400150266
+BR1122,Royal Square,LOMX09610,526201432,Hemant Sharma,Chhattisgarh,Durg,Durg,491001,5400150267
+BR1123,Crystal Heights,LOMX09611,526201433,Yash Gupta,Chhattisgarh,Rajnandgaon,Rajnandgaon,491441,5400150268
+BR1124,Metro Avenue,LOMX09612,526201434,Gaurav Singh,Chhattisgarh,Korba,Korba,495677,5400150269
+BR1125,Prime Colony,LOMX09613,526201435,Mukesh Meena,Chhattisgarh,Jagdalpur,Jagdalpur,494001,5400150270
+BR1126,Central Road,LOMX09614,526201436,Rajat Sharma,Chhattisgarh,Raigarh,Raigarh,496001,5400150271
+BR1127,Orbit Plaza,LOMX09615,526201437,Rohit Gupta,Chhattisgarh,Ambikapur,Ambikapur,497001,5400150272
+BR1128,Elite Tower,LOMX09616,526201438,Nikhil Verma,Chhattisgarh,Kanker,Kanker,494334,5400150273
+BR1129,Golden Market,LOMX09617,526201439,Vikas Tiwari,Chhattisgarh,Kawardha,Kawardha,491995,5400150274
+BR1130,Lotus Avenue,LOMX09618,526201440,Siddharth Jain,Madhya Pradesh,Gwalior,Gwalior,474001,5400150275
+BR1131,Shiv Plaza,LOMX09619,526201441,Ankit Kulkarni,Madhya Pradesh,Jabalpur,Jabalpur,482001,5400150276
+BR1132,River View,LOMX09620,526201442,Omkar Patil,Madhya Pradesh,Ujjain,Ujjain,456001,5400150277
+BR1133,Metro Garden,LOMX09621,526201443,Ritesh Shah,Madhya Pradesh,Sagar,Sagar,470001,5400150278
+BR1134,Prime Road,LOMX09622,526201444,Karan Mehta,Madhya Pradesh,Satna,Satna,485001,5400150279
+BR1135,Royal Colony,LOMX09623,526201445,Soumik Roy,Madhya Pradesh,Rewa,Rewa,486001,5400150280
+BR1136,Green Valley,LOMX09624,526201446,Anirban Das,Madhya Pradesh,Chhindwara,Chhindwara,480001,5400150281
+BR1137,Crystal Square,LOMX09625,526201447,Debashish Sahu,Madhya Pradesh,Damoh,Damoh,470661,5400150282
+BR1138,Capital Point,LOMX09626,526201448,Sandeep Nayak,Madhya Pradesh,Dewas,Dewas,455001,5400150283
+BR1139,Harmony Park,LOMX09627,526201449,Sai Krishna,Madhya Pradesh,Katni,Katni,483501,5400150284
+BR1140,Galaxy Heights,LOMX09628,526201450,Naveen Reddy,Maharashtra,Aurangabad,Aurangabad,431001,5400150285
+BR1141,Silver Plaza,LOMX09629,526201451,Prakash Gowda,Maharashtra,Nashik,Nashik,422001,5400150286
+BR1142,Elite Avenue,LOMX09630,526201452,Vinay Kumar,Maharashtra,Kolhapur,Kolhapur,416003,5400150287
+BR1143,Royal Market,LOMX09631,526201453,Arvind Raj,Maharashtra,Solapur,Solapur,413001,5400150288
+BR1144,Metro Road,LOMX09632,526201454,Dinesh Kumar,Maharashtra,Sangli,Sangli,416416,5400150289
+BR1145,Lotus Garden,LOMX09633,526201455,Joseph Mathew,Maharashtra,Ahmednagar,Ahmednagar,414001,5400150290
+BR1146,Prime Tower,LOMX09634,526201456,Nivin Thomas,Maharashtra,Jalgaon,Jalgaon,425001,5400150291
+BR1147,Crystal Point,LOMX09635,526201457,Gurpreet Singh,Maharashtra,Akola,Akola,444001,5400150292
+BR1148,Central Square,LOMX09636,526201458,Ashish Malhotra,Maharashtra,Amravati,Amravati,444601,5400150293
+BR1149,Orbit Colony,LOMX09637,526201459,Dhruv Patel,Maharashtra,Latur,Latur,413512,5400150294
+BR1150,Prestige Road,LOMX09638,526201460,Nirav Shah,Gujarat,Rajkot,Rajkot,360001,5400150295
+BR1151,Crown Plaza,LOMX09639,526201461,Jay Patel,Gujarat,Bhavnagar,Bhavnagar,364001,5400150296
+BR1152,Velocity Market,LOMX09640,526201462,Parth Desai,Gujarat,Jamnagar,Jamnagar,361001,5400150297
+BR1153,Galaxy Road,LOMX09641,526201463,Harsh Patel,Gujarat,Gandhinagar,Gandhinagar,382010,5400150298
+BR1154,Elite Heights,LOMX09642,526201464,Krunal Shah,Gujarat,Anand,Anand,388001,5400150299
+BR1155,Riverfront Plaza,LOMX09643,526201465,Rajesh Reddy,Gujarat,Mehsana,Mehsana,384001,5400150300
+BR1156,Prime Avenue,LOMX09644,526201466,Rakesh Sharma,Gujarat,Patan,Patan,384265,5400150301
+BR1157,Lotus Point,LOMX09645,526201467,Vivek Kumar,Gujarat,Junagadh,Junagadh,362001,5400150302
+BR1158,Central Colony,LOMX09646,526201468,Abhishek Singh,Gujarat,Porbandar,Porbandar,360575,5400150303
+BR1159,Royal Park,LOMX09647,526201469,Harsh Gupta,Gujarat,Valsad,Valsad,396001,5400150304
+BR1160,Crystal Road,LOMX09648,526201470,Ankit Verma,Rajasthan,Ajmer,Ajmer,305001,5400150305
+BR1161,Metro Heights,LOMX09649,526201471,Ayush Sharma,Rajasthan,Kota,Kota,324001,5400150306
+BR1162,Prime Square,LOMX09650,526201472,Rohit Mishra,Rajasthan,Alwar,Alwar,301001,5400150307
+BR1163,Silver Colony,LOMX09651,526201473,Nikhil Pandey,Rajasthan,Bharatpur,Bharatpur,321001,5400150308
+BR1164,Elite Market,LOMX09652,526201474,Manish Gupta,Rajasthan,Bhilwara,Bhilwara,311001,5400150309
+BR1165,Orbit Avenue,LOMX09653,526201475,Saurabh Singh,Rajasthan,Sikar,Sikar,332001,5400150310
+BR1166,Crown Road,LOMX09654,526201476,Pankaj Kumar,Rajasthan,Pali,Pali,306401,5400150311
+BR1167,Galaxy Plaza,LOMX09655,526201477,Akash Tiwari,Rajasthan,Churu,Churu,331001,5400150312
+BR1168,Central Tower,LOMX09656,526201478,Deepak Sharma,Rajasthan,Barmer,Barmer,344001,5400150313
+BR1169,River View,LOMX09657,526201479,Rajat Verma,Rajasthan,Nagaur,Nagaur,341001,5400150314
+BR1170,Prestige Heights,LOMX09658,526201480,Varun Gupta,Punjab,Patiala,Patiala,147001,5400150315
+BR1171,Lotus Market,LOMX09659,526201481,Amit Singh,Punjab,Jalandhar,Jalandhar,144001,5400150316
+BR1172,Metro Avenue,LOMX09660,526201482,Karan Sharma,Punjab,Bathinda,Bathinda,151001,5400150317
+BR1173,Prime Colony,LOMX09661,526201483,Harshit Gupta,Punjab,Moga,Moga,142001,5400150318
+BR1174,Silver Plaza,LOMX09662,526201484,Prashant Kumar,Punjab,Firozpur,Firozpur,152002,5400150319
+BR1175,Royal Point,LOMX09663,526201485,Anurag Singh,Punjab,Hoshiarpur,Hoshiarpur,146001,5400150320
+BR1176,Elite Road,LOMX09664,526201486,Yogesh Sharma,Punjab,Kapurthala,Kapurthala,144601,5400150321
+BR1177,Central Park,LOMX09665,526201487,Kapil Verma,Punjab,Sangrur,Sangrur,148001,5400150322
+BR1178,Galaxy Square,LOMX09666,526201488,Hemant Jain,Punjab,Barnala,Barnala,148101,5400150323
+BR1179,Crystal Tower,LOMX09667,526201489,Vimal Kumar,Punjab,Fazilka,Fazilka,152123,5400150324
+BR1180,Riverfront Avenue,LOMX09668,526201490,Aarav Kumar,Haryana,Hisar,Hisar,125001,5400150325
+BR1181,Lotus Heights,LOMX09669,526201491,Rohan Singh,Haryana,Rohtak,Rohtak,124001,5400150326
+BR1182,Metro Road,LOMX09670,526201492,Kabir Sharma,Haryana,Panipat,Panipat,132103,5400150327
+BR1183,Prime Plaza,LOMX09671,526201493,Aditya Gupta,Haryana,Karnal,Karnal,132001,5400150328
+BR1184,Silver Market,LOMX09672,526201494,Vivaan Mishra,Haryana,Ambala,Ambala,134003,5400150329
+BR1185,Elite Colony,LOMX09673,526201495,Arjun Tiwari,Haryana,Sonipat,Sonipat,131001,5400150330
+BR1186,Royal Square,LOMX09674,526201496,Krish Pandey,Haryana,Bhiwani,Bhiwani,127021,5400150331
+BR1187,Galaxy Point,LOMX09675,526201497,Mohit Yadav,Haryana,Rewari,Rewari,123401,5400150332
+BR1188,Crystal Park,LOMX09676,526201498,Aman Srivastava,Haryana,Jind,Jind,126102,5400150333
+BR1189,Central Avenue,LOMX09677,526201499,Rahul Chauhan,Haryana,Sirsa,Sirsa,125055,5400150334
+BR1190,Orbit Market,LOMX09678,526201500,Kunal Saxena,Uttarakhand,Nainital,Haldwani,263139,5400150335
+BR1191,Prime Road,LOMX09679,526201501,Saurabh Agarwal,Uttarakhand,Udham Singh Nagar,Rudrapur,263153,5400150336
+BR1192,Silver Tower,LOMX09680,526201502,Nitin Sharma,Uttarakhand,Pauri Garhwal,Srinagar,246174,5400150337
+BR1193,Royal Colony,LOMX09681,526201503,Deepak Verma,Uttarakhand,Almora,Almora,263601,5400150338
+BR1194,Elite Plaza,LOMX09682,526201504,Pankaj Singh,Uttarakhand,Tehri Garhwal,New Tehri,249001,5400150339
+BR1195,Crystal Avenue,LOMX09683,526201505,Manish Gupta,Uttarakhand,Champawat,Champawat,262523,5400150340
+BR1196,Metro Heights,LOMX09684,526201506,Akash Mishra,Uttarakhand,Bageshwar,Bageshwar,263642,5400150341
+BR1197,Central Point,LOMX09685,526201507,Harsh Tandon,Uttarakhand,Pithoragarh,Pithoragarh,262501,5400150342
+BR1198,Galaxy Market,LOMX09686,526201508,Abhishek Jain,Uttarakhand,Rudraprayag,Rudraprayag,246171,5400150343
+BR1199,Prestige Square,LOMX09687,526201509,Ayush Srivastava,Uttarakhand,Uttarkashi,Uttarkashi,249193,5400150344
+BR1200,Royal Garden,LOMX09688,526201510,Priya Sharma,Himachal Pradesh,Shimla,Shimla,171001,5400150345
+BR1201,Metro Plaza,LOMX09689,526201511,Ananya Verma,Himachal Pradesh,Solan,Solan,173212,5400150346
+BR1202,Crystal Avenue,LOMX09690,526201512,Kavya Singh,Himachal Pradesh,Mandi,Mandi,175001,5400150347
+BR1203,Elite Market,LOMX09691,526201513,Sneha Gupta,Himachal Pradesh,Kangra,Dharamshala,176215,5400150348
+BR1204,Central Point,LOMX09692,526201514,Aditi Mishra,Himachal Pradesh,Hamirpur,Hamirpur,177001,5400150349
+BR1205,Prime Heights,LOMX09693,526201515,Neha Tiwari,Himachal Pradesh,Una,Una,174303,5400150350
+BR1206,Galaxy Road,LOMX09694,526201516,Ishita Pandey,Himachal Pradesh,Bilaspur,Bilaspur,174001,5400150351
+BR1207,River View,LOMX09695,526201517,Pooja Yadav,Himachal Pradesh,Chamba,Chamba,176310,5400150352
+BR1208,Silver Square,LOMX09696,526201518,Riya Srivastava,Himachal Pradesh,Kullu,Kullu,175101,5400150353
+BR1209,Prestige Colony,LOMX09697,526201519,Muskan Chauhan,Himachal Pradesh,Lahaul and Spiti,Keylong,175132,5400150354
+BR1210,Lotus Plaza,LOMX09698,526201520,Shreya Saxena,Jammu and Kashmir,Srinagar,Srinagar,190001,5400150355
+BR1211,Metro Avenue,LOMX09699,526201521,Simran Agarwal,Jammu and Kashmir,Baramulla,Baramulla,193101,5400150356
+BR1212,Royal Point,LOMX09700,526201522,Tanvi Sharma,Jammu and Kashmir,Anantnag,Anantnag,192101,5400150357
+BR1213,Crystal Park,LOMX09701,526201523,Nandini Gupta,Jammu and Kashmir,Budgam,Budgam,191111,5400150358
+BR1214,Prime Tower,LOMX09702,526201524,Megha Singh,Jammu and Kashmir,Kupwara,Kupwara,193222,5400150359
+BR1215,Elite Heights,LOMX09703,526201525,Sakshi Mishra,Jammu and Kashmir,Pulwama,Pulwama,192301,5400150360
+BR1216,Central Avenue,LOMX09704,526201526,Payal Tiwari,Jammu and Kashmir,Ganderbal,Ganderbal,191201,5400150361
+BR1217,Silver Road,LOMX09705,526201527,Khushi Pandey,Jammu and Kashmir,Kulgam,Kulgam,192231,5400150362
+BR1218,Galaxy Plaza,LOMX09706,526201528,Aarohi Yadav,Jammu and Kashmir,Shopian,Shopian,192303,5400150363
+BR1219,Riverfront Market,LOMX09707,526201529,Diya Srivastava,Jammu and Kashmir,Bandipora,Bandipora,193502,5400150364
+BR1220,Metro Colony,LOMX09708,526201530,Pari Chauhan,Punjab,Gurdaspur,Gurdaspur,143521,5400150365
+BR1221,Royal Square,LOMX09709,526201531,Siya Sharma,Punjab,Tarn Taran,Tarn Taran,143401,5400150366
+BR1222,Crystal Avenue,LOMX09710,526201532,Avni Verma,Punjab,Pathankot,Pathankot,145001,5400150367
+BR1223,Prime Market,LOMX09711,526201533,Myra Gupta,Punjab,Rupnagar,Rupnagar,140001,5400150368
+BR1224,Elite Road,LOMX09712,526201534,Navya Mishra,Punjab,Mansa,Mansa,151505,5400150369
+BR1225,Central Park,LOMX09713,526201535,Kiara Tiwari,Punjab,Malerkotla,Malerkotla,148023,5400150370
+BR1226,Silver Heights,LOMX09714,526201536,Saanvi Pandey,Punjab,Muktsar,Muktsar,152026,5400150371
+BR1227,Galaxy Point,LOMX09715,526201537,Riddhi Yadav,Punjab,Faridkot,Faridkot,151203,5400150372
+BR1228,River View,LOMX09716,526201538,Anvi Srivastava,Punjab,Nawanshahr,Nawanshahr,144514,5400150373
+BR1229,Prestige Plaza,LOMX09717,526201539,Tanya Chauhan,Punjab,Abohar,Abohar,152116,5400150374
+BR1230,Lotus Colony,LOMX09718,526201540,Prisha Sharma,Haryana,Yamunanagar,Yamunanagar,135001,5400150375
+BR1231,Metro Heights,LOMX09719,526201541,Aashi Verma,Haryana,Kurukshetra,Kurukshetra,136118,5400150376
+BR1232,Royal Market,LOMX09720,526201542,Palak Singh,Haryana,Kaithal,Kaithal,136027,5400150377
+BR1233,Crystal Point,LOMX09721,526201543,Anushka Gupta,Haryana,Mahendragarh,Narnaul,123001,5400150378
+BR1234,Prime Road,LOMX09722,526201544,Vaishnavi Mishra,Haryana,Charkhi Dadri,Dadri,127306,5400150379
+BR1235,Elite Square,LOMX09723,526201545,Saloni Tiwari,Haryana,Nuh,Nuh,122107,5400150380
+BR1236,Central Avenue,LOMX09724,526201546,Trisha Pandey,Haryana,Palwal,Palwal,121102,5400150381
+BR1237,Silver Colony,LOMX09725,526201547,Ruhi Yadav,Haryana,Fatehabad,Fatehabad,125050,5400150382
+BR1238,Galaxy Market,LOMX09726,526201548,Mahi Srivastava,Haryana,Jhajjar,Jhajjar,124103,5400150383
+BR1239,Riverfront Plaza,LOMX09727,526201549,Juhi Chauhan,Haryana,Gohana,Gohana,131301,5400150384
+BR1240,Prestige Park,LOMX09728,526201550,Anika Sharma,Delhi,South West Delhi,Dwarka,110075,5400150385
+BR1241,Royal Avenue,LOMX09729,526201551,Meher Verma,Delhi,East Delhi,Mayur Vihar,110091,5400150386
+BR1242,Crystal Road,LOMX09730,526201552,Shanaya Singh,Delhi,North Delhi,Civil Lines,110054,5400150387
+BR1243,Metro Plaza,LOMX09731,526201553,Inaya Gupta,Delhi,West Delhi,Paschim Vihar,110063,5400150388
+BR1244,Elite Heights,LOMX09732,526201554,Ahana Mishra,Delhi,Central Delhi,Daryaganj,110002,5400150389
+BR1245,Prime Point,LOMX09733,526201555,Anvi Tiwari,Delhi,South Delhi,Greater Kailash,110048,5400150390
+BR1246,Central Market,LOMX09734,526201556,Mysha Pandey,Delhi,North West Delhi,Rohini,110085,5400150391
+BR1247,Silver Square,LOMX09735,526201557,Kyra Yadav,Delhi,North East Delhi,Seelampur,110053,5400150392
+BR1248,Galaxy Park,LOMX09736,526201558,Samaira Srivastava,Delhi,Shahdara,Shahdara,110032,5400150393
+BR1249,River View,LOMX09737,526201559,Aadhya Chauhan,Delhi,New Delhi,Chanakyapuri,110021,5400150394
+BR1250,Lotus Heights,LOMX09738,526201560,Priyanshi Sharma,Gujarat,Kutch,Bhuj,370001,5400150395
+BR1251,Metro Colony,LOMX09739,526201561,Kashvi Verma,Gujarat,Bharuch,Bharuch,392001,5400150396
+BR1252,Royal Plaza,LOMX09740,526201562,Anika Singh,Gujarat,Navsari,Navsari,396445,5400150397
+BR1253,Crystal Market,LOMX09741,526201563,Suhani Gupta,Gujarat,Dahod,Dahod,389151,5400150398
+BR1254,Prime Avenue,LOMX09742,526201564,Paridhi Mishra,Gujarat,Godhra,Godhra,389001,5400150399
+BR1255,Elite Road,LOMX09743,526201565,Jiya Tiwari,Gujarat,Amreli,Amreli,365601,5400150400
+BR1256,Central Point,LOMX09744,526201566,Aarna Pandey,Gujarat,Surendranagar,Surendranagar,363001,5400150401
+BR1257,Silver Park,LOMX09745,526201567,Tisha Yadav,Gujarat,Palanpur,Palanpur,385001,5400150402
+BR1258,Galaxy Heights,LOMX09746,526201568,Rhea Srivastava,Gujarat,Veraval,Veraval,362265,5400150403
+BR1259,Riverfront Road,LOMX09747,526201569,Charvi Chauhan,Gujarat,Morbi,Morbi,363641,5400150404
+BR1260,Prestige Colony,LOMX09748,526201570,Pranjal Sharma,Goa,North Goa,Mapusa,403507,5400150405
+BR1261,Royal Point,LOMX09749,526201571,Angel Verma,Goa,South Goa,Margao,403601,5400150406
+BR1262,Crystal Square,LOMX09750,526201572,Harleen Singh,Goa,North Goa,Panaji,403001,5400150407
+BR1263,Metro Market,LOMX09751,526201573,Garima Gupta,Goa,South Goa,Vasco da Gama,403802,5400150408
+BR1264,Prime Plaza,LOMX09752,526201574,Reet Mishra,Goa,North Goa,Ponda,403401,5400150409
+BR1265,Elite Avenue,LOMX09753,526201575,Prerna Tiwari,Goa,North Goa,Bicholim,403504,5400150410
+BR1266,Central Heights,LOMX09754,526201576,Komal Pandey,Goa,South Goa,Cuncolim,403703,5400150411
+BR1267,Silver Road,LOMX09755,526201577,Nikita Yadav,Goa,South Goa,Quepem,403705,5400150412
+BR1268,Galaxy Colony,LOMX09756,526201578,Shivani Srivastava,Goa,North Goa,Pernem,403512,5400150413
+BR1269,River View,LOMX09757,526201579,Sonali Chauhan,Goa,South Goa,Canacona,403702,5400150414
+BR1270,Lotus Park,LOMX09758,526201580,Deepika Sharma,Assam,Kamrup,Dispur,781006,5400150415
+BR1271,Royal Market,LOMX09759,526201581,Monika Verma,Assam,Dibrugarh,Dibrugarh,786001,5400150416
+BR1272,Metro Avenue,LOMX09760,526201582,Rashmi Singh,Assam,Jorhat,Jorhat,785001,5400150417
+BR1273,Crystal Plaza,LOMX09761,526201583,Shruti Gupta,Assam,Silchar,Silchar,788001,5400150418
+BR1274,Prime Colony,LOMX09762,526201584,Pallavi Mishra,Assam,Nagaon,Nagaon,782001,5400150419
+BR1275,Elite Road,LOMX09763,526201585,Bhavya Tiwari,Assam,Tinsukia,Tinsukia,786125,5400150420
+BR1276,Central Point,LOMX09764,526201586,Divya Pandey,Assam,Bongaigaon,Bongaigaon,783380,5400150421
+BR1277,Silver Heights,LOMX09765,526201587,Sakina Yadav,Assam,Tezpur,Tezpur,784001,5400150422
+BR1278,Galaxy Market,LOMX09766,526201588,Farah Srivastava,Assam,Goalpara,Goalpara,783101,5400150423
+BR1279,Riverfront Plaza,LOMX09767,526201589,Zoya Chauhan,Assam,Karimganj,Karimganj,788710,5400150424
+BR1280,Prestige Avenue,LOMX09768,526201590,Noor Sharma,Assam,Dhubri,Dhubri,783301,5400150425
+BR1281,Royal Square,LOMX09769,526201591,Ayesha Verma,Assam,Sivasagar,Sivasagar,785640,5400150426
+BR1282,Metro Tower,LOMX09770,526201592,Alina Singh,Assam,Barpeta,Barpeta,781301,5400150427
+BR1283,Crystal Colony,LOMX09771,526201593,Hina Gupta,Assam,Nalbari,Nalbari,781335,5400150428
+BR1284,Prime Heights,LOMX09772,526201594,Reshma Mishra,Assam,Morigaon,Morigaon,782105,5400150429
+BR1285,Elite Market,LOMX09773,526201595,Nazia Tiwari,Assam,Hailakandi,Hailakandi,788151,5400150430
+BR1286,Central Road,LOMX09774,526201596,Shazia Pandey,Assam,Dhemaji,Dhemaji,787057,5400150431
+BR1287,Silver Point,LOMX09775,526201597,Muskaan Yadav,Assam,Lakhimpur,North Lakhimpur,787001,5400150432
+BR1288,Galaxy Plaza,LOMX09776,526201598,Heena Srivastava,Assam,Cachar,Silchar,788001,5400150433
+BR1289,River Park,LOMX09777,526201599,Rabia Chauhan,Assam,Udalguri,Udalguri,784509,5400150434
+BR1290,Lotus Avenue,LOMX09778,526201600,Nehal Sharma,Assam,Darrang,Mangaldoi,784125,5400150435
+BR1291,Royal Colony,LOMX09779,526201601,Sania Verma,Assam,Biswanath,Biswanath Chariali,784176,5400150436
+BR1292,Metro Road,LOMX09780,526201602,Mariam Singh,Assam,Chirang,Kajalgaon,783385,5400150437
+BR1293,Crystal Point,LOMX09781,526201603,Afreen Gupta,Assam,Baksa,Mushalpur,781372,5400150438
+BR1294,Prime Market,LOMX09782,526201604,Rukhsar Mishra,Assam,Majuli,Garamur,785104,5400150439
+BR1295,Elite Plaza,LOMX09783,526201605,Humaira Tiwari,Assam,Sonitpur,Tezpur,784001,5400150440
+BR1296,Central Square,LOMX09784,526201606,Mehak Pandey,Assam,Golaghat,Golaghat,785621,5400150441
+BR1297,Silver Colony,LOMX09785,526201607,Saba Yadav,Assam,Kokrajhar,Kokrajhar,783370,5400150442
+BR1298,Galaxy Heights,LOMX09786,526201608,Inaaya Srivastava,Assam,West Karbi Anglong,Hamren,782486,5400150443
+BR1299,Riverfront Point,LOMX09787,526201609,Alisha Chauhan,Assam,East Karbi Anglong,Diphu,782460,5400150444
+BR1300,Royal Garden,LOMX09788,526201610,Priyanka Sharma,West Bengal,Howrah,Howrah,711101,5400150445
+BR1301,Metro Plaza,LOMX09789,526201611,Anjali Verma,West Bengal,Hooghly,Chinsurah,712101,5400150446
+BR1302,Crystal Avenue,LOMX09790,526201612,Nikita Singh,West Bengal,Bardhaman,Bardhaman,713101,5400150447
+BR1303,Elite Market,LOMX09791,526201613,Shivangi Gupta,West Bengal,Asansol,Asansol,713301,5400150448
+BR1304,Central Point,LOMX09792,526201614,Ritika Mishra,West Bengal,Durgapur,Durgapur,713201,5400150449
+BR1305,Prime Heights,LOMX09793,526201615,Neelam Tiwari,West Bengal,Nadia,Krishnanagar,741101,5400150450
+BR1306,Galaxy Road,LOMX09794,526201616,Preeti Pandey,West Bengal,Murshidabad,Berhampore,742101,5400150451
+BR1307,River View,LOMX09795,526201617,Swati Yadav,West Bengal,Malda,Malda,732101,5400150452
+BR1308,Silver Square,LOMX09796,526201618,Payal Srivastava,West Bengal,Jalpaiguri,Jalpaiguri,735101,5400150453
+BR1309,Prestige Colony,LOMX09797,526201619,Pallavi Chauhan,West Bengal,Cooch Behar,Cooch Behar,736101,5400150454
+BR1310,Lotus Plaza,LOMX09798,526201620,Komal Sharma,West Bengal,Darjeeling,Siliguri,734001,5400150455
+BR1311,Metro Avenue,LOMX09799,526201621,Ruchi Verma,West Bengal,Alipurduar,Alipurduar,736121,5400150456
+BR1312,Royal Point,LOMX09800,526201622,Sonam Singh,West Bengal,Bankura,Bankura,722101,5400150457
+BR1313,Crystal Park,LOMX09801,526201623,Monika Gupta,West Bengal,Purulia,Purulia,723101,5400150458
+BR1314,Prime Tower,LOMX09802,526201624,Shalini Mishra,West Bengal,Birbhum,Suri,731101,5400150459
+BR1315,Elite Heights,LOMX09803,526201625,Aarti Tiwari,West Bengal,East Midnapore,Tamluk,721636,5400150460
+BR1316,Central Avenue,LOMX09804,526201626,Deepa Pandey,West Bengal,West Midnapore,Midnapore,721101,5400150461
+BR1317,Silver Road,LOMX09805,526201627,Poonam Yadav,West Bengal,North 24 Parganas,Barasat,700124,5400150462
+BR1318,Galaxy Plaza,LOMX09806,526201628,Meenakshi Srivastava,West Bengal,South 24 Parganas,Alipore,700027,5400150463
+BR1319,Riverfront Market,LOMX09807,526201629,Rekha Chauhan,West Bengal,Kalimpong,Kalimpong,734301,5400150464
+BR1320,Metro Colony,LOMX09808,526201630,Kiran Sharma,Odisha,Cuttack,Cuttack,753001,5400150465
+BR1321,Royal Square,LOMX09809,526201631,Sarita Verma,Odisha,Puri,Puri,752001,5400150466
+BR1322,Crystal Avenue,LOMX09810,526201632,Geeta Singh,Odisha,Sambalpur,Sambalpur,768001,5400150467
+BR1323,Prime Market,LOMX09811,526201633,Sunita Gupta,Odisha,Rourkela,Rourkela,769001,5400150468
+BR1324,Elite Road,LOMX09812,526201634,Mamta Mishra,Odisha,Balasore,Balasore,756001,5400150469
+BR1325,Central Park,LOMX09813,526201635,Vandana Tiwari,Odisha,Baripada,Baripada,757001,5400150470
+BR1326,Silver Heights,LOMX09814,526201636,Alka Pandey,Odisha,Angul,Angul,759122,5400150471
+BR1327,Galaxy Point,LOMX09815,526201637,Reena Yadav,Odisha,Koraput,Koraput,764020,5400150472
+BR1328,River View,LOMX09816,526201638,Seema Srivastava,Odisha,Jeypore,Jeypore,764001,5400150473
+BR1329,Prestige Plaza,LOMX09817,526201639,Madhuri Chauhan,Odisha,Rayagada,Rayagada,765001,5400150474
+BR1330,Lotus Colony,LOMX09818,526201640,Nisha Sharma,Odisha,Bhadrak,Bhadrak,756100,5400150475
+BR1331,Metro Heights,LOMX09819,526201641,Archana Verma,Odisha,Jagatsinghpur,Jagatsinghpur,754103,5400150476
+BR1332,Royal Market,LOMX09820,526201642,Chandni Singh,Odisha,Kendrapara,Kendrapara,754211,5400150477
+BR1333,Crystal Point,LOMX09821,526201643,Varsha Gupta,Odisha,Dhenkanal,Dhenkanal,759001,5400150478
+BR1334,Prime Road,LOMX09822,526201644,Bharti Mishra,Odisha,Keonjhar,Keonjhar,758001,5400150479
+BR1335,Elite Square,LOMX09823,526201645,Lata Tiwari,Odisha,Nabarangpur,Nabarangpur,764059,5400150480
+BR1336,Central Avenue,LOMX09824,526201646,Sangeeta Pandey,Odisha,Kalahandi,Bhawanipatna,766001,5400150481
+BR1337,Silver Colony,LOMX09825,526201647,Rajni Yadav,Odisha,Nuapada,Nuapada,766105,5400150482
+BR1338,Galaxy Market,LOMX09826,526201648,Kusum Srivastava,Odisha,Boudh,Boudh,762014,5400150483
+BR1339,Riverfront Plaza,LOMX09827,526201649,Usha Chauhan,Odisha,Kandhamal,Phulbani,762001,5400150484
+BR1340,Prestige Park,LOMX09828,526201650,Shweta Sharma,Telangana,Warangal,Warangal,506002,5400150485
+BR1341,Royal Avenue,LOMX09829,526201651,Radhika Verma,Telangana,Karimnagar,Karimnagar,505001,5400150486
+BR1342,Crystal Road,LOMX09830,526201652,Shraddha Singh,Telangana,Nizamabad,Nizamabad,503001,5400150487
+BR1343,Metro Plaza,LOMX09831,526201653,Manisha Gupta,Telangana,Khammam,Khammam,507001,5400150488
+BR1344,Elite Heights,LOMX09832,526201654,Jyoti Mishra,Telangana,Mahbubnagar,Mahbubnagar,509001,5400150489
+BR1345,Prime Point,LOMX09833,526201655,Priyanka Tiwari,Telangana,Adilabad,Adilabad,504001,5400150490
+BR1346,Central Market,LOMX09834,526201656,Anamika Pandey,Telangana,Suryapet,Suryapet,508213,5400150491
+BR1347,Silver Square,LOMX09835,526201657,Kajal Yadav,Telangana,Siddipet,Siddipet,502103,5400150492
+BR1348,Galaxy Park,LOMX09836,526201658,Neetu Srivastava,Telangana,Medak,Medak,502110,5400150493
+BR1349,River View,LOMX09837,526201659,Sheetal Chauhan,Telangana,Sangareddy,Sangareddy,502001,5400150494
+BR1350,Lotus Heights,LOMX09838,526201660,Anita Sharma,Karnataka,Mysuru,Mysuru,570001,5400150495
+BR1351,Metro Colony,LOMX09839,526201661,Shilpa Verma,Karnataka,Hubballi,Hubballi,580020,5400150496
+BR1352,Royal Plaza,LOMX09840,526201662,Pratibha Singh,Karnataka,Belagavi,Belagavi,590001,5400150497
+BR1353,Crystal Market,LOMX09841,526201663,Kanchan Gupta,Karnataka,Mangaluru,Mangaluru,575001,5400150498
+BR1354,Prime Avenue,LOMX09842,526201664,Anju Mishra,Karnataka,Shivamogga,Shivamogga,577201,5400150499
+BR1355,Elite Road,LOMX09843,526201665,Rashmi Tiwari,Karnataka,Ballari,Ballari,583101,5400150500
+BR1356,Central Point,LOMX09844,526201666,Shobha Pandey,Karnataka,Davanagere,Davanagere,577002,5400150501
+BR1357,Silver Park,LOMX09845,526201667,Kirti Yadav,Karnataka,Vijayapura,Vijayapura,586101,5400150502
+BR1358,Galaxy Heights,LOMX09846,526201668,Priyanka Srivastava,Karnataka,Udupi,Udupi,576101,5400150503
+BR1359,Riverfront Road,LOMX09847,526201669,Manju Chauhan,Karnataka,Hassan,Hassan,573201,5400150504
+BR1360,Prestige Colony,LOMX09848,526201670,Neelam Sharma,Tamil Nadu,Madurai,Madurai,625001,5400150505
+BR1361,Royal Point,LOMX09849,526201671,Savita Verma,Tamil Nadu,Tiruchirappalli,Tiruchirappalli,620001,5400150506
+BR1362,Crystal Square,LOMX09850,526201672,Poonam Singh,Tamil Nadu,Salem,Salem,636001,5400150507
+BR1363,Metro Market,LOMX09851,526201673,Sunaina Gupta,Tamil Nadu,Tirunelveli,Tirunelveli,627001,5400150508
+BR1364,Prime Plaza,LOMX09852,526201674,Indu Mishra,Tamil Nadu,Erode,Erode,638001,5400150509
+BR1365,Elite Avenue,LOMX09853,526201675,Meera Tiwari,Tamil Nadu,Vellore,Vellore,632001,5400150510
+BR1366,Central Heights,LOMX09854,526201676,Anjali Pandey,Tamil Nadu,Thoothukudi,Thoothukudi,628001,5400150511
+BR1367,Silver Road,LOMX09855,526201677,Ritu Yadav,Tamil Nadu,Dindigul,Dindigul,624001,5400150512
+BR1368,Galaxy Colony,LOMX09856,526201678,Priyanka Srivastava,Tamil Nadu,Karur,Karur,639001,5400150513
+BR1369,River View,LOMX09857,526201679,Monika Chauhan,Tamil Nadu,Namakkal,Namakkal,637001,5400150514
+BR1370,Lotus Park,LOMX09858,526201680,Shweta Sharma,Kerala,Kozhikode,Kozhikode,673001,5400150515
+BR1371,Royal Market,LOMX09859,526201681,Radhika Verma,Kerala,Thrissur,Thrissur,680001,5400150516
+BR1372,Metro Avenue,LOMX09860,526201682,Shruti Singh,Kerala,Kollam,Kollam,691001,5400150517
+BR1373,Crystal Plaza,LOMX09861,526201683,Manisha Gupta,Kerala,Alappuzha,Alappuzha,688001,5400150518
+BR1374,Prime Colony,LOMX09862,526201684,Jyoti Mishra,Kerala,Palakkad,Palakkad,678001,5400150519
+BR1375,Elite Road,LOMX09863,526201685,Anamika Tiwari,Kerala,Kottayam,Kottayam,686001,5400150520
+BR1376,Central Point,LOMX09864,526201686,Kajal Pandey,Kerala,Idukki,Painavu,685603,5400150521
+BR1377,Silver Heights,LOMX09865,526201687,Neetu Yadav,Kerala,Pathanamthitta,Pathanamthitta,689645,5400150522
+BR1378,Galaxy Market,LOMX09866,526201688,Sheetal Srivastava,Kerala,Malappuram,Malappuram,676505,5400150523
+BR1379,Riverfront Plaza,LOMX09867,526201689,Anita Chauhan,Kerala,Wayanad,Kalpetta,673121,5400150524
+BR1380,Prestige Avenue,LOMX09868,526201690,Deepika Sharma,Andhra Pradesh,Vijayawada,Vijayawada,520001,5400150525
+BR1381,Royal Square,LOMX09869,526201691,Monika Verma,Andhra Pradesh,Visakhapatnam,Visakhapatnam,530001,5400150526
+BR1382,Metro Tower,LOMX09870,526201692,Rashmi Singh,Andhra Pradesh,Guntur,Guntur,522001,5400150527
+BR1383,Crystal Colony,LOMX09871,526201693,Shruti Gupta,Andhra Pradesh,Nellore,Nellore,524001,5400150528
+BR1384,Prime Heights,LOMX09872,526201694,Pallavi Mishra,Andhra Pradesh,Kurnool,Kurnool,518001,5400150529
+BR1385,Elite Market,LOMX09873,526201695,Bhavya Tiwari,Andhra Pradesh,Kadapa,Kadapa,516001,5400150530
+BR1386,Central Road,LOMX09874,526201696,Divya Pandey,Andhra Pradesh,Anantapur,Anantapur,515001,5400150531
+BR1387,Silver Point,LOMX09875,526201697,Sakina Yadav,Andhra Pradesh,Eluru,Eluru,534001,5400150532
+BR1388,Galaxy Plaza,LOMX09876,526201698,Farah Srivastava,Andhra Pradesh,Ongole,Ongole,523001,5400150533
+BR1389,River Park,LOMX09877,526201699,Zoya Chauhan,Andhra Pradesh,Chittoor,Chittoor,517001,5400150534
+BR1390,Lotus Avenue,LOMX09878,526201700,Noor Sharma,Andhra Pradesh,Srikakulam,Srikakulam,532001,5400150535
+BR1391,Royal Colony,LOMX09879,526201701,Ayesha Verma,Andhra Pradesh,Vizianagaram,Vizianagaram,535002,5400150536
+BR1392,Metro Road,LOMX09880,526201702,Alina Singh,Andhra Pradesh,Amaravati,Amaravati,522503,5400150537
+BR1393,Crystal Point,LOMX09881,526201703,Hina Gupta,Andhra Pradesh,Bapatla,Bapatla,522101,5400150538
+BR1394,Prime Market,LOMX09882,526201704,Reshma Mishra,Andhra Pradesh,Nandyal,Nandyal,518501,5400150539
+BR1395,Elite Plaza,LOMX09883,526201705,Nazia Tiwari,Andhra Pradesh,Tirupati,Tirupati,517501,5400150540
+BR1396,Central Square,LOMX09884,526201706,Shazia Pandey,Andhra Pradesh,Machilipatnam,Machilipatnam,521001,5400150541
+BR1397,Silver Colony,LOMX09885,526201707,Muskaan Yadav,Andhra Pradesh,Rajahmundry,Rajahmundry,533101,5400150542
+BR1398,Galaxy Heights,LOMX09886,526201708,Heena Srivastava,Andhra Pradesh,Kakinada,Kakinada,533001,5400150543
+BR1399,Riverfront Point,LOMX09887,526201709,Rabia Chauhan,Andhra Pradesh,Parvathipuram,Parvathipuram,535501,5400150544
+BR1400,Sunrise Plaza,LOMX09888,526201710,Priyanka Kapoor,Maharashtra,Nagpur,Nagpur,440001,5400150545
+BR1401,Green Valley,LOMX09889,526201711,Anjali Mehta,Maharashtra,Thane,Thane,400601,5400150546
+BR1402,Royal Square,LOMX09890,526201712,Neha Arora,Maharashtra,Pune,Pune,411001,5400150547
+BR1403,Metro Heights,LOMX09891,526201713,Sneha Bansal,Maharashtra,Navi Mumbai,Navi Mumbai,400703,5400150548
+BR1404,Crystal Point,LOMX09892,526201714,Kritika Sharma,Maharashtra,Nanded,Nanded,431601,5400150549
+BR1405,Prime Avenue,LOMX09893,526201715,Riya Malhotra,Maharashtra,Parbhani,Parbhani,431401,5400150550
+BR1406,Galaxy Market,LOMX09894,526201716,Aditi Khanna,Maharashtra,Beed,Beed,431122,5400150551
+BR1407,River View,LOMX09895,526201717,Simran Chawla,Maharashtra,Osmanabad,Osmanabad,413501,5400150552
+BR1408,Elite Plaza,LOMX09896,526201718,Muskan Kapoor,Maharashtra,Yavatmal,Yavatmal,445001,5400150553
+BR1409,Central Colony,LOMX09897,526201719,Shreya Sinha,Maharashtra,Chandrapur,Chandrapur,442401,5400150554
+BR1410,Lotus Garden,LOMX09898,526201720,Tanvi Jain,Rajasthan,Udaipur,Udaipur,313001,5400150555
+BR1411,Silver Heights,LOMX09899,526201721,Avni Agarwal,Rajasthan,Bikaner,Bikaner,334001,5400150556
+BR1412,Royal Avenue,LOMX09900,526201722,Sakshi Kapoor,Rajasthan,Jaisalmer,Jaisalmer,345001,5400150557
+BR1413,Metro Plaza,LOMX09901,526201723,Anushka Mehta,Rajasthan,Jhalawar,Jhalawar,326001,5400150558
+BR1414,Crystal Market,LOMX09902,526201724,Pari Sharma,Rajasthan,Tonk,Tonk,304001,5400150559
+BR1415,Prime Point,LOMX09903,526201725,Kiara Bansal,Rajasthan,Dausa,Dausa,303303,5400150560
+BR1416,Galaxy Square,LOMX09904,526201726,Navya Arora,Rajasthan,Sawai Madhopur,Sawai Madhopur,322001,5400150561
+BR1417,Riverfront Road,LOMX09905,526201727,Diya Khanna,Rajasthan,Karauli,Karauli,322241,5400150562
+BR1418,Elite Heights,LOMX09906,526201728,Aarohi Chawla,Rajasthan,Bundi,Bundi,323001,5400150563
+BR1419,Prestige Plaza,LOMX09907,526201729,Myra Sinha,Rajasthan,Baran,Baran,325205,5400150564
+BR1420,Sunrise Colony,LOMX09908,526201730,Pooja Jain,Gujarat,Surat,Surat,395003,5400150565
+BR1421,Royal Market,LOMX09909,526201731,Shivani Agarwal,Gujarat,Vadodara,Vadodara,390001,5400150566
+BR1422,Metro Point,LOMX09910,526201732,Nikita Kapoor,Gujarat,Ahmedabad,Ahmedabad,380001,5400150567
+BR1423,Crystal Avenue,LOMX09911,526201733,Ritika Mehta,Gujarat,Gandhidham,Gandhidham,370201,5400150568
+BR1424,Prime Square,LOMX09912,526201734,Mehak Sharma,Gujarat,Botad,Botad,364710,5400150569
+BR1425,Galaxy Plaza,LOMX09913,526201735,Sonam Bansal,Gujarat,Tapi,Vyara,394650,5400150570
+BR1426,River View,LOMX09914,526201736,Komal Arora,Gujarat,Aravalli,Modasa,383315,5400150571
+BR1427,Elite Colony,LOMX09915,526201737,Rashmi Khanna,Gujarat,Chhota Udepur,Chhota Udepur,391165,5400150572
+BR1428,Central Heights,LOMX09916,526201738,Monika Chawla,Gujarat,Devbhoomi Dwarka,Dwarka,361335,5400150573
+BR1429,Prestige Road,LOMX09917,526201739,Shweta Sinha,Gujarat,Mahisagar,Lunawada,389230,5400150574
+BR1430,Lotus Plaza,LOMX09918,526201740,Ananya Jain,Karnataka,Tumakuru,Tumakuru,572101,5400150575
+BR1431,Metro Colony,LOMX09919,526201741,Priyanka Agarwal,Karnataka,Chikkamagaluru,Chikkamagaluru,577101,5400150576
+BR1432,Royal Heights,LOMX09920,526201742,Neha Kapoor,Karnataka,Kolar,Kolar,563101,5400150577
+BR1433,Crystal Point,LOMX09921,526201743,Sneha Mehta,Karnataka,Raichur,Raichur,584101,5400150578
+BR1434,Prime Market,LOMX09922,526201744,Kritika Sharma,Karnataka,Gadag,Gadag,582101,5400150579
+BR1435,Galaxy Avenue,LOMX09923,526201745,Riya Bansal,Karnataka,Koppal,Koppal,583231,5400150580
+BR1436,River Park,LOMX09924,526201746,Aditi Arora,Karnataka,Chamarajanagar,Chamarajanagar,571313,5400150581
+BR1437,Elite Plaza,LOMX09925,526201747,Simran Khanna,Karnataka,Bagalkot,Bagalkot,587101,5400150582
+BR1438,Central Road,LOMX09926,526201748,Muskan Chawla,Karnataka,Yadgir,Yadgir,585201,5400150583
+BR1439,Prestige Square,LOMX09927,526201749,Shreya Sinha,Karnataka,Haveri,Haveri,581110,5400150584
+BR1440,Sunrise Market,LOMX09928,526201750,Tanvi Jain,Tamil Nadu,Coimbatore,Coimbatore,641001,5400150585
+BR1441,Royal Plaza,LOMX09929,526201751,Avni Agarwal,Tamil Nadu,Tanjavur,Tanjavur,613001,5400150586
+BR1442,Metro Heights,LOMX09930,526201752,Sakshi Kapoor,Tamil Nadu,Tiruppur,Tiruppur,641601,5400150587
+BR1443,Crystal Colony,LOMX09931,526201753,Anushka Mehta,Tamil Nadu,Kanchipuram,Kanchipuram,631501,5400150588
+BR1444,Prime Road,LOMX09932,526201754,Pari Sharma,Tamil Nadu,Cuddalore,Cuddalore,607001,5400150589
+BR1445,Galaxy Point,LOMX09933,526201755,Kiara Bansal,Tamil Nadu,Nagercoil,Nagercoil,629001,5400150590
+BR1446,Riverfront Plaza,LOMX09934,526201756,Navya Arora,Tamil Nadu,Theni,Theni,625531,5400150591
+BR1447,Elite Market,LOMX09935,526201757,Diya Khanna,Tamil Nadu,Sivaganga,Sivaganga,630561,5400150592
+BR1448,Central Avenue,LOMX09936,526201758,Aarohi Chawla,Tamil Nadu,Ramanathapuram,Ramanathapuram,623501,5400150593
+BR1449,Prestige Heights,LOMX09937,526201759,Myra Sinha,Tamil Nadu,Virudhunagar,Virudhunagar,626001,5400150594
+BR1450,Lotus Point,LOMX09938,526201760,Pooja Jain,Kerala,Ernakulam,Kochi,682011,5400150595
+BR1451,Royal Square,LOMX09939,526201761,Shivani Agarwal,Kerala,Kannur,Kannur,670001,5400150596
+BR1452,Metro Market,LOMX09940,526201762,Nikita Kapoor,Kerala,Kasaragod,Kasaragod,671121,5400150597
+BR1453,Crystal Plaza,LOMX09941,526201763,Ritika Mehta,Kerala,Attingal,Attingal,695101,5400150598
+BR1454,Prime Colony,LOMX09942,526201764,Mehak Sharma,Kerala,Chalakudy,Chalakudy,680307,5400150599
+BR1455,Galaxy Heights,LOMX09943,526201765,Sonam Bansal,Kerala,Perinthalmanna,Perinthalmanna,679322,5400150600
+BR1456,River View,LOMX09944,526201766,Komal Arora,Kerala,Thalassery,Thalassery,670101,5400150601
+BR1457,Elite Road,LOMX09945,526201767,Rashmi Khanna,Kerala,Payyanur,Payyanur,670307,5400150602
+BR1458,Central Point,LOMX09946,526201768,Monika Chawla,Kerala,Nedumangad,Nedumangad,695541,5400150603
+BR1459,Prestige Avenue,LOMX09947,526201769,Shweta Sinha,Kerala,Kayamkulam,Kayamkulam,690502,5400150604
+BR1460,Sunrise Plaza,LOMX09948,526201770,Ananya Jain,Madhya Pradesh,Indore,Indore,452001,5400150605
+BR1461,Royal Market,LOMX09949,526201771,Priyanka Agarwal,Madhya Pradesh,Bhopal,Bhopal,462001,5400150606
+BR1462,Metro Road,LOMX09950,526201772,Neha Kapoor,Madhya Pradesh,Ratlam,Ratlam,457001,5400150607
+BR1463,Crystal Heights,LOMX09951,526201773,Sneha Mehta,Madhya Pradesh,Neemuch,Neemuch,458441,5400150608
+BR1464,Prime Square,LOMX09952,526201774,Kritika Sharma,Madhya Pradesh,Sehore,Sehore,466001,5400150609
+BR1465,Galaxy Market,LOMX09953,526201775,Riya Bansal,Madhya Pradesh,Vidisha,Vidisha,464001,5400150610
+BR1466,Riverfront Point,LOMX09954,526201776,Aditi Arora,Madhya Pradesh,Betul,Betul,460001,5400150611
+BR1467,Elite Plaza,LOMX09955,526201777,Simran Khanna,Madhya Pradesh,Hoshangabad,Narmadapuram,461001,5400150612
+BR1468,Central Colony,LOMX09956,526201778,Muskan Chawla,Madhya Pradesh,Shivpuri,Shivpuri,473551,5400150613
+BR1469,Prestige Road,LOMX09957,526201779,Shreya Sinha,Madhya Pradesh,Guna,Guna,473001,5400150614
+BR1470,Lotus Garden,LOMX09958,526201780,Tanvi Jain,Chhattisgarh,Dhamtari,Dhamtari,493773,5400150615
+BR1471,Royal Plaza,LOMX09959,526201781,Avni Agarwal,Chhattisgarh,Janjgir,Janjgir,495668,5400150616
+BR1472,Metro Colony,LOMX09960,526201782,Sakshi Kapoor,Chhattisgarh,Mahasamund,Mahasamund,493445,5400150617
+BR1473,Crystal Market,LOMX09961,526201783,Anushka Mehta,Chhattisgarh,Balod,Balod,491226,5400150618
+BR1474,Prime Heights,LOMX09962,526201784,Pari Sharma,Chhattisgarh,Bemetara,Bemetara,491335,5400150619
+BR1475,Galaxy Avenue,LOMX09963,526201785,Kiara Bansal,Chhattisgarh,Kondagaon,Kondagaon,494226,5400150620
+BR1476,River View,LOMX09964,526201786,Navya Arora,Chhattisgarh,Sukma,Sukma,494111,5400150621
+BR1477,Elite Square,LOMX09965,526201787,Diya Khanna,Chhattisgarh,Balrampur,Balrampur,497119,5400150622
+BR1478,Central Market,LOMX09966,526201788,Aarohi Chawla,Chhattisgarh,Gariaband,Gariaband,493889,5400150623
+BR1479,Prestige Point,LOMX09967,526201789,Myra Sinha,Chhattisgarh,Mungeli,Mungeli,495334,5400150624
+BR1480,Sunrise Heights,LOMX09968,526201790,Pooja Jain,Goa,Panaji,Panaji,403001,5400150625
+BR1481,Royal Avenue,LOMX09969,526201791,Shivani Agarwal,Goa,Mapusa,Mapusa,403507,5400150626
+BR1482,Metro Plaza,LOMX09970,526201792,Nikita Kapoor,Goa,Margao,Margao,403601,5400150627
+BR1483,Crystal Road,LOMX09971,526201793,Ritika Mehta,Goa,Ponda,Ponda,403401,5400150628
+BR1484,Prime Colony,LOMX09972,526201794,Mehak Sharma,Goa,Vasco da Gama,Vasco da Gama,403802,5400150629
+BR1485,Galaxy Market,LOMX09973,526201795,Sonam Bansal,Goa,Bicholim,Bicholim,403504,5400150630
+BR1486,Riverfront Plaza,LOMX09974,526201796,Komal Arora,Goa,Quepem,Quepem,403705,5400150631
+BR1487,Elite Heights,LOMX09975,526201797,Rashmi Khanna,Goa,Cuncolim,Cuncolim,403703,5400150632
+BR1488,Central Point,LOMX09976,526201798,Monika Chawla,Goa,Canacona,Canacona,403702,5400150633
+BR1489,Prestige Square,LOMX09977,526201799,Shweta Sinha,Goa,Pernem,Pernem,403512,5400150634
+BR1490,Lotus Park,LOMX09978,526201800,Ananya Jain,Sikkim,Gangtok,Gangtok,737101,5400150635
+BR1491,Royal Market,LOMX09979,526201801,Priyanka Agarwal,Sikkim,Namchi,Namchi,737126,5400150636
+BR1492,Metro Heights,LOMX09980,526201802,Neha Kapoor,Sikkim,Gyalshing,Gyalshing,737111,5400150637
+BR1493,Crystal Plaza,LOMX09981,526201803,Sneha Mehta,Sikkim,Mangan,Mangan,737116,5400150638
+BR1494,Prime Avenue,LOMX09982,526201804,Kritika Sharma,Sikkim,Pakyong,Pakyong,737106,5400150639
+BR1495,Galaxy Colony,LOMX09983,526201805,Riya Bansal,Sikkim,Rangpo,Rangpo,737132,5400150640
+BR1496,River View,LOMX09984,526201806,Aditi Arora,Sikkim,Singtam,Singtam,737134,5400150641
+BR1497,Elite Market,LOMX09985,526201807,Simran Khanna,Sikkim,Jorethang,Jorethang,737121,5400150642
+BR1498,Central Road,LOMX09986,526201808,Muskan Chawla,Sikkim,Ravangla,Ravangla,737139,5400150643
+BR1499,Prestige Plaza,LOMX09987,526201809,Shreya Sinha,Sikkim,Chungthang,Chungthang,737120,5400150644
+BR1500,Emerald Plaza,LOMX09988,526201810,Priya Sharma,Arunachal Pradesh,Papum Pare,Itanagar,791111,5400150645
+BR1501,Royal Heights,LOMX09989,526201811,Ananya Verma,Arunachal Pradesh,Tawang,Tawang,790104,5400150646
+BR1502,Crystal Avenue,LOMX09990,526201812,Kavya Singh,Arunachal Pradesh,West Kameng,Bomdila,790001,5400150647
+BR1503,Metro Point,LOMX09991,526201813,Sneha Gupta,Arunachal Pradesh,East Siang,Pasighat,791102,5400150648
+BR1504,Prime Market,LOMX09992,526201814,Aditi Mishra,Arunachal Pradesh,Lohit,Tezu,792001,5400150649
+BR1505,Galaxy Square,LOMX09993,526201815,Neha Tiwari,Arunachal Pradesh,Changlang,Changlang,792120,5400150650
+BR1506,River View,LOMX09994,526201816,Ishita Pandey,Arunachal Pradesh,Tirap,Khonsa,786630,5400150651
+BR1507,Elite Plaza,LOMX09995,526201817,Pooja Yadav,Arunachal Pradesh,Lower Dibang Valley,Roing,792110,5400150652
+BR1508,Central Colony,LOMX09996,526201818,Riya Srivastava,Arunachal Pradesh,Namsai,Namsai,792103,5400150653
+BR1509,Prestige Road,LOMX09997,526201819,Muskan Chauhan,Arunachal Pradesh,Anjaw,Hawai,792104,5400150654
+BR1510,Lotus Heights,LOMX09998,526201820,Shreya Saxena,Nagaland,Kohima,Kohima,797001,5400150655
+BR1511,Royal Market,LOMX09999,526201821,Simran Agarwal,Nagaland,Dimapur,Dimapur,797112,5400150656
+BR1512,Metro Plaza,LOMX10000,526201822,Tanvi Sharma,Nagaland,Mokokchung,Mokokchung,798601,5400150657
+BR1513,Crystal Colony,LOMX10001,526201823,Nandini Gupta,Nagaland,Wokha,Wokha,797111,5400150658
+BR1514,Prime Avenue,LOMX10002,526201824,Megha Singh,Nagaland,Zunheboto,Zunheboto,798620,5400150659
+BR1515,Galaxy Point,LOMX10003,526201825,Sakshi Mishra,Nagaland,Tuensang,Tuensang,798612,5400150660
+BR1516,Riverfront Plaza,LOMX10004,526201826,Payal Tiwari,Nagaland,Mon,Mon,798621,5400150661
+BR1517,Elite Heights,LOMX10005,526201827,Khushi Pandey,Nagaland,Phek,Phek,797108,5400150662
+BR1518,Central Market,LOMX10006,526201828,Aarohi Yadav,Nagaland,Kiphire,Kiphire,798611,5400150663
+BR1519,Prestige Square,LOMX10007,526201829,Diya Srivastava,Nagaland,Longleng,Longleng,798625,5400150664
+BR1520,Sunrise Avenue,LOMX10008,526201830,Pari Chauhan,Manipur,Imphal West,Imphal,795001,5400150665
+BR1521,Royal Colony,LOMX10009,526201831,Siya Sharma,Manipur,Imphal East,Porompat,795005,5400150666
+BR1522,Metro Heights,LOMX10010,526201832,Avni Verma,Manipur,Thoubal,Thoubal,795138,5400150667
+BR1523,Crystal Market,LOMX10011,526201833,Myra Gupta,Manipur,Bishnupur,Bishnupur,795126,5400150668
+BR1524,Prime Road,LOMX10012,526201834,Navya Mishra,Manipur,Churachandpur,Churachandpur,795128,5400150669
+BR1525,Galaxy Plaza,LOMX10013,526201835,Kiara Tiwari,Manipur,Ukhrul,Ukhrul,795142,5400150670
+BR1526,River View,LOMX10014,526201836,Saanvi Pandey,Manipur,Senapati,Senapati,795106,5400150671
+BR1527,Elite Point,LOMX10015,526201837,Riddhi Yadav,Manipur,Tamenglong,Tamenglong,795141,5400150672
+BR1528,Central Square,LOMX10016,526201838,Anvi Srivastava,Manipur,Kakching,Kakching,795103,5400150673
+BR1529,Prestige Colony,LOMX10017,526201839,Tanya Chauhan,Manipur,Jiribam,Jiribam,795116,5400150674
+BR1530,Lotus Park,LOMX10018,526201840,Prisha Sharma,Meghalaya,East Khasi Hills,Shillong,793001,5400150675
+BR1531,Royal Plaza,LOMX10019,526201841,Aashi Verma,Meghalaya,West Garo Hills,Tura,794001,5400150676
+BR1532,Metro Avenue,LOMX10020,526201842,Palak Singh,Meghalaya,Jaintia Hills,Jowai,793150,5400150677
+BR1533,Crystal Heights,LOMX10021,526201843,Anushka Gupta,Meghalaya,Ri Bhoi,Nongpoh,793102,5400150678
+BR1534,Prime Market,LOMX10022,526201844,Vaishnavi Mishra,Meghalaya,South Garo Hills,Baghmara,794102,5400150679
+BR1535,Galaxy Road,LOMX10023,526201845,Saloni Tiwari,Meghalaya,West Khasi Hills,Nongstoin,793119,5400150680
+BR1536,Riverfront Point,LOMX10024,526201846,Trisha Pandey,Meghalaya,East Garo Hills,Williamnagar,794111,5400150681
+BR1537,Elite Colony,LOMX10025,526201847,Ruhi Yadav,Meghalaya,North Garo Hills,Resubelpara,794108,5400150682
+BR1538,Central Plaza,LOMX10026,526201848,Mahi Srivastava,Meghalaya,South West Khasi Hills,Mawkyrwat,793114,5400150683
+BR1539,Prestige Heights,LOMX10027,526201849,Juhi Chauhan,Meghalaya,South West Garo Hills,Ampati,794115,5400150684
+BR1540,Sunrise Market,LOMX10028,526201850,Anika Sharma,Mizoram,Aizawl,Aizawl,796001,5400150685
+BR1541,Royal Square,LOMX10029,526201851,Meher Verma,Mizoram,Lunglei,Lunglei,796701,5400150686
+BR1542,Metro Point,LOMX10030,526201852,Shanaya Singh,Mizoram,Champhai,Champhai,796321,5400150687
+BR1543,Crystal Avenue,LOMX10031,526201853,Inaya Gupta,Mizoram,Kolasib,Kolasib,796081,5400150688
+BR1544,Prime Plaza,LOMX10032,526201854,Ahana Mishra,Mizoram,Serchhip,Serchhip,796181,5400150689
+BR1545,Galaxy Colony,LOMX10033,526201855,Anvi Tiwari,Mizoram,Mamit,Mamit,796441,5400150690
+BR1546,River View,LOMX10034,526201856,Mysha Pandey,Mizoram,Lawngtlai,Lawngtlai,796891,5400150691
+BR1547,Elite Heights,LOMX10035,526201857,Kyra Yadav,Mizoram,Saitual,Saitual,796261,5400150692
+BR1548,Central Market,LOMX10036,526201858,Samaira Srivastava,Mizoram,Khawzawl,Khawzawl,796310,5400150693
+BR1549,Prestige Point,LOMX10037,526201859,Aadhya Chauhan,Mizoram,Hnahthial,Hnahthial,796571,5400150694
+BR1550,Lotus Heights,LOMX10038,526201860,Priyanshi Sharma,Tripura,West Tripura,Agartala,799001,5400150695
+BR1551,Royal Avenue,LOMX10039,526201861,Kashvi Verma,Tripura,Gomati,Udaipur,799120,5400150696
+BR1552,Metro Colony,LOMX10040,526201862,Anika Singh,Tripura,North Tripura,Dharmanagar,799250,5400150697
+BR1553,Crystal Market,LOMX10041,526201863,Suhani Gupta,Tripura,Dhalai,Ambassa,799289,5400150698
+BR1554,Prime Road,LOMX10042,526201864,Paridhi Mishra,Tripura,Khowai,Khowai,799201,5400150699
+BR1555,Galaxy Plaza,LOMX10043,526201865,Jiya Tiwari,Tripura,Sepahijala,Bishalgarh,799102,5400150700
+BR1556,Riverfront Square,LOMX10044,526201866,Aarna Pandey,Tripura,Unakoti,Kailashahar,799277,5400150701
+BR1557,Elite Point,LOMX10045,526201867,Tisha Yadav,Tripura,South Tripura,Belonia,799155,5400150702
+BR1558,Central Heights,LOMX10046,526201868,Rhea Srivastava,Tripura,South Tripura,Santirbazar,799144,5400150703
+BR1559,Prestige Colony,LOMX10047,526201869,Charvi Chauhan,Tripura,Gomati,Amarpur,799101,5400150704
+BR1560,Sunrise Plaza,LOMX10048,526201870,Pranjal Sharma,Andaman and Nicobar Islands,South Andaman,Port Blair,744101,5400150705
+BR1561,Royal Market,LOMX10049,526201871,Angel Verma,Andaman and Nicobar Islands,North and Middle Andaman,Mayabunder,744204,5400150706
+BR1562,Metro Heights,LOMX10050,526201872,Harleen Singh,Andaman and Nicobar Islands,Nicobar,Car Nicobar,744301,5400150707
+BR1563,Crystal Point,LOMX10051,526201873,Garima Gupta,Andaman and Nicobar Islands,South Andaman,Ferrargunj,744206,5400150708
+BR1564,Prime Avenue,LOMX10052,526201874,Reet Mishra,Andaman and Nicobar Islands,South Andaman,Bambooflat,744107,5400150709
+BR1565,Galaxy Market,LOMX10053,526201875,Prerna Tiwari,Andaman and Nicobar Islands,North and Middle Andaman,Rangat,744205,5400150710
+BR1566,River View,LOMX10054,526201876,Komal Pandey,Andaman and Nicobar Islands,North and Middle Andaman,Diglipur,744202,5400150711
+BR1567,Elite Plaza,LOMX10055,526201877,Nikita Yadav,Andaman and Nicobar Islands,South Andaman,Garacharma,744105,5400150712
+BR1568,Central Road,LOMX10056,526201878,Shivani Srivastava,Andaman and Nicobar Islands,South Andaman,Aberdeen Bazaar,744101,5400150713
+BR1569,Prestige Square,LOMX10057,526201879,Sonali Chauhan,Andaman and Nicobar Islands,South Andaman,Haddo,744102,5400150714
+BR1570,Lotus Plaza,LOMX10058,526201880,Deepika Sharma,Chandigarh,Chandigarh,Chandigarh,160017,5400150715
+BR1571,Royal Heights,LOMX10059,526201881,Monika Verma,Chandigarh,Chandigarh,Manimajra,160101,5400150716
+BR1572,Metro Market,LOMX10060,526201882,Rashmi Singh,Chandigarh,Chandigarh,Sector 22,160022,5400150717
+BR1573,Crystal Avenue,LOMX10061,526201883,Shruti Gupta,Chandigarh,Chandigarh,Sector 35,160035,5400150718
+BR1574,Prime Colony,LOMX10062,526201884,Pallavi Mishra,Chandigarh,Chandigarh,Sector 17,160017,5400150719
+BR1575,Galaxy Road,LOMX10063,526201885,Bhavya Tiwari,Chandigarh,Chandigarh,Sector 8,160009,5400150720
+BR1576,River View,LOMX10064,526201886,Divya Pandey,Chandigarh,Chandigarh,Sector 15,160015,5400150721
+BR1577,Elite Point,LOMX10065,526201887,Sakina Yadav,Chandigarh,Chandigarh,Sector 37,160036,5400150722
+BR1578,Central Square,LOMX10066,526201888,Farah Srivastava,Chandigarh,Chandigarh,Sector 44,160047,5400150723
+BR1579,Prestige Heights,LOMX10067,526201889,Zoya Chauhan,Chandigarh,Chandigarh,Sector 46,160047,5400150724
+BR1580,Sunrise Colony,LOMX10068,526201890,Noor Sharma,Dadra and Nagar Haveli and Daman and Diu,Daman,Daman,396210,5400150725
+BR1581,Royal Square,LOMX10069,526201891,Ayesha Verma,Dadra and Nagar Haveli and Daman and Diu,Diu,Diu,362520,5400150726
+BR1582,Metro Plaza,LOMX10070,526201892,Alina Singh,Dadra and Nagar Haveli and Daman and Diu,Dadra and Nagar Haveli,Silvassa,396230,5400150727
+BR1583,Crystal Market,LOMX10071,526201893,Hina Gupta,Dadra and Nagar Haveli and Daman and Diu,Daman,Moti Daman,396220,5400150728
+BR1584,Prime Point,LOMX10072,526201894,Reshma Mishra,Dadra and Nagar Haveli and Daman and Diu,Diu,Ghoghla,362540,5400150729
+BR1585,Galaxy Heights,LOMX10073,526201895,Nazia Tiwari,Dadra and Nagar Haveli and Daman and Diu,Dadra and Nagar Haveli,Naroli,396235,5400150730
+BR1586,Riverfront Plaza,LOMX10074,526201896,Shazia Pandey,Dadra and Nagar Haveli and Daman and Diu,Daman,Nani Daman,396210,5400150731
+BR1587,Elite Avenue,LOMX10075,526201897,Muskaan Yadav,Dadra and Nagar Haveli and Daman and Diu,Diu,Vanakbara,362570,5400150732
+BR1588,Central Market,LOMX10076,526201898,Heena Srivastava,Dadra and Nagar Haveli and Daman and Diu,Dadra and Nagar Haveli,Khanvel,396230,5400150733
+BR1589,Prestige Road,LOMX10077,526201899,Rabia Chauhan,Dadra and Nagar Haveli and Daman and Diu,Daman,Kachigam,396215,5400150734
+BR1590,Lotus Avenue,LOMX10078,526201900,Nehal Sharma,Ladakh,Leh,Leh,194101,5400150735
+BR1591,Royal Plaza,LOMX10079,526201901,Sania Verma,Ladakh,Kargil,Kargil,194103,5400150736
+BR1592,Metro Heights,LOMX10080,526201902,Mariam Singh,Ladakh,Leh,Nubra,194401,5400150737
+BR1593,Crystal Colony,LOMX10081,526201903,Afreen Gupta,Ladakh,Leh,Diskit,194401,5400150738
+BR1594,Prime Market,LOMX10082,526201904,Rukhsar Mishra,Ladakh,Kargil,Drass,194102,5400150739
+BR1595,Galaxy Point,LOMX10083,526201905,Humaira Tiwari,Ladakh,Leh,Khaltse,194106,5400150740
+BR1596,River View,LOMX10084,526201906,Mehak Pandey,Ladakh,Leh,Nyoma,194404,5400150741
+BR1597,Elite Square,LOMX10085,526201907,Saba Yadav,Ladakh,Kargil,Sankoo,194301,5400150742
+BR1598,Central Plaza,LOMX10086,526201908,Inaaya Srivastava,Ladakh,Leh,Shey,194201,5400150743
+BR1599,Prestige Heights,LOMX10087,526201909,Alisha Chauhan,Ladakh,Kargil,Zanskar,194302,5400150744
