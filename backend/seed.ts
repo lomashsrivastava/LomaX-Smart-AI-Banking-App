@@ -141,7 +141,9 @@ const ACC_TYPES   = ['Savings Account','Current Account','Salary Account'];
 const TXN_MODES   = ['NEFT','RTGS','IMPS','UPI','Internal Transfer'];
 const REMARKS     = ['Monthly EMI','Online Shopping','Grocery Payment','Rent Transfer','Medical Bill','Utility Bill','Insurance Premium','Investment SIP','Education Fee','Travel Booking'];
 
-const csvPath = path.join(__dirname, 'branchesData2.csv');
+const csvPath = fs.existsSync(path.join(__dirname, 'branchesData2.csv'))
+  ? path.join(__dirname, 'branchesData2.csv')
+  : path.join(__dirname, '..', 'branchesData2.csv');
 const csvData = fs.readFileSync(csvPath, 'utf-8');
 const lines = csvData.split('\n').map(line => line.trim()).filter(line => line.length > 0);
 const records = lines.slice(1);
