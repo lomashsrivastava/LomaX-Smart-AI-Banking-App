@@ -38,14 +38,25 @@ interface Branch {
 }
 
 const getApiBase = () => {
-  if (process.env.NEXT_PUBLIC_API_URL) return process.env.NEXT_PUBLIC_API_URL;
-  if (typeof window !== "undefined") {
+  let base = process.env.NEXT_PUBLIC_API_URL;
+  if (!base && typeof window !== "undefined") {
     const hostname = window.location.hostname;
     if (hostname !== "localhost" && hostname !== "127.0.0.1") {
-      return "https://lomax-backend.onrender.com";
+      base = "https://lomax-backend.onrender.com";
     }
   }
-  return "http://localhost:5000";
+  if (!base) {
+    base = "http://localhost:5000";
+  }
+  
+  // Normalize: remove trailing slash and /api suffix
+  if (base.endsWith("/")) {
+    base = base.slice(0, -1);
+  }
+  if (base.endsWith("/api")) {
+    base = base.slice(0, -4);
+  }
+  return base;
 };
 
 const API_BASE = getApiBase();
