@@ -37,6 +37,19 @@ interface Branch {
   country: string;
 }
 
+const getApiBase = () => {
+  if (process.env.NEXT_PUBLIC_API_URL) return process.env.NEXT_PUBLIC_API_URL;
+  if (typeof window !== "undefined") {
+    const hostname = window.location.hostname;
+    if (hostname !== "localhost" && hostname !== "127.0.0.1") {
+      return "https://lomax-backend.onrender.com";
+    }
+  }
+  return "http://localhost:5000";
+};
+
+const API_BASE = getApiBase();
+
 export default function EmployeeListPage() {
   const [regions, setRegions] = useState<Record<string, Record<string, string[]>>>({});
   const [regionsLoading, setRegionsLoading] = useState(true);
@@ -60,7 +73,7 @@ export default function EmployeeListPage() {
     const fetchRegions = async () => {
       setRegionsLoading(true);
       try {
-        const response = await fetch("http://localhost:5000/api/branches/regions");
+        const response = await fetch(`${API_BASE}/api/branches/regions`);
         const data = await response.json();
         if (data.success) {
           const regs = data.regions || {};
@@ -91,7 +104,7 @@ export default function EmployeeListPage() {
           state: selectedState,
           district: selectedDistrict
         });
-        const response = await fetch(`http://localhost:5000/api/branches?${queryParams}`);
+        const response = await fetch(`${API_BASE}/api/branches?${queryParams}`);
         const data = await response.json();
         if (data.success) {
           const list = data.data || [];
@@ -108,30 +121,24 @@ export default function EmployeeListPage() {
     fetchBranches();
   }, [selectedCountry, selectedState, selectedDistrict]);
 
-  // Fetch employees under the selected branch
+  // Load all employees on mount
   useEffect(() => {
-    if (!selectedBranchId) {
-      setEmployees([]);
-      return;
-    }
-
-    const fetchEmployees = async () => {
+    const fetchAllEmployees = async () => {
       setEmployeesLoading(true);
       try {
-        const response = await fetch(`http://localhost:5000/api/employees/branch/${selectedBranchId}`);
+        const response = await fetch(`${API_BASE}/api/employees`);
         const data = await response.json();
         if (data.success) {
           setEmployees(data.data || []);
         }
       } catch (error) {
-        console.error("Failed to fetch employees", error);
+        console.error("Failed to fetch all employees", error);
       } finally {
         setEmployeesLoading(false);
       }
     };
-
-    fetchEmployees();
-  }, [selectedBranchId]);
+    fetchAllEmployees();
+  }, []);
 
   const handleDelete = async (id: string, name: string) => {
     if (!window.confirm(`Are you sure you want to remove employee ${name}?`)) {
@@ -139,7 +146,7 @@ export default function EmployeeListPage() {
     }
     
     try {
-      const response = await fetch(`http://localhost:5000/api/employees/${id}`, {
+      const response = await fetch(`${API_BASE}/api/employees/${id}`, {
         method: "DELETE"
       });
       const data = await response.json();
@@ -160,13 +167,30 @@ export default function EmployeeListPage() {
   const states = selectedCountry && regions[selectedCountry] ? Object.keys(regions[selectedCountry]).sort() : [];
   const districts = selectedState && selectedCountry && regions[selectedCountry]?.[selectedState] ? regions[selectedCountry][selectedState].sort() : [];
 
-  const filteredEmployees = employees.filter(e => 
-    e.empId.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    e.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    e.lastName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    (e.officialEmail && e.officialEmail.toLowerCase().includes(searchTerm.toLowerCase())) ||
-    e.role.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredEmployees = employees.filter(e => {
+    // Apply regional hierarchy filters locally
+    if (selectedBranchId && (!e.branchId || e.branchId._id !== selectedBranchId)) {
+      return false;
+    }
+    if (selectedDistrict && (!e.district || e.district.trim().toLowerCase() !== selectedDistrict.trim().toLowerCase())) {
+      return false;
+    }
+    if (selectedState && (!e.state || e.state.trim().toLowerCase() !== selectedState.trim().toLowerCase())) {
+      return false;
+    }
+    
+    // Apply search term filter
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      const matchId = e.empId.toLowerCase().includes(term);
+      const matchName = `${e.firstName} ${e.lastName}`.toLowerCase().includes(term);
+      const matchEmail = e.officialEmail && e.officialEmail.toLowerCase().includes(term);
+      const matchRole = e.role.toLowerCase().includes(term);
+      return matchId || matchName || matchEmail || matchRole;
+    }
+    
+    return true;
+  });
 
   return (
     <div className="max-w-7xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 relative z-10 pb-12">
@@ -322,22 +346,10 @@ export default function EmployeeListPage() {
           </Card>
 
           {/* Results Section */}
-          {!selectedBranchId ? (
-            <Card className="bg-slate-950/40 border border-slate-900 p-12 text-center rounded-2xl relative overflow-hidden backdrop-blur-sm">
-              <div className="max-w-md mx-auto space-y-4">
-                <div className="w-12 h-12 rounded-2xl bg-indigo-950/60 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mx-auto shadow-[0_0_15px_rgba(99,102,241,0.2)]">
-                  <Users className="w-6 h-6" />
-                </div>
-                <h3 className="text-slate-200 font-bold text-base">Select Branch to View Staff</h3>
-                <p className="text-slate-500 text-xs leading-relaxed">
-                  To prevent interface lagging and maintain system stability, please choose a specific branch from the regional hierarchy to inspect its registered employees.
-                </p>
-              </div>
-            </Card>
-          ) : employeesLoading ? (
+          {employeesLoading ? (
             <div className="text-center py-20 text-slate-500 animate-pulse flex flex-col items-center justify-center gap-2">
               <Loader2 className="w-6 h-6 animate-spin text-indigo-400" />
-              <span className="text-xs">Querying branch staff records...</span>
+              <span className="text-xs">Querying staff records...</span>
             </div>
           ) : (
             <Card className="bg-slate-950/80 backdrop-blur-xl border border-slate-800 shadow-xl overflow-hidden rounded-2xl animate-in fade-in zoom-in-98 duration-300">
