@@ -404,121 +404,119 @@ export default function LoginPage() {
       
       {/* Demo Credentials Popup */}
       {showDemoPopup && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-sm p-4 animate-in fade-in duration-300">
-          <div className="relative w-full max-w-md bg-slate-900/90 border border-cyan-500/40 rounded-2xl shadow-[0_0_50px_rgba(6,182,212,0.25)] overflow-hidden p-6 animate-in zoom-in-95 duration-300">
-            {/* Cyber scanline */}
-            <div className="absolute top-0 left-0 w-full h-[2px] bg-cyan-400 shadow-[0_0_15px_#22d3ee] z-20 opacity-30 animate-pulse"></div>
-            
-            {/* Glowing corner brackets */}
-            <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyan-400"></div>
-            <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cyan-400"></div>
-            <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-cyan-400"></div>
-            <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-cyan-400"></div>
+        <div className="fixed bottom-4 left-4 z-50 w-[calc(100%-2rem)] sm:max-w-md bg-slate-900/95 border border-cyan-500/40 rounded-2xl shadow-[0_0_50px_rgba(6,182,212,0.35)] overflow-hidden p-6 animate-in fade-in slide-in-from-left-10 duration-500">
+          {/* Cyber scanline */}
+          <div className="absolute top-0 left-0 w-full h-[2px] bg-cyan-400 shadow-[0_0_15px_#22d3ee] z-20 opacity-30 animate-pulse"></div>
+          
+          {/* Glowing corner brackets */}
+          <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyan-400"></div>
+          <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cyan-400"></div>
+          <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-cyan-400"></div>
+          <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-cyan-400"></div>
 
-            {/* Header */}
-            <div className="flex items-center justify-between mb-4 border-b border-cyan-500/20 pb-3">
-              <div className="flex items-center space-x-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></div>
-                <h2 className="text-lg font-bold font-mono tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
-                  DEMO PORTAL CONSOLE
-                </h2>
-              </div>
-              <button 
-                onClick={() => setShowDemoPopup(false)}
-                className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-cyan-400 hover:text-cyan-300 transition-colors border border-cyan-500/20"
-                aria-label="Close popup"
+          {/* Header */}
+          <div className="flex items-center justify-between mb-4 border-b border-cyan-500/20 pb-3">
+            <div className="flex items-center space-x-2">
+              <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></div>
+              <h2 className="text-lg font-bold font-mono tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                DEMO PORTAL CONSOLE
+              </h2>
+            </div>
+            <button 
+              onClick={() => setShowDemoPopup(false)}
+              className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-cyan-400 hover:text-cyan-300 transition-colors border border-cyan-500/20"
+              aria-label="Close popup"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Timer banner */}
+          <div className="flex items-center justify-between px-3 py-2 mb-4 bg-cyan-950/40 border border-cyan-500/20 rounded-lg text-xs font-mono text-cyan-300">
+            <span className="tracking-wider">TERMINAL AUTO-DISCONNECT IN:</span>
+            <span className="text-emerald-400 font-bold tracking-widest text-sm">
+              00:{String(countdown).padStart(2, '0')}
+            </span>
+          </div>
+
+          <p className="text-slate-400 text-xs mb-4">
+            Select a simulation profile below to auto-fill credentials and access the LomaX Smart Banking Platform.
+          </p>
+
+          {/* Grid of Simulation Profiles */}
+          <div className="space-y-3">
+            {[
+              {
+                role: 'customer' as const,
+                title: 'Demo Customer Profile',
+                desc: 'Retail banking dashboard, statements, transfers, and notifications.',
+                user: 'CUST100001',
+                pass: '100001TSUC',
+                color: 'cyan'
+              },
+              {
+                role: 'admin' as const,
+                title: 'Demo Admin Console',
+                desc: 'System configurations, region selectors, and full audit registries.',
+                user: 'admin@lomax.com',
+                pass: '123456789',
+                color: 'emerald'
+              },
+              {
+                role: 'employee' as const,
+                title: 'Demo Employee Console',
+                desc: 'Cashier portal, ledger controls, and customer account approvals.',
+                user: 'EMP100001',
+                pass: '123456789',
+                color: 'fuchsia'
+              }
+            ].map((profile) => (
+              <div 
+                key={profile.role}
+                className="bg-slate-950/50 border border-slate-800 rounded-xl p-3 flex flex-col justify-between hover:border-cyan-500/30 transition-colors"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Timer banner */}
-            <div className="flex items-center justify-between px-3 py-2 mb-4 bg-cyan-950/40 border border-cyan-500/20 rounded-lg text-xs font-mono text-cyan-300">
-              <span className="tracking-wider">TERMINAL AUTO-DISCONNECT IN:</span>
-              <span className="text-emerald-400 font-bold tracking-widest text-sm">
-                00:{String(countdown).padStart(2, '0')}
-              </span>
-            </div>
-
-            <p className="text-slate-400 text-xs mb-4">
-              Select a simulation profile below to auto-fill credentials and access the LomaX Smart Banking Platform.
-            </p>
-
-            {/* Grid of Simulation Profiles */}
-            <div className="space-y-3">
-              {[
-                {
-                  role: 'customer' as const,
-                  title: 'Demo Customer Profile',
-                  desc: 'Retail banking dashboard, statements, transfers, and notifications.',
-                  user: 'CUST100001',
-                  pass: '100001TSUC',
-                  color: 'cyan'
-                },
-                {
-                  role: 'admin' as const,
-                  title: 'Demo Admin Console',
-                  desc: 'System configurations, region selectors, and full audit registries.',
-                  user: 'admin@lomax.com',
-                  pass: '123456789',
-                  color: 'emerald'
-                },
-                {
-                  role: 'employee' as const,
-                  title: 'Demo Employee Console',
-                  desc: 'Cashier portal, ledger controls, and customer account approvals.',
-                  user: 'EMP100001',
-                  pass: '123456789',
-                  color: 'fuchsia'
-                }
-              ].map((profile) => (
-                <div 
-                  key={profile.role}
-                  className="bg-slate-950/50 border border-slate-800 rounded-xl p-3 flex flex-col justify-between hover:border-cyan-500/30 transition-colors"
-                >
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <h3 className="text-sm font-bold text-slate-200 font-mono">{profile.title}</h3>
-                      <p className="text-[11px] text-slate-500 leading-tight mt-0.5">{profile.desc}</p>
-                    </div>
-                    <span className={`text-[10px] font-mono px-2 py-0.5 rounded border ${
-                      profile.role === 'customer' 
-                        ? 'text-cyan-400 bg-cyan-950/40 border-cyan-500/20' 
-                        : profile.role === 'admin'
-                        ? 'text-emerald-400 bg-emerald-950/40 border-emerald-500/20'
-                        : 'text-fuchsia-400 bg-fuchsia-950/40 border-fuchsia-500/20'
-                    }`}>
-                      {profile.role.toUpperCase()}
-                    </span>
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <h3 className="text-sm font-bold text-slate-200 font-mono">{profile.title}</h3>
+                    <p className="text-[11px] text-slate-500 leading-tight mt-0.5">{profile.desc}</p>
                   </div>
-                  
-                  <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-900">
-                    <div className="font-mono text-xs text-slate-400 space-y-0.5">
-                      <div><span className="text-slate-600">ID:</span> <code className="text-slate-300 font-bold">{profile.user}</code></div>
-                      <div><span className="text-slate-600">PW:</span> <code className="text-slate-300 font-bold">{profile.pass}</code></div>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        handleRoleChange(profile.role);
-                        setShowDemoPopup(false);
-                      }}
-                      className="px-3 py-1.5 bg-cyan-600/20 hover:bg-cyan-600/40 text-cyan-300 hover:text-white border border-cyan-500/30 rounded-lg text-xs font-mono font-bold tracking-wider transition-all duration-300"
-                    >
-                      SIMULATE LOGIN
-                    </button>
-                  </div>
+                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded border ${
+                    profile.role === 'customer' 
+                      ? 'text-cyan-400 bg-cyan-950/40 border-cyan-500/20' 
+                      : profile.role === 'admin'
+                      ? 'text-emerald-400 bg-emerald-950/40 border-emerald-500/20'
+                      : 'text-fuchsia-400 bg-fuchsia-950/40 border-fuchsia-500/20'
+                  }`}>
+                    {profile.role.toUpperCase()}
+                  </span>
                 </div>
-              ))}
-            </div>
+                
+                <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-900">
+                  <div className="font-mono text-xs text-slate-400 space-y-0.5">
+                    <div><span className="text-slate-600">ID:</span> <code className="text-slate-300 font-bold">{profile.user}</code></div>
+                    <div><span className="text-slate-600">PW:</span> <code className="text-slate-300 font-bold">{profile.pass}</code></div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      handleRoleChange(profile.role);
+                      setShowDemoPopup(false);
+                    }}
+                    className="px-3 py-1.5 bg-cyan-600/20 hover:bg-cyan-600/40 text-cyan-300 hover:text-white border border-cyan-500/30 rounded-lg text-xs font-mono font-bold tracking-wider transition-all duration-300"
+                  >
+                    SIMULATE LOGIN
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
 
-            <div className="mt-4 text-center">
-              <span className="text-[10px] font-mono text-slate-600 tracking-wider">
-                LOMAX QUANTUM SECURE DISCOVERY PROTOCOL ACTIVED // SEC-9008
-              </span>
-            </div>
+          <div className="mt-4 text-center">
+            <span className="text-[10px] font-mono text-slate-600 tracking-wider">
+              LOMAX QUANTUM SECURE DISCOVERY PROTOCOL ACTIVED // SEC-9008
+            </span>
           </div>
         </div>
       )}

@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import mongoose from 'mongoose';
 import os from 'os';
+import { seedDatabase } from '../utils/seeder';
 
 const router = Router();
 
@@ -57,6 +58,34 @@ router.get('/', async (_req: Request, res: Response) => {
       cpuCount: os.cpus().length,
     },
   });
+});
+
+// POST /api/health/seed  — trigger database seeding (protected by simple secret key)
+router.post('/seed', async (req: Request, res: Response) => {
+  const { secret } = req.query;
+  const expectedSecret = process.env.SEED_SECRET || 'lomax_seed_secret_2026';
+  
+  if (secret !== expectedSecret) {
+    return res.status(401).json({ success: false, message: 'Unauthorized. Invalid seed secret.' });
+  }
+
+  try {
+    console.log('[LomaX Seeder] Starting programmatic database seed via HTTP...');
+    const result = await seedDatabase();
+    console.log('[LomaX Seeder] Database seed completed successfully!');
+    return res.status(200).json({
+      success: true,
+      message: 'Database seeded successfully.',
+      summary: result
+    });
+  } catch (error: any) {
+    console.error('[LomaX Seeder] Database seed failed:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Failed to seed database.',
+      error: error.message || error
+    });
+  }
 });
 
 export default router;
