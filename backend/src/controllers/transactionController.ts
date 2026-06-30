@@ -101,7 +101,8 @@ export const lookupAccount = async (req: Request, res: Response): Promise<void> 
 
 export const transferMoney = async (req: Request, res: Response): Promise<void> => {
   try {
-    const { transferType, sourceAccount, targetAccount, amount, remarks, payeeName, payeeAccount, ifscCode, upiId } = req.body;
+    const { sourceAccount, targetAccount, amount, remarks, payeeName, payeeAccount, ifscCode, upiId } = req.body;
+    const transferType = req.body.transferType || req.body.transferMode || 'Internal Transfer';
     const transferAmount = parseFloat(amount);
 
     if (isNaN(transferAmount) || transferAmount <= 0) {

@@ -4,7 +4,7 @@ export interface ITicket extends Document {
   ticketId: string;
   customerId: string;
   subject: string;
-  category: 'Account' | 'Card' | 'Loan' | 'Transaction' | 'Other';
+  category: string;
   priority: 'Low' | 'Medium' | 'High' | 'Critical';
   status: 'Open' | 'In Progress' | 'Resolved' | 'Closed';
   description: string;
@@ -17,7 +17,7 @@ const TicketSchema: Schema = new Schema({
   ticketId: { type: String, required: true, unique: true },
   customerId: { type: String, required: true },
   subject: { type: String, required: true },
-  category: { type: String, enum: ['Account', 'Card', 'Loan', 'Transaction', 'Other'], required: true },
+  category: { type: String, required: true },
   priority: { type: String, enum: ['Low', 'Medium', 'High', 'Critical'], default: 'Medium' },
   status: { type: String, enum: ['Open', 'In Progress', 'Resolved', 'Closed'], default: 'Open' },
   description: { type: String, required: true },

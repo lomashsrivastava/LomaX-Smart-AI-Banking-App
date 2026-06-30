@@ -97,7 +97,18 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
 
     fetchNotifications();
 
-    const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+    let apiBase = process.env.NEXT_PUBLIC_API_URL;
+    if (!apiBase) {
+      if (typeof window !== "undefined") {
+        const hostname = window.location.hostname;
+        if (hostname !== "localhost" && hostname !== "127.0.0.1") {
+          apiBase = "https://lomax-backend.onrender.com/api";
+        }
+      }
+    }
+    if (!apiBase) {
+      apiBase = "http://localhost:5000/api";
+    }
     // Append customerId query fallback for dev environments
     const sseUrl = `${apiBase}/notifications/stream?customerId=${user.id}`;
     

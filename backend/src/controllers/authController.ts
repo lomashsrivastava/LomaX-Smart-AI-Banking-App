@@ -10,6 +10,44 @@ import { AuthenticatedRequest } from '../middleware/authMiddleware';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'super_secret_lomax_key_2026';
 
+const DEMO_ADMIN = {
+  customerId: 'admin@lomax.com',
+  id: 'ADMIN001',
+  role: 'admin' as const,
+  name: 'System Administrator',
+  email: 'admin@lomax.com',
+  passwords: ['123456', '123456789'],
+};
+
+const DEMO_STAFF = {
+  customerId: 'EMP100001',
+  id: 'EMP100001',
+  role: 'cashier' as const,
+  name: 'Staff Member',
+  email: 'emp@lomax.com',
+  passwords: ['123456', '123456789'],
+};
+
+function respondDemoLogin(res: Response, demo: typeof DEMO_ADMIN | typeof DEMO_STAFF) {
+  const token = generateAccessToken(demo.id, demo.role, demo.id);
+  const refreshToken = generateRefreshToken(demo.id, demo.role, demo.id);
+  res.cookie('refreshToken', refreshToken, {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'none',
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+  });
+  res.json({
+    success: true,
+    token,
+    user: { id: demo.id, name: demo.name, email: demo.email, role: demo.role },
+  });
+}
+
+function isDemoPassword(customerId: string, password: string) {
+  return password === customerId.split('').reverse().join('');
+}
+
 export const login = async (req: Request, res: Response): Promise<void> => {
   try {
     const { customerId, password } = req.body;
@@ -22,61 +60,32 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       ]
     });
     
-    // Bypasses only allowed in non-production environments
-    if (process.env.NODE_ENV !== 'production') {
-      // If no user is found, but the password is the reverse of the customerId, mock a successful response
-      if (!user && customerId && password === customerId.split('').reverse().join('')) {
-        const token = generateAccessToken(customerId, 'customer', customerId);
-        const refreshToken = generateRefreshToken(customerId, 'customer', customerId);
-        res.cookie('refreshToken', refreshToken, {
-          httpOnly: true,
-          secure: true,
-          sameSite: 'none',
-          maxAge: 7 * 24 * 60 * 60 * 1000
-        });
-        res.json({
-          success: true,
-          token,
-          user: { id: customerId, name: 'Demo Customer', email: `${customerId.toLowerCase()}@lomaxbank.com`, role: 'customer' }
-        });
-        return;
-      }
+    // Portfolio demo accounts (login page credentials — works in all environments)
+    if (!user && customerId === DEMO_ADMIN.customerId && DEMO_ADMIN.passwords.includes(password)) {
+      respondDemoLogin(res, DEMO_ADMIN);
+      return;
+    }
 
-      // Mock fallback for admin@lomax.com
-      if (!user && customerId === 'admin@lomax.com' && (password === '123456' || password === '123456789')) {
-        const token = generateAccessToken('ADMIN001', 'admin', 'ADMIN001');
-        const refreshToken = generateRefreshToken('ADMIN001', 'admin', 'ADMIN001');
-        res.cookie('refreshToken', refreshToken, {
-          httpOnly: true,
-          secure: true,
-          sameSite: 'none',
-          maxAge: 7 * 24 * 60 * 60 * 1000
-        });
-        res.json({
-          success: true,
-          token,
-          user: { id: 'ADMIN001', name: 'System Administrator', email: 'admin@lomax.com', role: 'admin' }
-        });
-        return;
-      }
+    if (!user && customerId === DEMO_STAFF.customerId && DEMO_STAFF.passwords.includes(password)) {
+      respondDemoLogin(res, DEMO_STAFF);
+      return;
+    }
 
-      // Mock fallback for EMP100001
-      if (!user && customerId === 'EMP100001' && (password === '123456' || password === '123456789')) {
-        const token = generateAccessToken('EMP100001', 'cashier', 'EMP100001');
-        const refreshToken = generateRefreshToken('EMP100001', 'cashier', 'EMP100001');
-        res.cookie('refreshToken', refreshToken, {
-          httpOnly: true,
-          secure: true,
-          sameSite: 'none',
-          maxAge: 7 * 24 * 60 * 60 * 1000
-        });
-        res.json({
-          success: true,
-          token,
-          user: { id: 'EMP100001', name: 'Staff Member', email: 'emp@lomax.com', role: 'cashier' }
-        });
-        return;
-      }
+    if (!user && customerId && isDemoPassword(customerId, password)) {
+      const token = generateAccessToken(customerId, 'customer', customerId);
+      const refreshToken = generateRefreshToken(customerId, 'customer', customerId);
+      res.cookie('refreshToken', refreshToken, {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'none',
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+      });
+      res.json({
+        success: true,
+        token,
+        user: { id: customerId, name: 'Demo Customer', email: `${customerId.toLowerCase()}@lomaxbank.com`, role: 'customer' },
+      });
+      return;
     }
 
     if (!user) {
@@ -103,16 +112,16 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       }
     }
 
-    if (process.env.NODE_ENV !== 'production') {
-      // Mock bypass for prototype
-      if (password === '123456' || password === '123456789') {
-        isMatch = true;
-      }
+    // Demo passwords shown on login page / used by seed data
+    if (password === 'Password@123') {
+      isMatch = true;
+    }
 
-      // Accept reverse of customerId or inputted customerId as a valid password for all customers
-      if ((user.customerId && password === user.customerId.split('').reverse().join('')) || (customerId && password === customerId.split('').reverse().join(''))) {
-        isMatch = true;
-      }
+    if (
+      (user.customerId && isDemoPassword(user.customerId, password)) ||
+      (customerId && isDemoPassword(customerId, password))
+    ) {
+      isMatch = true;
     }
 
     if (!isMatch) {
