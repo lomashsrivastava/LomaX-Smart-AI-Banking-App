@@ -244,7 +244,7 @@ async function seed() {
       lastName:   last,
       email:      `${first.toLowerCase()}.${last.toLowerCase()}${i}@gmail.com`,
       password:   hashedPw,
-      mobile:     `+91 ${rand(70000, 99999)}${rand(10000, 99999)}`,
+      mobile:     `${rand(1, 9)}${String(rand(0, 999999999)).padStart(9, '0')}`,
       pan:        `${uid().slice(0,5)}${rand(1000,9999)}${uid().slice(0,1)}`,
       aadhaar:    String(rand(100000000000, 999999999999)),
       dob:        `${rand(1975, 2000)}-${String(rand(1,12)).padStart(2,'0')}-${String(rand(1,28)).padStart(2,'0')}`,
