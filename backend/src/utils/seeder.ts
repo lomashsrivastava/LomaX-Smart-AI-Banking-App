@@ -109,33 +109,6 @@ export async function seedDatabase() {
   const adminHashedPw = await bcrypt.hash('123456789', 10);
   const staffHashedPw = await bcrypt.hash('123456789', 10);
 
-  // Seed Demo Admin in User collection
-  await new User({
-    customerId: 'admin@lomax.com',
-    firstName: 'System',
-    lastName: 'Admin',
-    email: 'admin@lomax.com',
-    password: adminHashedPw,
-    mobile: '9999999999',
-    pan: 'ABCDE1234F',
-    aadhaar: '123456789012',
-    role: 'admin',
-    isApproved: true,
-  }).save();
-
-  // Seed Demo Staff in User collection
-  await new User({
-    customerId: 'EMP100001',
-    firstName: 'Vivek',
-    lastName: 'Singh',
-    email: 'emp@lomax.com',
-    password: staffHashedPw,
-    mobile: '9876543210',
-    pan: 'FGHIJ5678K',
-    aadhaar: '987654321098',
-    role: 'cashier',
-    isApproved: true,
-  }).save();
 
   const customerIds: string[] = [];
   const accountIds: mongoose.Types.ObjectId[] = [];
