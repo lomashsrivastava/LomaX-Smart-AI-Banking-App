@@ -117,6 +117,8 @@ export async function seedDatabase() {
     email: 'admin@lomax.com',
     password: adminHashedPw,
     mobile: '9999999999',
+    pan: 'ABCDE1234F',
+    aadhaar: '123456789012',
     role: 'admin',
     isApproved: true,
   }).save();
@@ -129,6 +131,8 @@ export async function seedDatabase() {
     email: 'emp@lomax.com',
     password: staffHashedPw,
     mobile: '9876543210',
+    pan: 'FGHIJ5678K',
+    aadhaar: '987654321098',
     role: 'cashier',
     isApproved: true,
   }).save();
