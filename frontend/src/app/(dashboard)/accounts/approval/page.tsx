@@ -24,6 +24,30 @@ interface PendingApplication {
   createdAt: string;
 }
 
+const getApiBase = () => {
+  let base = process.env.NEXT_PUBLIC_API_URL;
+  if (!base && typeof window !== "undefined") {
+    const hostname = window.location.hostname;
+    if (hostname !== "localhost" && hostname !== "127.0.0.1") {
+      base = "https://lomax-backend.onrender.com";
+    }
+  }
+  if (!base) {
+    base = "http://localhost:5000";
+  }
+  
+  // Normalize: remove trailing slash and /api suffix
+  if (base.endsWith("/")) {
+    base = base.slice(0, -1);
+  }
+  if (base.endsWith("/api")) {
+    base = base.slice(0, -4);
+  }
+  return base;
+};
+
+const API_BASE = getApiBase();
+
 export default function AccountApprovalPage() {
   const [applications, setApplications] = useState<PendingApplication[]>([]);
   const [loading, setLoading] = useState(true);
@@ -40,7 +64,7 @@ export default function AccountApprovalPage() {
   const fetchApplications = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/customer-accounts/${filter === "pending" ? "pending" : filter === "approved" ? "approved" : "all"}`);
+      const res = await fetch(`${API_BASE}/api/customer-accounts/${filter === "pending" ? "pending" : filter === "approved" ? "approved" : "all"}`);
       const data = await res.json();
       if (data.success) {
         const result = filter === "rejected"
@@ -60,7 +84,7 @@ export default function AccountApprovalPage() {
   const handleApprove = async (id: string) => {
     setProcessing(id);
     try {
-      const res = await fetch(`http://localhost:5000/api/customer-accounts/${id}/approve`, { method: "POST" });
+      const res = await fetch(`${API_BASE}/api/customer-accounts/${id}/approve`, { method: "POST" });
       const data = await res.json();
       if (data.success) {
         showToast("✅ Account approved and activated successfully!", "success");
@@ -79,7 +103,7 @@ export default function AccountApprovalPage() {
     const reason = prompt("Enter rejection reason (optional):");
     setProcessing(id);
     try {
-      const res = await fetch(`http://localhost:5000/api/customer-accounts/${id}/reject`, {
+      const res = await fetch(`${API_BASE}/api/customer-accounts/${id}/reject`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ reason: reason || "Rejected by administrator" }),

@@ -154,6 +154,15 @@ export default function LoginPage() {
           90% { opacity: 1; }
           100% { transform: translateY(110px); opacity: 0; }
         }
+        @keyframes gradient-slide {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .loading-gradient-btn {
+          background-size: 200% 200%;
+          animation: gradient-slide 2s ease infinite;
+        }
       `}</style>
       
       {/* Full-screen Background Image with Gradient Overlay */}
@@ -459,13 +468,22 @@ export default function LoginPage() {
 
                       <Button 
                         type="submit" 
-                        className="w-full h-12 bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-bold tracking-widest text-lg shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(52,211,153,0.6)] border-none transition-all duration-300 uppercase"
+                        className={`w-full h-12 text-white font-bold tracking-widest text-lg shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(52,211,153,0.6)] border-none transition-all duration-300 uppercase ${
+                          isLoading 
+                            ? 'bg-gradient-to-r from-slate-800 via-cyan-950 to-slate-800 loading-gradient-btn' 
+                            : 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500'
+                        }`}
                         disabled={isLoading}
                       >
                         {isLoading ? (
-                          <div className="flex items-center font-mono">
-                            <Loader2 className="mr-3 h-5 w-5 animate-spin" />
-                            LOGGING IN...
+                          <div className="flex flex-col items-center justify-center py-1 leading-none">
+                            <div className="flex items-center justify-center font-mono text-sm tracking-wide font-bold">
+                              <Loader2 className="mr-2 h-4 w-4 animate-spin text-cyan-300" />
+                              CONNECTING TO SERVER...
+                            </div>
+                            <span className="text-[10px] font-mono text-amber-400 animate-pulse tracking-wider mt-1 font-semibold uppercase">
+                              Please Wait ~30 Sec To Connect
+                            </span>
                           </div>
                         ) : (
                           "Log In"
@@ -492,13 +510,22 @@ export default function LoginPage() {
 
                     <Button 
                       type="submit" 
-                      className="w-full h-12 bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-bold tracking-widest text-lg shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(52,211,153,0.6)] border-none transition-all duration-300 uppercase"
+                      className={`w-full h-12 text-white font-bold tracking-widest text-lg shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(52,211,153,0.6)] border-none transition-all duration-300 uppercase ${
+                        isLoading 
+                          ? 'bg-gradient-to-r from-slate-800 via-cyan-950 to-slate-800 loading-gradient-btn' 
+                          : 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500'
+                      }`}
                       disabled={isLoading}
                     >
                       {isLoading ? (
-                        <div className="flex items-center font-mono">
-                          <Loader2 className="mr-3 h-5 w-5 animate-spin" />
-                          VERIFYING CODE...
+                        <div className="flex flex-col items-center justify-center py-1 leading-none">
+                          <div className="flex items-center justify-center font-mono text-sm tracking-wide font-bold">
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin text-cyan-300" />
+                            VERIFYING CODE...
+                          </div>
+                          <span className="text-[10px] font-mono text-amber-400 animate-pulse tracking-wider mt-1 font-semibold uppercase">
+                            Please Wait ~30 Sec To Connect
+                          </span>
                         </div>
                       ) : (
                         "Verify & Access"

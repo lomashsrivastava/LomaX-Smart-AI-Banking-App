@@ -114,7 +114,7 @@ export async function seedDatabase() {
   const accountIds: mongoose.Types.ObjectId[] = [];
   const accountNumbers: string[] = [];
 
-  // Seed 100 Customers + 100 Accounts
+  // Seed 100 Customers + 100 Accounts (90 approved, 10 pending)
   for (let i = 1; i <= 100; i++) {
     const first = pick(FIRST_NAMES);
     const last  = pick(LAST_NAMES);
@@ -123,78 +123,111 @@ export async function seedDatabase() {
     const accNum  = `${rand(1000000000, 9999999999)}`;
     const branch = branches[idx];
 
-    const user = await new User({
-      customerId: custId,
-      firstName:  first,
-      lastName:   last,
-      email:      `${first.toLowerCase()}.${last.toLowerCase()}${i}@gmail.com`,
-      password:   hashedPw,
-      mobile:     `${rand(1, 9)}${String(rand(0, 999999999)).padStart(9, '0')}`,
-      pan:        `${uid().slice(0,5)}${rand(1000,9999)}${uid().slice(0,1)}`,
-      aadhaar:    String(rand(100000000000, 999999999999)),
-      dob:        `${rand(1975, 2000)}-${String(rand(1,12)).padStart(2,'0')}-${String(rand(1,28)).padStart(2,'0')}`,
-      gender:     pick(['Male','Female']),
-      address:    `${rand(1,999)}, ${pick(['MG Road','Park Street','Lake View','Hill Side','Beach Road'])}`,
-      city:       branch.city,
-      state:      branch.state,
-      pincode:    branch.pincode || String(400000 + rand(1, 99999)),
-      role:       'customer',
-      isApproved: true,
-    }).save();
+    const isPending = i > 90;
 
-    const account = await new Account({
-      accountNumber: accNum,
-      cifNumber:     `CIF${rand(1000000, 9999999)}`,
-      user:          user._id,
-      accountType:   pick(ACC_TYPES),
-      balance:       rand(5000, 500000),
-      branchName:    branch.branchName,
-      branchCode:    branch.branchCode,
-      ifscCode:      branch.ifscCode,
-      status:        'active',
-      services: {
-        debitCard:       true,
-        internetBanking: true,
-        mobileBanking:   true,
-        smsAlerts:       true,
-        chequeBook:      rand(0, 1) === 1,
-        upi:             true,
-      },
-    }).save();
+    if (isPending) {
+      // Seed pending application (no User or Account created yet)
+      await new CustomerAccount({
+        customerId: custId,
+        firstName: first,
+        lastName: last,
+        email: `${first.toLowerCase()}.${last.toLowerCase()}${i}@gmail.com`,
+        mobile: `${rand(1, 9)}${String(rand(0, 999999999)).padStart(9, '0')}`,
+        pan: `${uid().slice(0,5)}${rand(1000,9999)}${uid().slice(0,1)}`,
+        aadhaar: String(rand(100000000000, 999999999999)),
+        plainPassword: 'Password@123',
+        accountNumber: accNum,
+        accountType: pick(ACC_TYPES),
+        initialDeposit: rand(5000, 500000),
+        branchId: branch.branchId,
+        branchName: branch.branchName,
+        branchCode: branch.branchCode,
+        ifscCode: branch.ifscCode,
+        status: 'pending',
+        services: {
+          debitCard: true,
+          internetBanking: true,
+          mobileBanking: true,
+          smsAlerts: true,
+          chequeBook: rand(0, 1) === 1,
+          upi: true,
+        },
+      }).save();
+    } else {
+      const user = await new User({
+        customerId: custId,
+        firstName:  first,
+        lastName:   last,
+        email:      `${first.toLowerCase()}.${last.toLowerCase()}${i}@gmail.com`,
+        password:   hashedPw,
+        mobile:     `${rand(1, 9)}${String(rand(0, 999999999)).padStart(9, '0')}`,
+        pan:        `${uid().slice(0,5)}${rand(1000,9999)}${uid().slice(0,1)}`,
+        aadhaar:    String(rand(100000000000, 999999999999)),
+        dob:        `${rand(1975, 2000)}-${String(rand(1,12)).padStart(2,'0')}-${String(rand(1,28)).padStart(2,'0')}`,
+        gender:     pick(['Male','Female']),
+        address:    `${rand(1,999)}, ${pick(['MG Road','Park Street','Lake View','Hill Side','Beach Road'])}`,
+        city:       branch.city,
+        state:      branch.state,
+        pincode:    branch.pincode || String(400000 + rand(1, 99999)),
+        role:       'customer',
+        status:     'active',
+      }).save();
 
-    await new CustomerAccount({
-      customerId: user.customerId,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      email: user.email,
-      mobile: user.mobile,
-      pan: user.pan,
-      aadhaar: user.aadhaar,
-      plainPassword: 'Password@123',
-      accountNumber: account.accountNumber,
-      accountType: account.accountType,
-      initialDeposit: account.balance,
-      branchId: branch.branchId,
-      branchName: branch.branchName,
-      branchCode: branch.branchCode,
-      ifscCode: branch.ifscCode,
-      status: 'approved',
-      userId: user._id,
-      accountId: account._id,
-      approvedAt: new Date(),
-    }).save();
+      const account = await new Account({
+        accountNumber: accNum,
+        cifNumber:     `CIF${rand(1000000, 9999999)}`,
+        user:          user._id,
+        accountType:   pick(ACC_TYPES),
+        balance:       rand(5000, 500000),
+        branchName:    branch.branchName,
+        branchCode:    branch.branchCode,
+        ifscCode:      branch.ifscCode,
+        status:        'active',
+        services: {
+          debitCard:       true,
+          internetBanking: true,
+          mobileBanking:   true,
+          smsAlerts:       true,
+          chequeBook:      rand(0, 1) === 1,
+          upi:             true,
+        },
+      }).save();
 
-    customerIds.push(custId);
-    accountIds.push(account._id as mongoose.Types.ObjectId);
-    accountNumbers.push(accNum);
+      await new CustomerAccount({
+        customerId: user.customerId,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        mobile: user.mobile,
+        pan: user.pan,
+        aadhaar: user.aadhaar,
+        plainPassword: 'Password@123',
+        accountNumber: account.accountNumber,
+        accountType: account.accountType,
+        initialDeposit: account.balance,
+        branchId: branch.branchId,
+        branchName: branch.branchName,
+        branchCode: branch.branchCode,
+        ifscCode: branch.ifscCode,
+        status: 'approved',
+        userId: user._id,
+        accountId: account._id,
+        approvedAt: new Date(),
+      }).save();
+
+      customerIds.push(custId);
+      accountIds.push(account._id as mongoose.Types.ObjectId);
+      accountNumbers.push(accNum);
+    }
   }
 
   // Seed Transactions
   const txns = [];
+  const maxIdx = accountIds.length - 1;
   for (let i = 0; i < 500; i++) {
-    const srcIdx = rand(0, 99);
-    let tgtIdx   = rand(0, 99);
-    while (tgtIdx === srcIdx) tgtIdx = rand(0, 99);
+    const srcIdx = rand(0, maxIdx);
+    let tgtIdx   = rand(0, maxIdx);
+    while (tgtIdx === srcIdx && maxIdx > 0) tgtIdx = rand(0, maxIdx);
 
     const isCredit = rand(0, 1) === 1;
     const amount   = randAmount();
