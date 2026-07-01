@@ -245,7 +245,7 @@ export default function LoginPage() {
         </div>
       </div>
 
-      <div className={`z-10 transition-all duration-500 flex flex-col items-center justify-center shrink-0 w-full ${showDemoPopup ? 'max-w-4xl lg:mr-[4%] xl:mr-[6%]' : 'max-w-md lg:mr-[8%] xl:mr-[12%]'}`}>
+      <div className={`z-10 transition-all duration-500 flex flex-col items-center justify-center shrink-0 w-full ${showDemoPopup ? 'max-w-7xl lg:mr-[2%] xl:mr-[4%]' : 'max-w-md lg:mr-[8%] xl:mr-[12%]'}`}>
         <div className="text-center mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
           <div className="inline-flex items-center justify-center relative group">
             <div className="absolute inset-0 bg-cyan-500/20 blur-xl rounded-full group-hover:bg-cyan-400/40 transition-colors duration-500"></div>
@@ -263,10 +263,10 @@ export default function LoginPage() {
           </p>
         </div>
 
-        <div className={`w-full flex flex-col ${showDemoPopup ? 'md:flex-row items-stretch' : 'items-center'} justify-center gap-6`}>
+        <div className={`w-full flex flex-col ${showDemoPopup ? 'lg:flex-row items-stretch' : 'items-center'} justify-center gap-6`}>
           {/* Demo Credentials Console Card (shows on the left) */}
           {showDemoPopup && (
-            <div className="w-full md:w-[400px] flex-1 relative group animate-in fade-in slide-in-from-left-10 duration-500 flex flex-col">
+            <div className="w-full lg:w-[380px] flex-1 relative group animate-in fade-in slide-in-from-left-10 duration-500 flex flex-col">
               {/* Ambient Glow behind the card */}
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-emerald-500/30 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
               
@@ -393,8 +393,221 @@ export default function LoginPage() {
             </div>
           )}
 
+          {/* Android Mobile App Card (shows next to the Demo Console) */}
+          {showDemoPopup && (
+            <div className="w-full lg:w-[380px] flex-1 relative group animate-in fade-in slide-in-from-left-10 duration-500 flex flex-col">
+              {/* Ambient Glow behind the card */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
+              
+              <div className="h-full bg-slate-950/85 backdrop-blur-2xl border border-cyan-500/30 rounded-2xl shadow-[0_0_40px_rgba(34,211,238,0.15)] overflow-hidden p-5 relative z-10 flex flex-col justify-between">
+                {/* Cyber scanline */}
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-emerald-400 shadow-[0_0_15px_#10b981] z-20 opacity-30 animate-pulse"></div>
+                
+                {/* Glowing corner brackets */}
+                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-emerald-400"></div>
+                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-emerald-400"></div>
+                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-emerald-400"></div>
+                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-emerald-400"></div>
+
+                <div>
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-3 border-b border-emerald-500/20 pb-2">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 rounded-full bg-cyan-500 animate-ping"></div>
+                      <h2 className="text-sm font-bold font-mono tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
+                        MOBILE APP PORTAL
+                      </h2>
+                    </div>
+                  </div>
+
+                  <p className="text-slate-400 text-[11px] mb-3 leading-snug">
+                    Access your accounts on the go. Scan the secure QR code or download the package directly.
+                  </p>
+
+                  {/* QR Code display section */}
+                  <div className="flex flex-col items-center justify-center p-4 bg-slate-900/50 border border-emerald-500/20 rounded-xl mb-4 relative overflow-hidden group/qr">
+                    {/* QR scanner simulation line moving up and down */}
+                    <div className="absolute left-4 right-4 h-[1.5px] bg-emerald-400 shadow-[0_0_10px_#34d399] z-10 animate-[scan_3s_ease-in-out_infinite]" />
+                    
+                    <div className="relative p-2 bg-slate-950 rounded-lg border border-emerald-500/30">
+                      {/* SVG QR Code */}
+                      <svg width="130" height="130" viewBox="0 0 29 29" fill="none" className="text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]">
+                        {/* Top-Left Marker */}
+                        <path d="M1 1h7v7H1V1zm1 1v5h5V2H2z" fill="currentColor" />
+                        <path d="M3 3h3v3H3V3z" fill="currentColor" />
+                        
+                        {/* Top-Right Marker */}
+                        <path d="M21 1h7v7h-7V1zm1 1v5h5V2h-5z" fill="currentColor" />
+                        <path d="M23 3h3v3h-3V3z" fill="currentColor" />
+                        
+                        {/* Bottom-Left Marker */}
+                        <path d="M1 21h7v7H1v-7zm1 1v5h5v-5H2z" fill="currentColor" />
+                        <path d="M3 23h3v3H3v-3z" fill="currentColor" />
+                        
+                        {/* Bottom-Right Alignment Marker */}
+                        <path d="M22 22h3v3h-3v-3z" fill="currentColor" />
+                        
+                        {/* Mock QR data pixels */}
+                        <rect x="10" y="1" width="1" height="1" fill="currentColor" />
+                        <rect x="12" y="1" width="2" height="1" fill="currentColor" />
+                        <rect x="16" y="1" width="1" height="1" fill="currentColor" />
+                        <rect x="19" y="1" width="1" height="1" fill="currentColor" />
+                        
+                        <rect x="10" y="2" width="2" height="1" fill="currentColor" />
+                        <rect x="13" y="2" width="1" height="1" fill="currentColor" />
+                        <rect x="15" y="2" width="2" height="1" fill="currentColor" />
+                        <rect x="18" y="2" width="1" height="1" fill="currentColor" />
+                        
+                        <rect x="9" y="3" width="1" height="2" fill="currentColor" />
+                        <rect x="11" y="3" width="2" height="1" fill="currentColor" />
+                        <rect x="14" y="3" width="1" height="1" fill="currentColor" />
+                        <rect x="17" y="3" width="2" height="1" fill="currentColor" />
+                        
+                        <rect x="10" y="4" width="1" height="1" fill="currentColor" />
+                        <rect x="12" y="4" width="1" height="2" fill="currentColor" />
+                        <rect x="15" y="4" width="1" height="1" fill="currentColor" />
+                        <rect x="18" y="4" width="1" height="1" fill="currentColor" />
+                        
+                        <rect x="9" y="5" width="2" height="1" fill="currentColor" />
+                        <rect x="13" y="5" width="1" height="1" fill="currentColor" />
+                        <rect x="16" y="5" width="3" height="1" fill="currentColor" />
+                        
+                        <rect x="10" y="6" width="1" height="1" fill="currentColor" />
+                        <rect x="12" y="6" width="2" height="2" fill="currentColor" />
+                        <rect x="15" y="6" width="1" height="1" fill="currentColor" />
+                        <rect x="17" y="6" width="1" height="1" fill="currentColor" />
+                        <rect x="19" y="6" width="1" height="1" fill="currentColor" />
+                        
+                        <rect x="9" y="7" width="1" height="1" fill="currentColor" />
+                        <rect x="11" y="7" width="1" height="1" fill="currentColor" />
+                        <rect x="16" y="7" width="2" height="1" fill="currentColor" />
+                        
+                        <rect x="1" y="10" width="2" height="1" fill="currentColor" />
+                        <rect x="4" y="10" width="1" height="1" fill="currentColor" />
+                        <rect x="6" y="10" width="1" height="2" fill="currentColor" />
+                        <rect x="9" y="10" width="2" height="1" fill="currentColor" />
+                        <rect x="13" y="10" width="1" height="1" fill="currentColor" />
+                        <rect x="15" y="10" width="3" height="1" fill="currentColor" />
+                        <rect x="19" y="10" width="2" height="2" fill="currentColor" />
+                        <rect x="22" y="10" width="1" height="1" fill="currentColor" />
+                        <rect x="24" y="10" width="1" height="1" fill="currentColor" />
+                        <rect x="26" y="10" width="2" height="1" fill="currentColor" />
+                        
+                        <rect x="2" y="11" width="1" height="1" fill="currentColor" />
+                        <rect x="5" y="11" width="1" height="1" fill="currentColor" />
+                        <rect x="8" y="11" width="1" height="2" fill="currentColor" />
+                        <rect x="11" y="11" width="1" height="1" fill="currentColor" />
+                        <rect x="14" y="11" width="1" height="1" fill="currentColor" />
+                        <rect x="17" y="11" width="1" height="1" fill="currentColor" />
+                        <rect x="23" y="11" width="2" height="1" fill="currentColor" />
+                        <rect x="27" y="11" width="1" height="1" fill="currentColor" />
+                        
+                        <rect x="1" y="12" width="1" height="2" fill="currentColor" />
+                        <rect x="3" y="12" width="2" height="1" fill="currentColor" />
+                        <rect x="6" y="12" width="1" height="1" fill="currentColor" />
+                        <rect x="10" y="12" width="2" height="1" fill="currentColor" />
+                        <rect x="13" y="12" width="1" height="1" fill="currentColor" />
+                        <rect x="15" y="12" width="3" height="2" fill="currentColor" />
+                        <rect x="20" y="12" width="1" height="1" fill="currentColor" />
+                        <rect x="22" y="12" width="1" height="2" fill="currentColor" />
+                        <rect x="25" y="12" width="2" height="1" fill="currentColor" />
+                        <rect x="28" y="12" width="1" height="1" fill="currentColor" />
+                        
+                        <rect x="2" y="13" width="1" height="1" fill="currentColor" />
+                        <rect x="5" y="13" width="1" height="1" fill="currentColor" />
+                        <rect x="7" y="13" width="2" height="1" fill="currentColor" />
+                        <rect x="12" y="13" width="1" height="1" fill="currentColor" />
+                        <rect x="19" y="13" width="1" height="1" fill="currentColor" />
+                        <rect x="24" y="13" width="1" height="1" fill="currentColor" />
+                        <rect x="27" y="13" width="1" height="1" fill="currentColor" />
+                        
+                        <rect x="1" y="14" width="3" height="1" fill="currentColor" />
+                        <rect x="6" y="14" width="1" height="1" fill="currentColor" />
+                        <rect x="9" y="14" width="1" height="1" fill="currentColor" />
+                        <rect x="11" y="14" width="3" height="1" fill="currentColor" />
+                        <rect x="15" y="14" width="1" height="1" fill="currentColor" />
+                        <rect x="17" y="14" width="1" height="2" fill="currentColor" />
+                        <rect x="20" y="14" width="1" height="1" fill="currentColor" />
+                        <rect x="23" y="14" width="2" height="1" fill="currentColor" />
+                        <rect x="26" y="14" width="3" height="1" fill="currentColor" />
+                        
+                        <rect x="3" y="15" width="2" height="2" fill="currentColor" />
+                        <rect x="6" y="15" width="2" height="1" fill="currentColor" />
+                        <rect x="10" y="15" width="1" height="1" fill="currentColor" />
+                        <rect x="12" y="15" width="2" height="1" fill="currentColor" />
+                        <rect x="18" y="15" width="2" height="1" fill="currentColor" />
+                        <rect x="21" y="15" width="1" height="1" fill="currentColor" />
+                        <rect x="25" y="15" width="1" height="1" fill="currentColor" />
+                        
+                        <rect x="1" y="16" width="1" height="1" fill="currentColor" />
+                        <rect x="7" y="16" width="2" height="1" fill="currentColor" />
+                        <rect x="11" y="16" width="1" height="1" fill="currentColor" />
+                        <rect x="14" y="16" width="2" height="1" fill="currentColor" />
+                        <rect x="17" y="16" width="1" height="1" fill="currentColor" />
+                        <rect x="22" y="16" width="2" height="1" fill="currentColor" />
+                        <rect x="26" y="16" width="1" height="1" fill="currentColor" />
+                        <rect x="28" y="16" width="1" height="1" fill="currentColor" />
+                        
+                        <rect x="2" y="17" width="2" height="1" fill="currentColor" />
+                        <rect x="5" y="17" width="1" height="2" fill="currentColor" />
+                        <rect x="8" y="17" width="2" height="1" fill="currentColor" />
+                        <rect x="12" y="17" width="1" height="1" fill="currentColor" />
+                        <rect x="15" y="17" width="3" height="1" fill="currentColor" />
+                        <rect x="19" y="17" width="2" height="1" fill="currentColor" />
+                        <rect x="24" y="17" width="1" height="1" fill="currentColor" />
+                        <rect x="27" y="17" width="2" height="1" fill="currentColor" />
+                        
+                        <rect x="10" y="18" width="1" height="1" fill="currentColor" />
+                        <rect x="13" y="18" width="2" height="1" fill="currentColor" />
+                        <rect x="17" y="18" width="1" height="1" fill="currentColor" />
+                        
+                        <rect x="9" y="19" width="3" height="1" fill="currentColor" />
+                        <rect x="14" y="19" width="1" height="2" fill="currentColor" />
+                        <rect x="16" y="19" width="2" height="1" fill="currentColor" />
+                        
+                        <rect x="11" y="20" width="2" height="1" fill="currentColor" />
+                        <rect x="18" y="20" width="1" height="1" fill="currentColor" />
+                        
+                        {/* Central Phone/App Icon Mock */}
+                        <rect x="13" y="13" width="3" height="3" rx="0.5" fill="currentColor" />
+                        <circle cx="14.5" cy="14.5" r="0.5" fill="#020617" />
+                      </svg>
+                    </div>
+                    
+                    <span className="text-[10px] font-mono text-emerald-400 mt-2 tracking-wider font-bold">SCAN TO INSTALL</span>
+                  </div>
+
+                  {/* Download Button */}
+                  <div className="space-y-2">
+                    <a 
+                      href="/lomax-mobile.apk" 
+                      download
+                      className="flex items-center justify-center space-x-2 w-full py-2.5 bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-slate-950 font-bold tracking-wider text-xs rounded-xl shadow-[0_0_15px_rgba(52,211,153,0.3)] hover:shadow-[0_0_20px_rgba(52,211,153,0.5)] transition-all duration-300 font-mono"
+                    >
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                      </svg>
+                      <span>DOWNLOAD ANDROID APK</span>
+                    </a>
+                    
+                    <div className="font-mono text-[9px] text-slate-500 text-center space-y-0.5">
+                      <div>LomaX-Mobile-v1.0.2-Beta.apk</div>
+                      <div>SHA-256: <code className="text-slate-400 font-bold">f83e...a91c</code></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-3 text-center border-t border-emerald-500/10 pt-2">
+                  <span className="text-[9px] font-mono text-slate-600 tracking-wider">
+                    ANDROID OS 10+ REQUIRED // SECURE APK
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Main Login Card */}
-          <div className="w-full md:w-[400px] flex-1 relative group animate-in fade-in zoom-in-95 duration-700 delay-150 fill-mode-both flex flex-col">
+          <div className="w-full lg:w-[400px] flex-1 relative group animate-in fade-in zoom-in-95 duration-700 delay-150 fill-mode-both flex flex-col">
             {/* Ambient Glow behind the card */}
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-emerald-500/30 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
             
