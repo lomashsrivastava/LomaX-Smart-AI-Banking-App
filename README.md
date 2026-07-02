@@ -51,6 +51,7 @@
   - [Reports & Statements](#-reports--statements)
   - [Support Center](#-support-center)
   - [Settings & Administration](#-settings--administration)
+- [Mobile App Portal](#-mobile-app-portal-react-native)
 - [Tech Stack](#-tech-stack)
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
@@ -406,6 +407,34 @@ System preferences, general settings, and administrator security controls.
     </td>
   </tr>
 </table>
+
+---
+
+## Mobile App Portal (React Native)
+
+LomaX features a premium cross-platform mobile app built with **React Native** and **Expo**, enabling customers to handle their banking on the go.
+
+### 📱 Mobile Features & Capabilities
+* **Interactive Dashboard**: Real-time balance updates, quick transaction history, and custom account summary.
+* **Card Control Module**: Lock/unlock cards, set transaction limits, and manage ATM settings dynamically.
+* **Intelligent Fund Transfers**: Scan and transfer or input details to execute double-entry ledger transfers with instant notification popups.
+* **Audit & Security**: Custom device identification and location logging for all login sessions to protect account integrity.
+* **Biometric Auth Simulation**: Pre-configured support for modern device security modules.
+
+### 📥 Direct APK Installation
+You can download and run the mobile app directly on your Android phone using our pre-compiled EAS cloud artifact:
+
+* **Direct Download**: [Download LomaX Android APK](https://expo.dev/artifacts/eas/3b9nlnjp7BEzFczqarCBpb0bj1bkZwMZTGIuXbYZQ44.apk)
+* **Scan to Install**:
+  
+  <p align="left">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fexpo.dev%2Fartifacts%2Feas%2F3b9nlnjp7BEzFczqarCBpb0bj1bkZwMZTGIuXbYZQ44.apk&color=10b981&bgcolor=020617" alt="LomaX Mobile App QR Code" width="150" />
+  </p>
+
+### 🔑 Demo Login Details
+Open the app and log in using the case-insensitive demo user credentials:
+* **Customer ID**: `CUST411279`
+* **Password**: `972114TSUC` (reverse of the Customer ID)
 
 ---
 
