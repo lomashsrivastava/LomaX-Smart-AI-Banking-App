@@ -580,8 +580,8 @@ export default function LoginPage() {
                   {/* Download Button */}
                   <div className="space-y-2">
                     <a 
-                      href="/lomax-mobile.apk" 
-                      download
+                      href="/LomaX-Banking.apk" 
+                      download="LomaX Banking.apk"
                       className="flex items-center justify-center space-x-2 w-full py-2.5 bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-slate-950 font-bold tracking-wider text-xs rounded-xl shadow-[0_0_15px_rgba(52,211,153,0.3)] hover:shadow-[0_0_20px_rgba(52,211,153,0.5)] transition-all duration-300 font-mono"
                     >
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -591,7 +591,7 @@ export default function LoginPage() {
                     </a>
                     
                     <div className="font-mono text-[9px] text-slate-500 text-center space-y-0.5">
-                      <div>LomaX-Mobile-v1.0.2-Beta.apk</div>
+                      <div>LomaX-Banking-v1.0.0.apk</div>
                       <div>SHA-256: <code className="text-slate-400 font-bold">f83e...a91c</code></div>
                     </div>
                   </div>
