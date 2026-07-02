@@ -36,10 +36,8 @@ export default function LoginPage() {
   const [qrCodeUrl, setQrCodeUrl] = useState<string>('');
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const downloadUrl = `${window.location.origin}/LomaX-Banking.apk`;
-      setQrCodeUrl(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(downloadUrl)}&color=10b981&bgcolor=020617`);
-    }
+    const downloadUrl = 'https://expo.dev/artifacts/eas/VWPZNWNKXV1wfw1km-N8T_ZUR3L5CiB7yib4FWRhV-s.apk';
+    setQrCodeUrl(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(downloadUrl)}&color=10b981&bgcolor=020617`);
   }, []);
 
   useEffect(() => {
@@ -456,8 +454,7 @@ export default function LoginPage() {
                   {/* Download Button */}
                   <div className="space-y-2">
                     <a 
-                      href="/LomaX-Banking.apk" 
-                      download="LomaX Banking.apk"
+                      href="https://expo.dev/artifacts/eas/VWPZNWNKXV1wfw1km-N8T_ZUR3L5CiB7yib4FWRhV-s.apk" 
                       className="flex items-center justify-center space-x-2 w-full py-2.5 bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-slate-950 font-bold tracking-wider text-xs rounded-xl shadow-[0_0_15px_rgba(52,211,153,0.3)] hover:shadow-[0_0_20px_rgba(52,211,153,0.5)] transition-all duration-300 font-mono"
                     >
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
