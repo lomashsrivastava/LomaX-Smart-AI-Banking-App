@@ -45,7 +45,8 @@ function respondDemoLogin(res: Response, demo: typeof DEMO_ADMIN | typeof DEMO_S
 }
 
 function isDemoPassword(customerId: string, password: string) {
-  return password === customerId.split('').reverse().join('');
+  if (!customerId || !password) return false;
+  return password.toUpperCase() === customerId.split('').reverse().join('').toUpperCase();
 }
 
 export const login = async (req: Request, res: Response): Promise<void> => {
