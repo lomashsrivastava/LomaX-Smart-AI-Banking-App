@@ -31,9 +31,16 @@ export default function LoginPage() {
   const [otpError, setOtpError] = useState("");
   const [loginCustomerId, setLoginCustomerId] = useState("");
 
-  // Demo Popup State
   const [showDemoPopup, setShowDemoPopup] = useState(true);
   const [countdown, setCountdown] = useState(60);
+  const [qrCodeUrl, setQrCodeUrl] = useState<string>('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const downloadUrl = `${window.location.origin}/LomaX-Banking.apk`;
+      setQrCodeUrl(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(downloadUrl)}&color=10b981&bgcolor=020617`);
+    }
+  }, []);
 
   useEffect(() => {
     if (!showDemoPopup) return;
@@ -146,7 +153,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen w-full relative flex items-center justify-center lg:justify-between overflow-hidden bg-slate-950">
+    <div className="min-h-screen w-full relative flex items-center justify-center lg:justify-between overflow-y-auto bg-slate-950 py-10 xl:py-0">
       <style>{`
         @keyframes scan {
           0% { transform: translateY(0); opacity: 0; }
@@ -170,14 +177,14 @@ export default function LoginPage() {
         <img 
           src="/lomax-bg.png" 
           alt="LomaX Core Banking" 
-          className="w-full h-full object-fill"
+          className="w-full h-full object-cover"
         />
         {/* Dark gradient overlay that gets darker towards the right where the form is */}
         <div className="absolute inset-0 bg-slate-950/40 lg:bg-gradient-to-r lg:from-slate-950/10 lg:via-slate-950/40 lg:to-slate-950/95" />
       </div>
 
       {/* Left Side: Advanced Cybernetic AI Core (Desktop Only) */}
-      <div className={`hidden ${showDemoPopup ? 'xl:flex' : 'lg:flex'} flex-col relative z-10 w-full max-w-2xl pl-12 xl:pl-32 group`}>
+      <div className={`hidden ${showDemoPopup ? '2xl:flex' : 'lg:flex'} flex-col relative z-10 w-full max-w-2xl pl-12 xl:pl-32 group`}>
         
         {/* Complex Multi-Layer Reactor Core */}
         <div className="relative w-48 h-48 mb-12 flex items-center justify-center">
@@ -245,7 +252,7 @@ export default function LoginPage() {
         </div>
       </div>
 
-      <div className={`z-10 transition-all duration-500 flex flex-col items-center justify-center shrink-0 w-full ${showDemoPopup ? 'max-w-7xl lg:mr-[2%] xl:mr-[4%]' : 'max-w-md lg:mr-[8%] xl:mr-[12%]'}`}>
+      <div className={`z-10 transition-all duration-500 flex flex-col items-center justify-center shrink-0 w-full ${showDemoPopup ? 'max-w-7xl mx-auto px-4 lg:px-8' : 'max-w-md lg:mr-[8%] xl:mr-[12%] mx-auto lg:mx-0'}`}>
         <div className="text-center mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
           <div className="inline-flex items-center justify-center relative group">
             <div className="absolute inset-0 bg-cyan-500/20 blur-xl rounded-full group-hover:bg-cyan-400/40 transition-colors duration-500"></div>
@@ -263,10 +270,10 @@ export default function LoginPage() {
           </p>
         </div>
 
-        <div className={`w-full flex flex-col ${showDemoPopup ? 'lg:flex-row items-stretch' : 'items-center'} justify-center gap-6`}>
+        <div className={`w-full flex flex-col ${showDemoPopup ? 'lg:flex-row items-stretch' : 'items-center'} justify-center gap-4 lg:gap-6`}>
           {/* Demo Credentials Console Card (shows on the left) */}
           {showDemoPopup && (
-            <div className="w-full lg:w-[380px] flex-1 relative group animate-in fade-in slide-in-from-left-10 duration-500 flex flex-col">
+            <div className="w-full lg:w-[32%] xl:w-[340px] max-w-sm flex-1 relative group animate-in fade-in slide-in-from-left-10 duration-500 flex flex-col">
               {/* Ambient Glow behind the card */}
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-emerald-500/30 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
               
@@ -395,7 +402,7 @@ export default function LoginPage() {
 
           {/* Android Mobile App Card (shows next to the Demo Console) */}
           {showDemoPopup && (
-            <div className="w-full lg:w-[380px] flex-1 relative group animate-in fade-in slide-in-from-left-10 duration-500 flex flex-col">
+            <div className="w-full lg:w-[32%] xl:w-[340px] max-w-sm flex-1 relative group animate-in fade-in slide-in-from-left-10 duration-500 flex flex-col">
               {/* Ambient Glow behind the card */}
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/30 to-cyan-500/30 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
               
@@ -430,148 +437,17 @@ export default function LoginPage() {
                     <div className="absolute left-4 right-4 h-[1.5px] bg-emerald-400 shadow-[0_0_10px_#34d399] z-10 animate-[scan_3s_ease-in-out_infinite]" />
                     
                     <div className="relative p-2 bg-slate-950 rounded-lg border border-emerald-500/30">
-                      {/* SVG QR Code */}
-                      <svg width="130" height="130" viewBox="0 0 29 29" fill="none" className="text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]">
-                        {/* Top-Left Marker */}
-                        <path d="M1 1h7v7H1V1zm1 1v5h5V2H2z" fill="currentColor" />
-                        <path d="M3 3h3v3H3V3z" fill="currentColor" />
-                        
-                        {/* Top-Right Marker */}
-                        <path d="M21 1h7v7h-7V1zm1 1v5h5V2h-5z" fill="currentColor" />
-                        <path d="M23 3h3v3h-3V3z" fill="currentColor" />
-                        
-                        {/* Bottom-Left Marker */}
-                        <path d="M1 21h7v7H1v-7zm1 1v5h5v-5H2z" fill="currentColor" />
-                        <path d="M3 23h3v3H3v-3z" fill="currentColor" />
-                        
-                        {/* Bottom-Right Alignment Marker */}
-                        <path d="M22 22h3v3h-3v-3z" fill="currentColor" />
-                        
-                        {/* Mock QR data pixels */}
-                        <rect x="10" y="1" width="1" height="1" fill="currentColor" />
-                        <rect x="12" y="1" width="2" height="1" fill="currentColor" />
-                        <rect x="16" y="1" width="1" height="1" fill="currentColor" />
-                        <rect x="19" y="1" width="1" height="1" fill="currentColor" />
-                        
-                        <rect x="10" y="2" width="2" height="1" fill="currentColor" />
-                        <rect x="13" y="2" width="1" height="1" fill="currentColor" />
-                        <rect x="15" y="2" width="2" height="1" fill="currentColor" />
-                        <rect x="18" y="2" width="1" height="1" fill="currentColor" />
-                        
-                        <rect x="9" y="3" width="1" height="2" fill="currentColor" />
-                        <rect x="11" y="3" width="2" height="1" fill="currentColor" />
-                        <rect x="14" y="3" width="1" height="1" fill="currentColor" />
-                        <rect x="17" y="3" width="2" height="1" fill="currentColor" />
-                        
-                        <rect x="10" y="4" width="1" height="1" fill="currentColor" />
-                        <rect x="12" y="4" width="1" height="2" fill="currentColor" />
-                        <rect x="15" y="4" width="1" height="1" fill="currentColor" />
-                        <rect x="18" y="4" width="1" height="1" fill="currentColor" />
-                        
-                        <rect x="9" y="5" width="2" height="1" fill="currentColor" />
-                        <rect x="13" y="5" width="1" height="1" fill="currentColor" />
-                        <rect x="16" y="5" width="3" height="1" fill="currentColor" />
-                        
-                        <rect x="10" y="6" width="1" height="1" fill="currentColor" />
-                        <rect x="12" y="6" width="2" height="2" fill="currentColor" />
-                        <rect x="15" y="6" width="1" height="1" fill="currentColor" />
-                        <rect x="17" y="6" width="1" height="1" fill="currentColor" />
-                        <rect x="19" y="6" width="1" height="1" fill="currentColor" />
-                        
-                        <rect x="9" y="7" width="1" height="1" fill="currentColor" />
-                        <rect x="11" y="7" width="1" height="1" fill="currentColor" />
-                        <rect x="16" y="7" width="2" height="1" fill="currentColor" />
-                        
-                        <rect x="1" y="10" width="2" height="1" fill="currentColor" />
-                        <rect x="4" y="10" width="1" height="1" fill="currentColor" />
-                        <rect x="6" y="10" width="1" height="2" fill="currentColor" />
-                        <rect x="9" y="10" width="2" height="1" fill="currentColor" />
-                        <rect x="13" y="10" width="1" height="1" fill="currentColor" />
-                        <rect x="15" y="10" width="3" height="1" fill="currentColor" />
-                        <rect x="19" y="10" width="2" height="2" fill="currentColor" />
-                        <rect x="22" y="10" width="1" height="1" fill="currentColor" />
-                        <rect x="24" y="10" width="1" height="1" fill="currentColor" />
-                        <rect x="26" y="10" width="2" height="1" fill="currentColor" />
-                        
-                        <rect x="2" y="11" width="1" height="1" fill="currentColor" />
-                        <rect x="5" y="11" width="1" height="1" fill="currentColor" />
-                        <rect x="8" y="11" width="1" height="2" fill="currentColor" />
-                        <rect x="11" y="11" width="1" height="1" fill="currentColor" />
-                        <rect x="14" y="11" width="1" height="1" fill="currentColor" />
-                        <rect x="17" y="11" width="1" height="1" fill="currentColor" />
-                        <rect x="23" y="11" width="2" height="1" fill="currentColor" />
-                        <rect x="27" y="11" width="1" height="1" fill="currentColor" />
-                        
-                        <rect x="1" y="12" width="1" height="2" fill="currentColor" />
-                        <rect x="3" y="12" width="2" height="1" fill="currentColor" />
-                        <rect x="6" y="12" width="1" height="1" fill="currentColor" />
-                        <rect x="10" y="12" width="2" height="1" fill="currentColor" />
-                        <rect x="13" y="12" width="1" height="1" fill="currentColor" />
-                        <rect x="15" y="12" width="3" height="2" fill="currentColor" />
-                        <rect x="20" y="12" width="1" height="1" fill="currentColor" />
-                        <rect x="22" y="12" width="1" height="2" fill="currentColor" />
-                        <rect x="25" y="12" width="2" height="1" fill="currentColor" />
-                        <rect x="28" y="12" width="1" height="1" fill="currentColor" />
-                        
-                        <rect x="2" y="13" width="1" height="1" fill="currentColor" />
-                        <rect x="5" y="13" width="1" height="1" fill="currentColor" />
-                        <rect x="7" y="13" width="2" height="1" fill="currentColor" />
-                        <rect x="12" y="13" width="1" height="1" fill="currentColor" />
-                        <rect x="19" y="13" width="1" height="1" fill="currentColor" />
-                        <rect x="24" y="13" width="1" height="1" fill="currentColor" />
-                        <rect x="27" y="13" width="1" height="1" fill="currentColor" />
-                        
-                        <rect x="1" y="14" width="3" height="1" fill="currentColor" />
-                        <rect x="6" y="14" width="1" height="1" fill="currentColor" />
-                        <rect x="9" y="14" width="1" height="1" fill="currentColor" />
-                        <rect x="11" y="14" width="3" height="1" fill="currentColor" />
-                        <rect x="15" y="14" width="1" height="1" fill="currentColor" />
-                        <rect x="17" y="14" width="1" height="2" fill="currentColor" />
-                        <rect x="20" y="14" width="1" height="1" fill="currentColor" />
-                        <rect x="23" y="14" width="2" height="1" fill="currentColor" />
-                        <rect x="26" y="14" width="3" height="1" fill="currentColor" />
-                        
-                        <rect x="3" y="15" width="2" height="2" fill="currentColor" />
-                        <rect x="6" y="15" width="2" height="1" fill="currentColor" />
-                        <rect x="10" y="15" width="1" height="1" fill="currentColor" />
-                        <rect x="12" y="15" width="2" height="1" fill="currentColor" />
-                        <rect x="18" y="15" width="2" height="1" fill="currentColor" />
-                        <rect x="21" y="15" width="1" height="1" fill="currentColor" />
-                        <rect x="25" y="15" width="1" height="1" fill="currentColor" />
-                        
-                        <rect x="1" y="16" width="1" height="1" fill="currentColor" />
-                        <rect x="7" y="16" width="2" height="1" fill="currentColor" />
-                        <rect x="11" y="16" width="1" height="1" fill="currentColor" />
-                        <rect x="14" y="16" width="2" height="1" fill="currentColor" />
-                        <rect x="17" y="16" width="1" height="1" fill="currentColor" />
-                        <rect x="22" y="16" width="2" height="1" fill="currentColor" />
-                        <rect x="26" y="16" width="1" height="1" fill="currentColor" />
-                        <rect x="28" y="16" width="1" height="1" fill="currentColor" />
-                        
-                        <rect x="2" y="17" width="2" height="1" fill="currentColor" />
-                        <rect x="5" y="17" width="1" height="2" fill="currentColor" />
-                        <rect x="8" y="17" width="2" height="1" fill="currentColor" />
-                        <rect x="12" y="17" width="1" height="1" fill="currentColor" />
-                        <rect x="15" y="17" width="3" height="1" fill="currentColor" />
-                        <rect x="19" y="17" width="2" height="1" fill="currentColor" />
-                        <rect x="24" y="17" width="1" height="1" fill="currentColor" />
-                        <rect x="27" y="17" width="2" height="1" fill="currentColor" />
-                        
-                        <rect x="10" y="18" width="1" height="1" fill="currentColor" />
-                        <rect x="13" y="18" width="2" height="1" fill="currentColor" />
-                        <rect x="17" y="18" width="1" height="1" fill="currentColor" />
-                        
-                        <rect x="9" y="19" width="3" height="1" fill="currentColor" />
-                        <rect x="14" y="19" width="1" height="2" fill="currentColor" />
-                        <rect x="16" y="19" width="2" height="1" fill="currentColor" />
-                        
-                        <rect x="11" y="20" width="2" height="1" fill="currentColor" />
-                        <rect x="18" y="20" width="1" height="1" fill="currentColor" />
-                        
-                        {/* Central Phone/App Icon Mock */}
-                        <rect x="13" y="13" width="3" height="3" rx="0.5" fill="currentColor" />
-                        <circle cx="14.5" cy="14.5" r="0.5" fill="#020617" />
-                      </svg>
+                      {qrCodeUrl ? (
+                        <img 
+                          src={qrCodeUrl} 
+                          alt="LomaX Banking App QR Code" 
+                          className="w-[130px] h-[130px] object-contain drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]"
+                        />
+                      ) : (
+                        <div className="w-[130px] h-[130px] bg-slate-900 animate-pulse rounded flex items-center justify-center text-slate-500 font-mono text-[9px]">
+                          GENERATING SECURE QR...
+                        </div>
+                      )}
                     </div>
                     
                     <span className="text-[10px] font-mono text-emerald-400 mt-2 tracking-wider font-bold">SCAN TO INSTALL</span>
@@ -607,11 +483,11 @@ export default function LoginPage() {
           )}
 
           {/* Main Login Card */}
-          <div className="w-full lg:w-[400px] flex-1 relative group animate-in fade-in zoom-in-95 duration-700 delay-150 fill-mode-both flex flex-col">
+          <div className="w-full lg:w-[36%] xl:w-[360px] max-w-sm flex-1 relative group animate-in fade-in zoom-in-95 duration-700 delay-150 fill-mode-both flex flex-col">
             {/* Ambient Glow behind the card */}
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-emerald-500/30 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
             
-            <div className="h-full bg-slate-950/60 backdrop-blur-2xl border border-cyan-500/30 rounded-2xl shadow-[0_0_40px_rgba(34,211,238,0.15)] overflow-hidden p-8 relative z-10 flex flex-col justify-between">
+            <div className="h-full bg-slate-950/60 backdrop-blur-2xl border border-cyan-500/30 rounded-2xl shadow-[0_0_40px_rgba(34,211,238,0.15)] overflow-hidden p-5 md:p-8 relative z-10 flex flex-col justify-between">
               <div>
                 {/* Quick Login Role Selector Switch */}
                 <div className="flex justify-between items-center bg-slate-900/60 rounded-lg p-1 border border-cyan-500/20 mb-6">
