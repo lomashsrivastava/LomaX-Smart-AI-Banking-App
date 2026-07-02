@@ -658,7 +658,7 @@ export const logout = async (req: AuthenticatedRequest, res: Response): Promise<
 
 export const refreshToken = async (req: Request, res: Response): Promise<void> => {
   try {
-    const cookieToken = req.cookies?.refreshToken;
+    const cookieToken = req.cookies?.refreshToken || req.body?.refreshToken;
     if (!cookieToken) {
       res.status(401).json({ success: false, message: 'Refresh token missing' });
       return;
